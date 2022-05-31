@@ -1,15 +1,3 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
-# scope: inline
-
 import logging
 import atexit
 import random
@@ -38,11 +26,11 @@ def restart(*argv):
 
 
 @loader.tds
-class HikkaSettingsMod(loader.Module):
+class SettingsmodMod(loader.Module):
     """Advanced settings for Hikka Userbot"""
 
     strings = {
-        "name": "HikkaSettings",
+        "name": "Settings",
         "watchers": "👀 <b>Watchers:</b>\n\n<b>{}</b>",
         "mod404": "🚫 <b>Watcher {} not found</b>",
         "disabled": "👀 <b>Watcher {} is now <u>disabled</u></b>",
@@ -263,7 +251,7 @@ class HikkaSettingsMod(loader.Module):
             ],
         )
 
-    async def uninstall_hikkacmd(self, message: Message):
+    async def uninstall_ubcmd(self, message: Message):
         """Uninstall Hikka"""
         await self.inline.form(
             self.strings("deauth_confirm"),
