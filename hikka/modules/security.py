@@ -1,15 +1,3 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
-# scope: inline
-
 import logging
 from types import FunctionType
 from typing import List, Union
@@ -40,11 +28,11 @@ logger = logging.getLogger(__name__)
 
 
 @loader.tds
-class HikkaSecurityMod(loader.Module):
+class SecuritymodMod(loader.Module):
     """Control security settings"""
 
     strings = {
-        "name": "HikkaSecurity",
+        "name": "Security",
         "no_command": "🚫 <b>Command </b><code>{}</code><b> not found!</b>",
         "permissions": "🔐 <b>Here you can configure permissions for </b><code>{}{}</code>",
         "close_menu": "🙈 Close this menu",
