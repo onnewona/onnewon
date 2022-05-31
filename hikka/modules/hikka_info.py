@@ -28,8 +28,8 @@ class HikkaInfoMod(loader.Module):
 
     strings = {
         "name": "HikkaInfo",
-        "owner": "Owner",
-        "version": "Version",
+        "owner": "Moderator",
+        "version": "Sosi version",
         "build": "Build",
         "prefix": "Prefix",
         "send_info": "Send userbot info",
@@ -93,7 +93,7 @@ class HikkaInfoMod(loader.Module):
         except Exception:
             upd = ""
 
-        me = f'<b><a href="tg://user?id={self._me.id}">{utils.escape_html(get_display_name(self._me))}</a></b>'
+        me = f'<code><a href="tg://user?id={self._me.id}">{utils.escape_html(get_display_name(self._me))}</a></code>'
         version = f'<i>{".".join(list(map(str, list(main.__version__))))}</i>'
         build = f'<a href="https://github.com/Netuzb/sosi/commit/{ver}">#{ver[:8]}</a>'  # fmt: skip
         prefix = f"•<code>{utils.escape_html(self.get_prefix())}</code>•"
@@ -113,7 +113,7 @@ class HikkaInfoMod(loader.Module):
                 "<b>🌇 Sosi-Userbot</b>\n"
                 f'<b>🌉 {self.strings("owner")}: </b>{me}\n\n'
                 f"<b>🌉 {self.strings('version')}: </b>{version} {build}\n"
-                f"<b>{upd}</b>\n\n"
+                f"<a href='{upd}'></a>\n\n"
                 f"<a href='{self.strings('prefix')} {prefix}'></a>\n"
                 f"<a href='{platform}'></a>\n"
             )
@@ -149,35 +149,8 @@ class HikkaInfoMod(loader.Module):
             text=self._render_info(),
             reply_markup=self._get_mark(),
             **(
-                {"photo": "https://i.imgur.com/XYNawuK.jpeg"}
+                {"photo": "https://i.imgur.com/sYULuO1.jpeg"}
                 if not self.config["disable_banner"]
                 else {}
-            ),
-        )
-
-    @loader.unrestricted
-    async def sosicmd(self, message: Message):
-        """[en/ru - default en] - Send info aka 'What is Hikka?'"""
-        args = utils.get_args_raw(message)
-        args = args if args in {"en", "ru"} else "en"
-
-        await utils.answer(
-            message,
-            (
-                "🌘 <b>sosi</b>\n\n"
-                "Brand new userbot for Telegram with a lot of features, "
-                "aka InlineGalleries, forms etc. Userbot - software, running "
-                "on your Telegram account. If you write a command to any chat, it will "
-                "get executed right there. Check out live examples at "
-                '<a href="https://github.com/hikariatama/Hikka">GitHub</a>'
-            )
-            if args == "en"
-            else (
-                "🌘 <b>sosi</b>\n\n"
-                "Новый юзербот для Telegram с огромным количеством функций, "
-                "из которых: Инлайн галереи, формы и другое. Юзербот - программа, "
-                "которая запускается на твоем Telegram-аккаунте. Когда ты пишешь "
-                "команду в любом чате, она сразу же выполняется. Обрати внимание "
-                'на живые примеры на <a href="https://github.com/hikariatama/Hikka">GitHub</a>'
             ),
         )
