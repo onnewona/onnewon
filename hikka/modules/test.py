@@ -28,24 +28,24 @@ class TestMod(loader.Module):
     strings = {
         "name": "Tester",
         "set_loglevel": "🚫 <b>Please specify verbosity as an integer or string</b>",
-        "no_logs": "ℹ️ <b>You don't have any logs at verbosity {}.</b>",
+        "no_logs": "🌉 <b>You don't have any logs at verbosity {}.</b>",
         "logs_filename": "sosi-logs.html",
         "logs_caption": "🌉 <b>Sosi logs with verbosity </b><code>{}</code>\n🌉 <b>Sosi version: {}.{}.{}</b>\n<a href='{}'></a>",
         "suspend_invalid_time": "🚫 <b>Invalid time to suspend</b>",
-        "suspended": "🥶 <b>Bot suspended for</b> <code>{}</code> <b>seconds</b>",
-        "results_ping": "⏱ <b>Response time:</b> <code>{}</code> <b>ms</b>\n👩‍💼 <b>Uptime: {}</b>",
+        "suspended": "🏙️ <b>Bot suspended for</b> <code>{}</code> <b>seconds</b>",
+        "results_ping": "🌉 <b>Response speed:</b> <code>{} ms</code>\n🌉 <b>Updated time:</b> <code>{}</code>",
         "confidential": "⚠️ <b>Log level </b><code>{}</code><b> may reveal your confidential info, be careful</b>",
         "confidential_text": (
             "⚠️ <b>Log level </b><code>{0}</code><b> may reveal your confidential info, "
             "be careful</b>\n<b>Type </b><code>.logs {0} force_insecure</code><b> "
             "to ignore this warning</b>"
         ),
-        "choose_loglevel": "💁‍♂️ <b>Choose log level</b>",
+        "choose_loglevel": "🌉 <b>Choose log level</b>",
         "database_unlocked": "🚫 DB eval unlocked",
-        "database_locked": "✅ DB eval locked",
+        "database_locked": "🌇 DB eval locked",
         "bad_module": "🚫 <b>Module not found</b>",
-        "debugging_enabled": "🧑‍💻 <b>Debugging mode enabled for module </b><code>{0}</code>\n<i>Go to directory named `debug_modules`, edit file named `{0}.py` and see changes in real time</i>",
-        "debugging_disabled": "✅ <b>Debugging disabled</b>",
+        "debugging_enabled": "🌉 <b>Debugging mode enabled for module </b><code>{0}</code>\n<i>Go to directory named `debug_modules`, edit file named `{0}.py` and see changes in real time</i>",
+        "debugging_disabled": "🌇 <b>Debugging disabled</b>",
     }
 
     strings_ru = {
@@ -198,36 +198,36 @@ class TestMod(loader.Module):
                     reply_markup=[
                         [
                             {
-                                "text": "🚨 Critical",
+                                "text": "🌇 Critical",
                                 "callback": self.logscmd,
                                 "args": (False, 50),
                             },
                             {
-                                "text": "🚫 Error",
+                                "text": "🌇 Error",
                                 "callback": self.logscmd,
                                 "args": (False, 40),
                             },
                         ],
                         [
                             {
-                                "text": "⚠️ Warning",
+                                "text": "🌉 Warning",
                                 "callback": self.logscmd,
                                 "args": (False, 30),
                             },
                             {
-                                "text": "ℹ️ Info",
+                                "text": "🌉 Info",
                                 "callback": self.logscmd,
                                 "args": (False, 20),
                             },
                         ],
                         [
                             {
-                                "text": "🧑‍💻 Debug",
+                                "text": "🌉 Debug",
                                 "callback": self.logscmd,
                                 "args": (False, 10),
                             },
                             {
-                                "text": "👁 All",
+                                "text": "🌉 All",
                                 "callback": self.logscmd,
                                 "args": (False, 0),
                             },
