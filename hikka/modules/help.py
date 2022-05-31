@@ -20,14 +20,14 @@ class HelpMod(loader.Module):
         "undoc_cmd": "🦥 No docs",
         "all_header": "🌇 <b>{} mods available \n🌇 {} hidden:</b>",
         "mod_tmpl": "\n{} <b>{}</b>",
-        "first_cmd_tmpl": ": ( {}",
-        "cmd_tmpl": " | {}",
+        "first_cmd_tmpl": ": - {}",
+        "cmd_tmpl": ", {}",
         "no_mod": "🚫 <b>Specify module to hide</b>",
         "hidden_shown": "🌇 <b>{} modules hidden \n🌇 {} modules shown:</b>\n{}\n{}",
-        "ihandler": "\n🎹 <code>{}</code> {}",
+        "ihandler": "\n🌉 <b>{}</b> {}",
         "undoc_ihandler": "🦥 No docs",
-        "joined": "🌘 <b>Joined the</b> <a href='https://t.me/hikka_talks'>support chat</a>",
-        "join": "🌘 <b>Join the</b> <a href='https://t.me/hikka_talks'>support chat</a>",
+        "joined": "🌉 <b>Joined the</b> <a href='https://t.me/hikka_talks'>support chat</a>",
+        "join": "🌉 <b>Join the</b> <a href='https://t.me/hikka_talks'>support chat</a>",
         "partial_load": "⚠️ <b>Userbot is not fully loaded, so not all modules are shown</b>",
         "not_exact": "⚠️ <b>No exact match occured, so the closest result is shown instead</b>",
     }
@@ -172,7 +172,7 @@ class HelpMod(loader.Module):
 
             reply = self.strings("single_mod_header").format(utils.escape_html(name))
             if module.__doc__:
-                reply += "<b>\n🌉 Info:</b> " + utils.escape_html(inspect.getdoc(module)) + "\n"  # fmt: skip
+                reply += "<b>\n🌉 Info:</b> <code>" + utils.escape_html(inspect.getdoc(module)) + "</code>\n"  # fmt: skip
 
             commands = {
                 name: func
@@ -302,7 +302,7 @@ class HelpMod(loader.Module):
                     tmp += self.strings("cmd_tmpl").format(f"🎹 {cmd}")
 
             if commands or icommands:
-                tmp += " )"
+                tmp += "."
                 if core:
                     core_ += [tmp]
                 elif inline:
@@ -328,8 +328,8 @@ class HelpMod(loader.Module):
             f"{reply}\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}{partial_load}" + sosi,
         )
 
-    async def supportcmd(self, message):
-        """Joins the support Hikka chat"""
+    async def sosi_admincmd(self, message):
+        """administration is here button"""
         if await self.allmodules.check_security(
             message,
             security.OWNER | security.SUDO,
@@ -340,7 +340,7 @@ class HelpMod(loader.Module):
                 await self.inline.form(
                     self.strings("joined"),
                     reply_markup=[
-                        [{"text": "👩‍💼 Chat", "url": "https://t.me/hikka_talks"}]
+                        [{"text": "🌉 Administration is here", "url": "https://t.me/netuzb"}]
                     ],
                     ttl=10,
                     message=message,
@@ -352,7 +352,7 @@ class HelpMod(loader.Module):
                 await self.inline.form(
                     self.strings("join"),
                     reply_markup=[
-                        [{"text": "👩‍💼 Chat", "url": "https://t.me/hikka_talks"}]
+                        [{"text": "🌉 Administration is here", "url": "https://t.me/netuzb"}]
                     ],
                     ttl=10,
                     message=message,
