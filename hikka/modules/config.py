@@ -1,15 +1,3 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
-# scope: inline
-
 import ast
 import logging
 from typing import Union, Any
@@ -23,11 +11,11 @@ logger = logging.getLogger(__name__)
 
 
 @loader.tds
-class HikkaConfigMod(loader.Module):
+class ConfigmodMod(loader.Module):
     """Interactive configurator for Hikka Userbot"""
 
     strings = {
-        "name": "HikkaConfig",
+        "name": "Config",
         "configure": "🎚 <b>Here you can configure your modules' configs</b>",
         "configuring_mod": "🎚 <b>Choose config option for mod</b> <code>{}</code>",
         "configuring_option": "🎚 <b>Configuring option </b><code>{}</code><b> of mod </b><code>{}</code>\n<i>ℹ️ {}</i>\n\n<b>Default: </b><code>{}</code>\n\n<b>Current: </b><code>{}</code>\n\n{}",
