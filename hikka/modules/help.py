@@ -334,7 +334,7 @@ class HelpMod(loader.Module):
             if not self.lookup("Loader")._fully_loaded
             else ""
         )
-        sosi = "🏙️ <b>Heya, Honey!</b> suck me if you want. (√°v°)√"
+        sosi = "\n\n🏙️ <b>Heya, Honey!</b> suck me if you want. (√°v°)√"
         await utils.answer(
             message,
             f"{reply}\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}{partial_load}" + sosi,
