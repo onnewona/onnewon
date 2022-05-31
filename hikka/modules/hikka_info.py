@@ -126,15 +126,14 @@ class HikkaInfoMod(loader.Module):
         return (
             None
             if not self.config["custom_button"]
-            else {
-                "text": self.config["custom_button"][0],
-                "url": self.config["custom_button"][1],
+            else [
+            {"text": self.config["custom_button"][0],
+             "url": self.config["custom_button"][1],
             },
-            {
-                "text": self.config["custom_button1"][0],
-                "url": self.config["custom_button1"][1],
+            {"text": self.config["custom_button1"][0],
+             "url": self.config["custom_button1"][1],
             },
-
+          ]
         )
 
     @loader.inline_everyone
