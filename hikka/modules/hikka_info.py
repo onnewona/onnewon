@@ -1,14 +1,11 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
-# scope: inline
+# ▀█▀ █▀▀ █▀▄▀█ █░█ █▀█
+# ░█░ ██▄ █░▀░█ █▄█ █▀▄
+# ═══════════════════════
+# █▀▀ █▀█ █▄▀ █ █▄░█ █▀█ █░█
+# ██▄ █▀▄ █░█ █ █░▀█ █▄█ ▀▄▀
+# ═════════════════════════════
+# meta developer: @netuzb
+# meta channel: @umodules
 
 import logging
 
@@ -111,10 +108,10 @@ class HikkaInfoMod(loader.Module):
             if self.config["custom_message"] and self.config["custom_message"] != "no"
             else (
                 "<b>🌇 Sosi-Userbot</b>\n"
-                f'<b>🌉 {self.strings("owner")}: </b>{me}\n\n'
-                f"<b>🌉 {self.strings('version')}: </b>{version} {build}\n"
+                f'<b>🌉 {self.strings("owner")}: </b>{me}\n'
+                f"<b>🌉 {self.strings('version')}: </b><code>{version}</code> <a href='{build}'></a>\n"
                 f"<a href='{upd}'></a>\n\n"
-                f"<a href='{self.strings('prefix')} {prefix}'></a>\n"
+                f"xuy <a href='{self.strings('prefix')} {prefix}'></a>\n"
                 f"<a href='{platform}'></a>\n"
             )
         )
