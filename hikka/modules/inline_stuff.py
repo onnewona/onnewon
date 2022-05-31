@@ -1,15 +1,3 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the CC BY-NC-ND 4.0
-# 🌐 https://creativecommons.org/licenses/by-nc-nd/4.0
-
-# scope: inline
-
 import logging
 import re
 import string
@@ -29,7 +17,7 @@ class InlineStuffMod(loader.Module):
     """Provides support for inline stuff"""
 
     strings = {
-        "name": "InlineStuff",
+        "name": "InlineChanger",
         "bot_username_invalid": "🚫 <b>Specified bot username is invalid. It must end with </b><code>bot</code><b> and contain at least 4 symbols</b>",
         "bot_username_occupied": "🚫 <b>This username is already occupied</b>",
         "bot_updated": "😌 <b>Config successfully saved. Restart userbot to apply changes</b>",
@@ -114,8 +102,8 @@ class InlineStuffMod(loader.Module):
 
                     return True
 
-    async def ch_hikka_botcmd(self, message: Message):
-        """<username> - Change your Hikka inline bot username"""
+    async def change_inlinecmd(self, message: Message):
+        """<username> - Change your inline bot username"""
         args = utils.get_args_raw(message).strip("@")
         if (
             not args
