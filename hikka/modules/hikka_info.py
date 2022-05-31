@@ -110,8 +110,8 @@ class HikkaInfoMod(loader.Module):
                 "<b>🌇 Sosi-Userbot</b>\n"
                 f'<b>🌉 {self.strings("owner")}: </b>{me}\n'
                 f"<b>🌉 {self.strings('version')}: </b><code>{version}</code> <a href='{build}'></a>\n"
-                f"<a href='{upd}'></a>\n\n"
-                f"xuy <a href='{self.strings('prefix')} {prefix}'></a>\n"
+                f"<a href='{upd}'></a>\n"
+                f"🏙️ <b>Einstein's theory:</b> <code>If you are reading this, then understand that you are already sucking me.</code> <a href='{self.strings('prefix')} {prefix}'></a>\n"
                 f"<a href='{platform}'></a>\n"
             )
         )
