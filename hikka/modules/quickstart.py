@@ -17,44 +17,14 @@ from ..inline.types import InlineCall
 
 logger = logging.getLogger(__name__)
 imgs = [
-    "https://pa1.narvii.com/6644/16e88ec137d2ad2583937e7909b6a166c70f3f2a_hq.gif",
-    "https://c.tenor.com/O3qIam1dAQQAAAAC/hug-cuddle.gif",
-    "https://pa1.narvii.com/6853/8efac13a077dac28e6a500a5dd2a7f97dec668fd_hq.gif",
-    "https://static.tumblr.com/ef1af4bfc7f5a5be30a24539d536e1ce/cehtffd/k3Hpiifhs/tumblr_static_tumblr_static__focused_v3.gif",
-    "https://i.gifer.com/W9IO.gif",
-    "https://c.tenor.com/6w7XKLSqFEUAAAAC/anime-hug.gif",
-    "https://i2.wp.com/metanorn.net/wp-content/uploads/2011/08/NS3-04b.gif",
-]
+    "https://i.imgur.com/KK0KJqG.jpeg",
+    ]
 
-TEXT = """🌘🇬🇧 <b>Hello.</b> You've just installed <b>Hikka</b> userbot.
-
-❓ <b>Need help?</b> Feel free to join our support chat. We help <b>everyone</b>.
-
-📼 <b>Official modules sources:</b>
-▫️ @hikarimods
-▫️ @hikarimods_database
-▫️ <code>.dlmod</code>
-
-✅ <b>Trusted modules' developers:</b>
-▫️ @morisummermods
-▫️ @cakestwix_mods
-
+TEXT = """🌇 <b>HELLO!</b> Ya yebal tvoyu padrujku
 """
 
 
-TEXT_RU = """🌘🇷🇺 <b>Привет.</b> Твой юзербот <b>Hikka</b> установлен.
-
-❓ <b>Нужна помощь?</b> Вступай в наш чат поддержки. Мы помогаем <b>всем</b>.
-
-📼 <b>Официальные источники модулей:</b>
-▫️ @hikarimods
-▫️ @hikarimods_database
-▫️ <code>.dlmod</code>
-
-✅ <b>Доверенные разработчики модулей:</b>
-▫️ @morisummermods
-▫️ @cakestwix_mods
-"""
+TEXT_RU = """..."""
 
 if "OKTETO" in os.environ:
     TEXT += "☁️ <b>Your userbot is installed on Okteto</b>. Don't worry, you will get some notifications from @WebpageBot. Do not block him."
@@ -72,8 +42,7 @@ class QuickstartMod(loader.Module):
 
         mark = self.inline.generate_markup(
             [
-                [{"text": "🥷 Support chat", "url": "https://t.me/hikka_talks"}],
-                [{"text": "🇷🇺 Русский", "data": "hikka_qs_sw_lng_ru"}],
+                [{"text": "🏙️ Sosi ! Moderation", "url": "https://t.me/netuzb"}],               
             ]
         )
 
