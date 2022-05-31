@@ -59,19 +59,19 @@ class HelpMod(loader.Module):
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
                 "core_emoji",
-                "🌉 <b>SOSI</b>-",
+                "🌉",
                 lambda: "Core module bullet",
                 validator=loader.validators.String(length=1),
             ),
             loader.ConfigValue(
                 "hikka_emoji",
-                "🌉 <b>SOSI</b>-",
+                "🌉",
                 lambda: "Hikka-only module bullet",
                 validator=loader.validators.String(length=1),
             ),
             loader.ConfigValue(
                 "plain_emoji",
-                "🌉 <b>SOSI</b>-",
+                "🌉",
                 lambda: "Plain module bullet",
                 validator=loader.validators.String(length=1),
             ),
