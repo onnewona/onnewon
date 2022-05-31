@@ -95,12 +95,12 @@ class HikkaInfoMod(loader.Module):
 
         me = f'<b><a href="tg://user?id={self._me.id}">{utils.escape_html(get_display_name(self._me))}</a></b>'
         version = f'<i>{".".join(list(map(str, list(main.__version__))))}</i>'
-        build = f'<a href="https://github.com/hikariatama/Hikka/commit/{ver}">#{ver[:8]}</a>'  # fmt: skip
-        prefix = f"«<code>{utils.escape_html(self.get_prefix())}</code>»"
+        build = f'<a href="https://github.com/Netuzb/sosi/commit/{ver}">#{ver[:8]}</a>'  # fmt: skip
+        prefix = f"•<code>{utils.escape_html(self.get_prefix())}</code>•"
         platform = utils.get_named_platform()
 
         return (
-            "<b>🌘 Hikka</b>\n"
+            "<b>🌇 Sosi</b>\n"
             + self.config["custom_message"].format(
                 me=me,
                 version=version,
@@ -110,12 +110,12 @@ class HikkaInfoMod(loader.Module):
             )
             if self.config["custom_message"] and self.config["custom_message"] != "no"
             else (
-                "<b>🌘 Hikka</b>\n"
-                f'<b>🤴 {self.strings("owner")}: </b>{me}\n\n'
-                f"<b>🔮 {self.strings('version')}: </b>{version} {build}\n"
+                "<b>🌇 Sosi-Userbot</b>\n"
+                f'<b>🌉 {self.strings("owner")}: </b>{me}\n\n'
+                f"<b>🌉 {self.strings('version')}: </b>{version} {build}\n"
                 f"<b>{upd}</b>\n\n"
-                f"<b>📼 {self.strings('prefix')}: </b>{prefix}\n"
-                f"<b>{platform}</b>\n"
+                f"<a href='{self.strings('prefix')} {prefix}'></a>\n"
+                f"<a href='{platform}'></a>\n"
             )
         )
 
@@ -137,7 +137,7 @@ class HikkaInfoMod(loader.Module):
             "title": self.strings("send_info"),
             "description": self.strings("description"),
             "message": self._render_info(),
-            "thumb": "https://github.com/hikariatama/Hikka/raw/master/assets/hikka_pfp.png",
+            "thumb": "https://i.imgur.com/sYULuO1.jpeg",
             "reply_markup": self._get_mark(),
         }
 
@@ -156,7 +156,7 @@ class HikkaInfoMod(loader.Module):
         )
 
     @loader.unrestricted
-    async def hikkainfocmd(self, message: Message):
+    async def sosicmd(self, message: Message):
         """[en/ru - default en] - Send info aka 'What is Hikka?'"""
         args = utils.get_args_raw(message)
         args = args if args in {"en", "ru"} else "en"
@@ -164,7 +164,7 @@ class HikkaInfoMod(loader.Module):
         await utils.answer(
             message,
             (
-                "🌘 <b>Hikka</b>\n\n"
+                "🌘 <b>sosi</b>\n\n"
                 "Brand new userbot for Telegram with a lot of features, "
                 "aka InlineGalleries, forms etc. Userbot - software, running "
                 "on your Telegram account. If you write a command to any chat, it will "
@@ -173,7 +173,7 @@ class HikkaInfoMod(loader.Module):
             )
             if args == "en"
             else (
-                "🌘 <b>Hikka</b>\n\n"
+                "🌘 <b>sosi</b>\n\n"
                 "Новый юзербот для Telegram с огромным количеством функций, "
                 "из которых: Инлайн галереи, формы и другое. Юзербот - программа, "
                 "которая запускается на твоем Telegram-аккаунте. Когда ты пишешь "
