@@ -50,7 +50,7 @@ class HikkaBackupMod(loader.Module):
         if not self.get("period"):
             await self.inline.bot.send_photo(
                 self._tg_id,
-                photo="https://i.pinimg.com/originals/94/e5/9c/94e59c1fbecd7b842d7feeecb58f8fd6.jpg",
+                photo="https://i.imgur.com/XavsNiG.jpeg",
                 caption=self.strings("period"),
                 reply_markup=self.inline.generate_markup(
                     utils.chunks(
