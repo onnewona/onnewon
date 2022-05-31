@@ -28,8 +28,8 @@ class UpdateNotifierMod(loader.Module):
 
     strings = {
         "name": "UpdateNotifier",
-        "update_required": "🌘 <b>Hikka Update available!</b>\n\nNew Hikka version released.\n🔮 <b>Hikka <s>{}</s> -> {}</b>\n\n{}",
-        "more": "\n<i><b>🎥 And {} more...</b></i>",
+        "update_required": "🌇 <b>Sosi Update available!</b>\n\nNew Hikka version released.\n🌉 <b>Sosi <s>{}</s> -> {}</b>\n\n{}",
+        "more": "\n<i><b>🌉 And {} more...</b></i>",
     }
 
     strings_ru = {
