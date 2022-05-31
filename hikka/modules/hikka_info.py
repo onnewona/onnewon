@@ -20,11 +20,11 @@ logger = logging.getLogger(__name__)
 
 
 @loader.tds
-class HikkaInfoMod(loader.Module):
+class InfomodMod(loader.Module):
     """Show userbot info"""
 
     strings = {
-        "name": "HikkaInfo",
+        "name": "Info",
         "owner": "Moderator",
         "version": "Sosi version",
         "build": "Build",
