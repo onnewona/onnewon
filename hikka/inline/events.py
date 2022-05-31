@@ -362,9 +362,9 @@ class Events(InlineUnit):
             try:
                 doc = utils.escape_html(inspect.getdoc(fun))
             except Exception:
-                doc = "🦥 No docs"
+                doc = "🏙️ No docs"
 
-            _help += f"🎹 <code>@{self.bot_username} {name}</code> - {doc}\n"
+            _help += f"🌉 <code>@{self.bot_username} {name}</code> - {doc}\n\n🌉 <b>Info:</b> You can suck me if you want"
 
         if not _help:
             await inline_query.answer(
@@ -374,11 +374,11 @@ class Events(InlineUnit):
                         title="Show available inline commands",
                         description="You have no available commands",
                         input_message_content=InputTextMessageContent(
-                            "<b>😔 There are no available inline commands or you lack access to them</b>",
+                            "<b>🏙️ There are no available inline commands or you lack access to them</b>",
                             "HTML",
                             disable_web_page_preview=True,
                         ),
-                        thumb_url="https://img.icons8.com/fluency/50/000000/info-squared.png",
+                        thumb_url="https://i.imgur.com/mMIbOnm.jpeg",
                         thumb_width=128,
                         thumb_height=128,
                     )
@@ -394,11 +394,11 @@ class Events(InlineUnit):
                     title="Show available inline commands",
                     description=f"You have {len(_help.splitlines())} available command(-s)",
                     input_message_content=InputTextMessageContent(
-                        f"<b>ℹ️ Available inline commands:</b>\n\n{_help}",
+                        f"<b>🌇 Available inline commands:</b>\n\n{_help}",
                         "HTML",
                         disable_web_page_preview=True,
                     ),
-                    thumb_url="https://img.icons8.com/fluency/50/000000/info-squared.png",
+                    thumb_url="https://i.imgur.com/mMIbOnm.jpeg",
                     thumb_width=128,
                     thumb_height=128,
                 )
