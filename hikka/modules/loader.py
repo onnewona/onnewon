@@ -1,33 +1,5 @@
 """Loads and registers modules"""
 
-#    Friendly Telegram (telegram userbot)
-#    Copyright (C) 2018-2021 The Authors
-
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
-
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
-# scope: inline
-
 import asyncio
 import importlib
 import inspect
@@ -137,9 +109,9 @@ class LoaderMod(loader.Module):
         "requirements_installing": "<b>🔄 Installing requirements:\n\n{}</b>",
         "requirements_restart": "<b>🔄 Requirements installed, but a restart is required for </b><code>{}</code><b> to apply</b>",
         "all_modules_deleted": "<b>✅ All modules deleted</b>",
-        "single_cmd": "\n🌉 <code>{}{}</code> {}",
+        "single_cmd": "\n🌉 <b>{}{}</b> {}",
         "undoc_cmd": "🦥 No docs",
-        "ihandler": "\n🌉 <code>{}</code> {}",
+        "ihandler": "\n🌉 <b>{}</b> {}",
         "undoc_ihandler": "🦥 No docs",
         "inline_init_failed": (
             "🚫 <b>This module requires Hikka inline feature and "
@@ -766,7 +738,7 @@ class LoaderMod(loader.Module):
         modhelp = ""
 
         if instance.__doc__:
-            modhelp += f"<i>\nℹ️ {utils.escape_html(inspect.getdoc(instance))}</i>\n"
+            modhelp += f"<b>\n🌇 Info:</b> {utils.escape_html(inspect.getdoc(instance))}\n"
 
         if any(
             line.replace(" ", "") == "#scope:disable_onload_docs"
