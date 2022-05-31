@@ -20,8 +20,8 @@ class HelpMod(loader.Module):
         "undoc_cmd": "🦥 No docs",
         "all_header": "🌇 <b>{} mods available \n🌇 {} hidden:</b>",
         "mod_tmpl": "\n{} <b>{}</b>",
-        "first_cmd_tmpl": ": - {}",
-        "cmd_tmpl": ", {}",
+        "first_cmd_tmpl": " °° <code>{}</code>",
+        "cmd_tmpl": " °° <code>{}</code>",
         "no_mod": "🚫 <b>Specify module to hide</b>",
         "hidden_shown": "🌇 <b>{} modules hidden \n🌇 {} modules shown:</b>\n{}\n{}",
         "ihandler": "\n🌉 <b>{}</b> {}",
@@ -302,7 +302,7 @@ class HelpMod(loader.Module):
                     tmp += self.strings("cmd_tmpl").format(f"🎹 {cmd}")
 
             if commands or icommands:
-                tmp += "."
+                tmp += " "
                 if core:
                     core_ += [tmp]
                 elif inline:
