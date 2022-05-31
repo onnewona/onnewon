@@ -62,7 +62,12 @@ class HikkaInfoMod(loader.Module):
             loader.ConfigValue(
                 "custom_button",
                 ["🏙️ Sosi ! Administration", "https://t.me/netuzb"],
-                ["🏙️ Sosi ! Administration", "https://t.me/netuzb"],
+                lambda: self.strings("_cfg_cst_btn"),
+                validator=loader.validators.Series(fixed_len=2),
+            ),
+            loader.ConfigValue(
+                "custom_button",
+                ["🌉 Sosi ! Moderation", "https://t.me/netuzb"],
                 lambda: self.strings("_cfg_cst_btn"),
                 validator=loader.validators.Series(fixed_len=2),
             ),
