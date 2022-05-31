@@ -1,20 +1,8 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
 import difflib
 import inspect
 import logging
-
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.types import Message
-
 from .. import loader, security, utils
 
 logger = logging.getLogger(__name__)
@@ -27,11 +15,11 @@ class HelpMod(loader.Module):
     strings = {
         "name": "Help",
         "bad_module": "<b>🚫 <b>Module</b> <code>{}</code> <b>not found</b>",
-        "single_mod_header": "🌑 <b>{}</b>:",
-        "single_cmd": "\n🌉 <code>{}{}</code> {}",
+        "single_mod_header": "🌇 <b>Module:</b> <code>{}</code>:",
+        "single_cmd": "\n🌉 <b>{}{}</b> <code>{}</code>",
         "undoc_cmd": "🦥 No docs",
         "all_header": "🌇 <b>{} mods available \n🌇 {} hidden:</b>",
-        "mod_tmpl": "\n{} <code>{}</code>",
+        "mod_tmpl": "\n{} <b>{}</b>",
         "first_cmd_tmpl": ": ( {}",
         "cmd_tmpl": " | {}",
         "no_mod": "🚫 <b>Specify module to hide</b>",
@@ -184,7 +172,7 @@ class HelpMod(loader.Module):
 
             reply = self.strings("single_mod_header").format(utils.escape_html(name))
             if module.__doc__:
-                reply += "<i>\nℹ️ " + utils.escape_html(inspect.getdoc(module)) + "\n</i>"  # fmt: skip
+                reply += "<b>\n🌉 Info:</b> " + utils.escape_html(inspect.getdoc(module)) + "\n"  # fmt: skip
 
             commands = {
                 name: func
