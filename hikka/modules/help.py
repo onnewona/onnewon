@@ -19,7 +19,7 @@ class HelpMod(loader.Module):
         "single_cmd": "\n🌉 <b>{}{}</b> <code>{}</code>",
         "undoc_cmd": "🦥 No docs",
         "all_header": "🌇 <b>This is my Sosi toy</b>\n🌉 <b>{} mods available \n🌉 {} hidden:</b>",
-        "mod_tmpl": "\n{} <code>{}</code>",
+        "mod_tmpl": "\n{} {}",
         "first_cmd_tmpl": " °° <code>{}</code>",
         "cmd_tmpl": " °° <code>{}</code>",
         "no_mod": "🚫 <b>Specify module to hide</b>",
@@ -59,19 +59,19 @@ class HelpMod(loader.Module):
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
                 "core_emoji",
-                "🌉",
+                "🌉 <b>SOSI</b>-",
                 lambda: "Core module bullet",
                 validator=loader.validators.String(length=1),
             ),
             loader.ConfigValue(
                 "hikka_emoji",
-                "🌉",
+                "🌉 <b>SOSI</b>-",
                 lambda: "Hikka-only module bullet",
                 validator=loader.validators.String(length=1),
             ),
             loader.ConfigValue(
                 "plain_emoji",
-                "🌉",
+                "🌉 <b>SOSI</b>-",
                 lambda: "Plain module bullet",
                 validator=loader.validators.String(length=1),
             ),
