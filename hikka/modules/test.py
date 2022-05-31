@@ -1,25 +1,11 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
-# scope: inline
-
 import inspect
 import logging
 import os
 import time
 from io import BytesIO
 from typing import Union
-
 from telethon.tl.functions.channels import EditAdminRequest, InviteToChannelRequest
 from telethon.tl.types import ChatAdminRights, Message
-
 from .. import loader, main, utils
 from ..inline.types import InlineCall
 
@@ -44,7 +30,7 @@ class TestMod(loader.Module):
         "set_loglevel": "🚫 <b>Please specify verbosity as an integer or string</b>",
         "no_logs": "ℹ️ <b>You don't have any logs at verbosity {}.</b>",
         "logs_filename": "hikka-logs.txt",
-        "logs_caption": "🌘 <b>Hikka logs with verbosity </b><code>{}</code>\n\n👩‍🎤 <b>Hikka version: {}.{}.{}</b>{}\n⏱ <b>Uptime: {}</b>\n<b>{}</b>\n\n<b>{}</b>\n\n<b>{} NoNick</b>\n<b>{} Grep</b>\n<b>{} InlineLogs</b>",
+        "logs_caption": "🌉 <b>Sosi logs with verbosity </b><code>{}</code>\n🌉 <b>Sosi version: {}.{}.{}</b><a href='{}\n⏱ Uptime: {}{}{}{} NoNick{} Grep{} InlineLogs'></a>",
         "suspend_invalid_time": "🚫 <b>Invalid time to suspend</b>",
         "suspended": "🥶 <b>Bot suspended for</b> <code>{}</code> <b>seconds</b>",
         "results_ping": "⏱ <b>Response time:</b> <code>{}</code> <b>ms</b>\n👩‍💼 <b>Uptime: {}</b>",
