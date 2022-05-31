@@ -1,15 +1,3 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
-# scope: inline
-
 import asyncio
 import datetime
 import io
@@ -26,12 +14,12 @@ logger = logging.getLogger(__name__)
 
 
 @loader.tds
-class HikkaBackupMod(loader.Module):
+class BackupmodMod(loader.Module):
     """Automatic database backup"""
 
     strings = {
-        "name": "HikkaBackup",
-        "period": "⌚️ <b>Hewwo! I'm Asuna</b> - your personal backup manager. Please, select the periodicity of automatic database backups",
+        "name": "Backup",
+        "period": "⌚️ <b>Hewwo! I'm Sosi</b> - your personal backup manager. Please, select the periodicity of automatic database backups",
         "saved": "✅ Backup period saved. You can re-configure it later with .set_backup_period",
         "never": "✅ I will not make automatic backups. You can re-configure it later with .set_backup_period",
         "invalid_args": "🚫 <b>Specify correct backup period in hours, or `0` to disable</b>",
@@ -66,8 +54,8 @@ class HikkaBackupMod(loader.Module):
 
         self._backup_channel, is_new = await utils.asset_channel(
             self._client,
-            "hikka-backups",
-            "📼 Your database backups will appear there",
+            "🌉 sosi-backups",
+            "🌉 Your database backups will appear there",
             silent=True,
             archive=True,
             avatar="https://github.com/hikariatama/assets/raw/master/hikka-backups.png",
@@ -113,7 +101,7 @@ class HikkaBackupMod(loader.Module):
             call.message.message_id,
         )
 
-    async def set_backup_periodcmd(self, message: Message):
+    async def set_backupcmd(self, message: Message):
         """<time in hours> - Change backup frequency"""
         args = utils.get_args_raw(message)
         if not args or not args.isdigit() or int(args) not in range(200):
