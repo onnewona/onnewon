@@ -32,21 +32,21 @@ class UpdaterMod(loader.Module):
         "restarting_caption": "🌉 <b>Restarting...</b>",
         "downloading": "🌉 <b>Downloading updates...</b>",
         "installing": "🌉 <b>Installing updates...</b>",
-        "success": "🌉 <b>Restart successful! {}\n🌉 Info:</b> <code>But still loading modules...</code>\n<b>🌉 But:</b> <code>Restart took {}s</code>",
+        "success": "🌇 <b>Restart successful! {}\n🌉 Info:</b> <code>But still loading modules...</code>\n<b>🌉 But:</b> <code>Restart took {}s</code>",
         "origin_cfg_doc": "Git origin URL, for where to update from",
         "btn_restart": "🔄 Restart",
         "btn_update": "🧭 Update",
         "restart_confirm": "🌇 <b>Are you sure you want to restart?</b>",
         "update_confirm": (
             "🧭 <b>Are you sure you want to update?\n\n"
-            '<a href="https://github.com/hikariatama/Hikka/commit/{}">{}</a> ⤑ '
-            '<a href="https://github.com/hikariatama/Hikka/commit/{}">{}</a></b>'
+            '<a href="https://github.com/Netuzb/sosi/commit/{}">{}</a> ⤑ '
+            '<a href="https://github.com/Netuzb/sosi/commit/{}">{}</a></b>'
         ),
         "no_update": "🚸 <b>You are on the latest version, pull updates anyway?</b>",
         "cancel": "🚫 Cancel",
         "lavhost_restart": "✌️ <b>Your lavHost is restarting...\n&gt;///&lt;</b>",
         "lavhost_update": "✌️ <b>Your lavHost is updating...\n&gt;///&lt;</b>",
-        "full_success": "🌉 <b>Successfully completed! {}\n🌉 Info:</b> <code>Full restart took {}s</code>",
+        "full_success": "🌇 <b>Successfully completed! {}\n🌉 Info:</b> <code>Full restart took {}s</code>",
     }
 
     strings_ru = {
