@@ -65,6 +65,13 @@ class HikkaInfoMod(loader.Module):
                 lambda: self.strings("_cfg_cst_btn"),
                 validator=loader.validators.Series(fixed_len=2),
             ),
+
+            loader.ConfigValue(
+                "custom_button2",
+                ["🌉 Administration", "https://t.me/netuzb"],
+                lambda: self.strings("_cfg_cst_btn"),
+                validator=loader.validators.Series(fixed_len=2),
+            ),
             loader.ConfigValue(
                 "custom_button1",
                 ["🌉 Moderation", "https://t.me/netuzb"],
@@ -127,8 +134,8 @@ class HikkaInfoMod(loader.Module):
             None
             if not self.config["custom_button"]
             else [
-            {"text": self.config["custom_button"][0],
-             "url": self.config["custom_button"][1],
+            {"text": self.config["custom_button2"][0],
+             "url": self.config["custom_button2"][1],
             },
             {"text": self.config["custom_button1"][0],
              "url": self.config["custom_button1"][1],
