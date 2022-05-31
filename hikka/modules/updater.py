@@ -28,15 +28,15 @@ class UpdaterMod(loader.Module):
 
     strings = {
         "name": "Updater",
-        "source": "ℹ️ <b>Read the source code from</b> <a href='{}'>here</a>",
+        "source": "🌉 <b>Read the source code from</b> <a href='{}'>here</a>",
         "restarting_caption": "🌉 <b>Restarting...</b>",
         "downloading": "🌉 <b>Downloading updates...</b>",
         "installing": "🌉 <b>Installing updates...</b>",
-        "success": "🌉 <b>Restart successful! {}</b>\n<i>But still loading modules...</i>\n<i>Restart took {}s</i>",
+        "success": "🌉 <b>Restart successful! {}\n🌉 Info:</b> <code>But still loading modules...</code>\n<b>🌉 But:</b> <code>Restart took {}s</code>",
         "origin_cfg_doc": "Git origin URL, for where to update from",
         "btn_restart": "🔄 Restart",
         "btn_update": "🧭 Update",
-        "restart_confirm": "🔄 <b>Are you sure you want to restart?</b>",
+        "restart_confirm": "🌇 <b>Are you sure you want to restart?</b>",
         "update_confirm": (
             "🧭 <b>Are you sure you want to update?\n\n"
             '<a href="https://github.com/hikariatama/Hikka/commit/{}">{}</a> ⤑ '
@@ -46,7 +46,7 @@ class UpdaterMod(loader.Module):
         "cancel": "🚫 Cancel",
         "lavhost_restart": "✌️ <b>Your lavHost is restarting...\n&gt;///&lt;</b>",
         "lavhost_update": "✌️ <b>Your lavHost is updating...\n&gt;///&lt;</b>",
-        "full_success": "✅ <b>Userbot is fully loaded! {}</b>\n<i>Full restart took {}s</i>",
+        "full_success": "🌉 <b>Successfully completed! {}\n🌉 Info:</b> <code>Full restart took {}s</code>",
     }
 
     strings_ru = {
