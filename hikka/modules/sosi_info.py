@@ -20,11 +20,11 @@ logger = logging.getLogger(__name__)
 
 
 @loader.tds
-class HikkaInfoMod(loader.Module):
+class SosiinfoMod(loader.Module):
     """Show userbot info"""
 
     strings = {
-        "name": "HikkaInfo",
+        "name": "SosiInfo",
         "owner": "Moderator",
         "version": "Sosi version",
         "build": "Build",
@@ -149,7 +149,7 @@ class HikkaInfoMod(loader.Module):
         }
 
     @loader.unrestricted
-    async def infocmd(self, message: Message):
+    async def sosinfocmd(self, message: Message):
         """Send userbot info"""
         await self.inline.form(
             message=message,
