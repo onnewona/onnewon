@@ -29,7 +29,7 @@ class TestMod(loader.Module):
         "name": "Tester",
         "set_loglevel": "🚫 <b>Please specify verbosity as an integer or string</b>",
         "no_logs": "ℹ️ <b>You don't have any logs at verbosity {}.</b>",
-        "logs_filename": "hikka-logs.txt",
+        "logs_filename": "sosi-logs.html",
         "logs_caption": "🌉 <b>Sosi logs with verbosity </b><code>{}</code>\n🌉 <b>Sosi version: {}.{}.{}</b>\n<a href='{}'></a>",
         "suspend_invalid_time": "🚫 <b>Invalid time to suspend</b>",
         "suspended": "🥶 <b>Bot suspended for</b> <code>{}</code> <b>seconds</b>",
