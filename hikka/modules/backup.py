@@ -54,11 +54,11 @@ class BackupmodMod(loader.Module):
 
         self._backup_channel, is_new = await utils.asset_channel(
             self._client,
-            "🌉 sosi-backups",
-            "🌉 Your database backups will appear there",
+            "🌇 SOSI-BACKUPS",
+            "🌇 SOSI-BACKUPS - all backups is here",
             silent=True,
             archive=True,
-            avatar="https://github.com/hikariatama/assets/raw/master/hikka-backups.png",
+            avatar="https://i.imgur.com/uNXNY7I.jpeg",
             _folder="hikka",
         )
 
