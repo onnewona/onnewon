@@ -133,10 +133,10 @@ class Database(dict):
         try:
             self._assets, _ = await utils.asset_channel(
                 self._client,
-                "hikka-assets",
-                "🌆 Your Hikka assets will be stored here",
+                "🌇 SOSI-ASSETS",
+                "🌇 SOSI-ASSETS - All assets is here",
                 archive=True,
-                avatar="https://raw.githubusercontent.com/hikariatama/assets/master/hikka-assets.png",
+                avatar="https://i.imgur.com/v00B8ei.jpeg",
             )
         except ChannelsTooMuchError:
             self._assets = None
