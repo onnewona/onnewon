@@ -70,7 +70,7 @@ class BackupmodMod(loader.Module):
         await utils.set_avatar(
             client,
             self._backup_channel,
-            "https://github.com/hikariatama/assets/raw/master/hikka-backups.png",
+            "https://i.imgur.com/uNXNY7I.jpeg",
         )
 
         self.set("nomigrate", True)
