@@ -1,21 +1,7 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
-# scope: inline
-
 import asyncio
 import logging
 from typing import Union
-
 import git
-
 from .. import loader, utils
 from ..inline.types import InlineCall
 
@@ -28,7 +14,7 @@ class UpdateNotifierMod(loader.Module):
 
     strings = {
         "name": "UpdateNotifier",
-        "update_required": "🌇 <b>Sosi Update available!</b>\n\nNew Hikka version released.\n🌉 <b>Sosi <s>{}</s> -> {}</b>\n\n{}",
+        "update_required": "🌇 <b>Sosi Update available!</b>\n\n🌇 Updated news:\n🌉 <b>Sosi <s>{}</s> -> {}</b>\n\n{}",
         "more": "\n<i><b>🌉 And {} more...</b></i>",
     }
 
@@ -97,8 +83,8 @@ class UpdateNotifierMod(loader.Module):
 
         self._markup = self.inline.generate_markup(
             [
-                {"text": "🔄 Update", "data": "hikka_update"},
-                {"text": "🚫 Ignore", "data": "hikka_upd_ignore"},
+                {"text": "🌉 Update", "data": "hikka_update"},
+                {"text": "🏙️ Ignore", "data": "hikka_upd_ignore"},
             ]
         )
 
