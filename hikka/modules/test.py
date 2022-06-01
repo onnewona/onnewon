@@ -386,10 +386,10 @@ class TestMod(loader.Module):
 
         chat, is_new = await utils.asset_channel(
             self._client,
-            "hikka-logs",
-            "🌘 Your Hikka logs will appear in this chat",
+            "🌇 SOSI-LOGS",
+            "🌇 SOSI-LOGS - All logs is here",
             silent=True,
-            avatar="https://i.imgur.com/MWoMKp0.jpeg",
+            avatar="https://i.imgur.com/JmwwMM0.jpeg",
         )
 
         self._logchat = int(f"-100{chat.id}")
