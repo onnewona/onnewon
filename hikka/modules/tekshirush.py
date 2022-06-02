@@ -1,25 +1,18 @@
-#	████░████░███░███░██░██░████░
-#    ░██░░██░░░██░█░██░██░██░███░░
-#    ░██░░████░██░░░██░█████░█████
-#    ═════════════════════════════════════════
-#    ████░████░░██░██░██░███░░██░█████░██░░░██
-#    ██░░░███░░░████░░██░██░█░██░██░██░░██░██░
-#    ████░█████░██░██░██░██░░███░█████░░░███░░
-#    ═════════════════════════════════════════
-#    Litsenziya: https://t.me/UModules/112
-#    Taqdim qilingan manzil: https://telegram.me/umodules
-#    ═════════════════════════════════════════
-#    UMod oʻrnatish qoʻllanmasi: https://t.me/TGraphUz/1620
+# ▀█▀ █▀▀ █▀▄▀█ █░█ █▀█
+# ░█░ ██▄ █░▀░█ █▄█ █▀▄
+# ═══════════════════════
+# █▀▀ █▀█ █▄▀ █ █▄░█ █▀█ █░█
+# ██▄ █▀▄ █░█ █ █░▀█ █▄█ ▀▄▀
+# ═════════════════════════════
+# meta developer: @netuzb
+# meta channel: @umodules
 
 from telethon import events
 from .. import loader, utils
 from asyncio import sleep
 import random
 
-__version__ = (1, 2, 0)
-
-# meta developer: @netuzb
-# meta channel: @umodules
+__version__ = (3, 2, 48)
 
 def register(cb):
 	cb(TekshiruvchiMod())
@@ -28,17 +21,17 @@ class TekshiruvchiMod(loader.Module):
 	"""Kerakli manzillar"""
 	
 	strings = {
-		"name": "UM - Havolalar",
-		"izlash": "<b>📖 Quyidagi ijtimoiy tarmoqlardan maʼqulini tanlang</b>",
-		"yut": "<b>📖 Shaxsan siz uchun YouTube'ga havola.</b>",
-		"gug": "<b>📖 Shaxsan siz uchun Google'ga havola.</b>",
+		"name": "Tekshiruvchi",
+		"izlash": "<b>🌇 Quyidagi ijtimoiy tarmoqlardan maʼqulini tanlang</b>",
+		"yut": "<b>🌇 Shaxsan siz uchun YouTube'ga havola.</b>",
+		"gug": "<b>🌇 Shaxsan siz uchun Google'ga havola.</b>",
 		}
 		
 	async def shxcmd(self, message):
-		"""📃 inline - tekshirish manzillari"""
+		"""🏙️ inline - tekshirish manzillari"""
 		
 		text = utils.get_args_raw(message)
-		top = f"\n<b>🥷 Izlanayotgan shaxs: <code>{text}</code></b>"
+		top = f"\n<b>🌉 Izlanayotgan shaxs: <code>{text}</code></b>"
 		await self.inline.form(
                     self.strings("izlash", message) + top,
                     reply_markup=[
@@ -52,28 +45,28 @@ class TekshiruvchiMod(loader.Module):
                 )
 
 	async def yutcmd(self, message):
-		"""📃 inline - youtube'dan izlash"""
+		"""🏙️ inline - youtube'dan izlash"""
 		
 		text = utils.get_args_raw(message)
-		top = f"\n<b>🥷 Kiritilgan soʻz: <code>{text}</code></b>"
+		top = f"\n<b>🌉 Kiritilgan soʻz: <code>{text}</code></b>"
 		await self.inline.form(
                     self.strings("yut", message) + top,
                     reply_markup=[
-                        [{"text": "♨️ YouTube'ga", "url": f"https://m.youtube.com/results?sp=mAEA&search_query={text}"}],
+                        [{"text": "🌉 YouTube'ga", "url": f"https://m.youtube.com/results?sp=mAEA&search_query={text}"}],
                     ],
                     ttl=10,
                     message=message,
                 )
 
 		async def gugcmd(self, message):
-		"""📃 inline - google'dan izlash"""
+		"""🏙️ inline - google'dan izlash"""
 		
 		text = utils.get_args_raw(message)
-		top = f"\n<b>🥷 Kiritilgan soʻz: <code>{text}</code></b>"
+		top = f"\n<b>🌉 Kiritilgan soʻz: <code>{text}</code></b>"
 		await self.inline.form(
                     self.strings("yut", message) + top,
                     reply_markup=[
-                        [{"text": "🌐 Google'ga", "url": f"https://www.google.com/search?q={text}"}],
+                        [{"text": "🏙️ Google'ga", "url": f"https://www.google.com/search?q={text}"}],
                     ],
                     ttl=10,
                     message=message,
