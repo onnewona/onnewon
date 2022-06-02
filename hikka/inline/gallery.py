@@ -247,7 +247,7 @@ class Gallery(InlineUnit):
             try:
                 status_message = await (
                     message.edit if message.out else message.respond
-                )("🌘 <b>Loading inline gallery...</b>")
+                )("🌉 <b>Loading gallery...</b>")
             except Exception:
                 status_message = None
         else:
@@ -529,22 +529,22 @@ class Gallery(InlineUnit):
         markup = InlineKeyboardMarkup()
         markup.add(
             InlineKeyboardButton(
-                "⏪",
+                "back",
                 callback_data=self._units[unit_id]["btn_call_data"]["back"],
             ),
             InlineKeyboardButton(
-                "▶️" if not self._units[unit_id].get("slideshow", False) else "⏸",
+                "slideshow" if not self._units[unit_id].get("slideshow", False) else "⏸",
                 callback_data=self._units[unit_id]["btn_call_data"]["show"],
             ),
             InlineKeyboardButton(
-                "⏩",
+                "next",
                 callback_data=self._units[unit_id]["btn_call_data"]["next"],
             ),
         )
 
         markup.add(
             InlineKeyboardButton(
-                "❌ Close",
+                "🌉 That's a finish time",
                 callback_data=self._units[unit_id]["btn_call_data"]["close"],
             ),
         )
