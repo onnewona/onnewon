@@ -1,20 +1,8 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
 import difflib
 import inspect
 import logging
-
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.types import Message
-
 from .. import loader, security, utils
 
 logger = logging.getLogger(__name__)
@@ -77,19 +65,19 @@ class HelpMod(loader.Module):
             ),
             loader.ConfigValue(
                 "hikka_emoji",
-                "🌘",
+                "🌉",
                 lambda: "Hikka-only module bullet",
                 validator=loader.validators.String(length=1),
             ),
             loader.ConfigValue(
                 "plain_emoji",
-                "▫️",
+                "🌉",
                 lambda: "Plain module bullet",
                 validator=loader.validators.String(length=1),
             ),
             loader.ConfigValue(
                 "empty_emoji",
-                "👁‍🗨",
+                "🌉",
                 lambda: "Empty modules bullet",
                 validator=loader.validators.String(length=1),
             ),
@@ -179,7 +167,7 @@ class HelpMod(loader.Module):
 
         reply = self.strings("single_mod_header").format(utils.escape_html(name))
         if module.__doc__:
-            reply += "<i>\nℹ️ " + utils.escape_html(inspect.getdoc(module)) + "\n</i>"  # fmt: skip
+            reply += "<b>\n🌉 Info:</b> " + utils.escape_html(inspect.getdoc(module)) + "\n"  # fmt: skip
 
         commands = {
             name: func
@@ -358,38 +346,6 @@ class HelpMod(loader.Module):
             message,
             f"{reply}\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}{no_commands_}{partial_load}",
         )
-
-    async def supportcmd(self, message):
-        """Joins the support Hikka chat"""
-        if await self.allmodules.check_security(
-            message,
-            security.OWNER | security.SUDO,
-        ):
-            await self._client(JoinChannelRequest("https://t.me/hikka_talks"))
-
-            try:
-                await self.inline.form(
-                    self.strings("joined"),
-                    reply_markup=[
-                        [{"text": "👩‍💼 Chat", "url": "https://t.me/hikka_talks"}]
-                    ],
-                    ttl=10,
-                    message=message,
-                )
-            except Exception:
-                await utils.answer(message, self.strings("joined"))
-        else:
-            try:
-                await self.inline.form(
-                    self.strings("join"),
-                    reply_markup=[
-                        [{"text": "👩‍💼 Chat", "url": "https://t.me/hikka_talks"}]
-                    ],
-                    ttl=10,
-                    message=message,
-                )
-            except Exception:
-                await utils.answer(message, self.strings("join"))
 
     async def client_ready(self, client, db):
         self._client = client
