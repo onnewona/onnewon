@@ -323,8 +323,9 @@ class HelpMod(loader.Module):
             else ""
         )
         sosi = "\n\n🏙️ <b>Heya, Honey!</b> suck me if you want. (√°v°)√"
+        sosi_help = f"{reply}\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}{partial_load}"
         await self.inline.form(
-                    text = f"{reply}\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}{partial_load}" + sosi,
+                    text =  + sosi_help + sosi,
                     reply_markup=[
                      [{
        "text": "🌉 About me", 
