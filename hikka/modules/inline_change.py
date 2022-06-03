@@ -53,7 +53,7 @@ class InlineStuffMod(loader.Module):
             not getattr(message, "out", False)
             or not getattr(message, "via_bot_id", False)
             or message.via_bot_id != self._bot_id
-            or "Loading Hikka gallery..." not in getattr(message, "raw_text", "")
+            or "Loading gallery..." not in getattr(message, "raw_text", "")
         ):
             return
 
@@ -61,7 +61,7 @@ class InlineStuffMod(loader.Module):
 
         await message.delete()
 
-        m = await message.respond("🌘 <b>Opening gallery... wait</b>")
+        m = await message.respond("🌉 <b>Opening gallery... wait</b>")
 
         await self.inline.gallery(
             message=m,
