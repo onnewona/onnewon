@@ -131,10 +131,6 @@ class CoreMod(loader.Module):
         module = self.allmodules.get_classname(module)
         return f"{str(chatid)}.{module}" if module else chatid
 
-    async def hikkacmd(self, message: Message):
-        """Get Hikka version"""
-        await utils.answer(message, self.strings("hikka").format(*main.__version__))
-
     async def blacklistcmd(self, message: Message):
         """Blacklist the bot from operating somewhere"""
         chatid = await self.blacklistcommon(message)
