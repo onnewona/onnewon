@@ -323,22 +323,10 @@ class HelpMod(loader.Module):
             else ""
         )
         sosi = "\n\n🏙️ <b>Heya, Honey!</b> suck me if you want. (√°v°)√"
-        sosi_help = f"{reply}\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}{partial_load}"
-        await self.inline.form(
-                    text = sosi_help + sosi,
-                    reply_markup=[
-                     [{
-       "text": "🌉 About me", 
-       "url": "https://t.me/te_about"
-      },
-                     {
-       "text": "🌉 Administration", 
-       "url": "tg://openmessage?user_id=605778538"
-      }],
-           ], **{"photo": "https://i.imgur.com/VkP3r0g.jpeg"},
-                    ttl=10,
-                    message=message,
-                )
+        await utils.answer(
+            message,
+            f"{reply}\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}{no_commands_}{partial_load}" + sosi,
+        )
 
     async def sosi_admincmd(self, message):
         """administration is here button"""
