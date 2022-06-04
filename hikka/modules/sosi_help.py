@@ -319,7 +319,7 @@ class HelpMod(loader.Module):
                     tmp += self.strings("cmd_tmpl").format(f"🌉 {cmd}")
 
             if commands or icommands:
-                tmp += " )"
+                tmp += " "
                 if core:
                     core_ += [tmp]
                 elif inline:
