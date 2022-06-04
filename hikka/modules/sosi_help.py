@@ -59,7 +59,7 @@ class HelpMod(loader.Module):
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
                 "core_emoji",
-                "▪️",
+                "🌉",
                 lambda: "Core module bullet",
                 validator=loader.validators.String(length=1),
             ),
