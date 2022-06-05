@@ -309,7 +309,7 @@ class UpdaterMod(loader.Module):
 
         folders = await self._client(GetDialogFiltersRequest())
 
-        if any(folder.title == "hikka" for folder in folders):
+        if any(folder.title == "bt." for folder in folders):
             return
 
         try:
@@ -329,7 +329,7 @@ class UpdaterMod(loader.Module):
                     folder_id,
                     DialogFilter(
                         folder_id,
-                        title="hikka",
+                        title="bt.",
                         pinned_peers=(
                             [
                                 await self._client.get_input_entity(
@@ -372,7 +372,7 @@ class UpdaterMod(loader.Module):
                                 1679998924,
                             ]  # official hikka chats
                         ],
-                        emoticon="🐱",
+                        emoticon="😺",
                         exclude_peers=[],
                         contacts=False,
                         non_contacts=False,
