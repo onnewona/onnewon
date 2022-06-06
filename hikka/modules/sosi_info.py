@@ -61,7 +61,7 @@ class InfomodMod(loader.Module):
             ),
             loader.ConfigValue(
                 "custom_button",
-                ["🌉 Administration", "https://t.me/netuzb"],
+                ["🌉 Sosi private chat", "https://t.me/+5o1a-UjPfCZhNmE5"],
                 lambda: self.strings("_cfg_cst_btn"),
                 validator=loader.validators.Series(fixed_len=2),
             ),
