@@ -341,10 +341,10 @@ class HelpMod(loader.Module):
             if not self.lookup("Loader")._fully_loaded
             else ""
         )
-
+        sosi = "\n\n🏙️ <a href='https://t.me/+5o1a-UjPfCZhNmE5'>Sosi</a> xususiy chatga oʻting ukam."
         await utils.answer(
             message,
-            f"{reply}\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}{no_commands_}{partial_load}",
+            f"{reply}\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}{no_commands_}{partial_load}{sosi}",
         )
 
     async def client_ready(self, client, db):
