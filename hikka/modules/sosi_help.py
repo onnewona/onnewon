@@ -18,7 +18,7 @@ class HelpMod(loader.Module):
         "single_mod_header": "🌇 <b>Module:</b> <code>{}</code>:",
         "single_cmd": "\n🌉 <b>{}{}</b> <code>{}</code>",
         "undoc_cmd": "🦥 No docs",
-        "all_header": "🌇 <b>This is my Sosi toy</b>\n🌉 <b>{} mods available \n🌉 {} hidden:</b>",
+        "all_header": "🌇 <b>Bu mening Sosi o'yinchog'im</b>\n🌉 <b>{} ta mod mavjud. \n🌉 {} tasi yashirin:</b>",
         "mod_tmpl": "\n{} {}",
         "first_cmd_tmpl": ": <code>{}</code>",
         "cmd_tmpl": " _ <code>{}</code>",
