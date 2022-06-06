@@ -67,6 +67,13 @@ class InfomodMod(loader.Module):
             ),
 
             loader.ConfigValue(
+                "custom_button4",
+                ["🌉 Sosi private chat", "https://t.me/+5o1a-UjPfCZhNmE5"],
+                lambda: self.strings("_cfg_cst_btn"),
+                validator=loader.validators.Series(fixed_len=2),
+            ),
+
+            loader.ConfigValue(
                 "custom_button2",
                 ["🌉 Sosi private chat", "https://t.me/+5o1a-UjPfCZhNmE5"],
                 lambda: self.strings("_cfg_cst_btn"),
@@ -134,8 +141,8 @@ class InfomodMod(loader.Module):
             None
             if not self.config["custom_button"]
             else [
-            {"text": self.config["custom_button2"][0],
-             "url": self.config["custom_button2"][1],
+            {"text": self.config["custom_button4"][0],
+             "url": self.config["custom_button4"][1],
             },            
           ]
         )
