@@ -21,12 +21,12 @@ logger = logging.getLogger(__name__)
 
 @loader.tds
 class InfomodMod(loader.Module):
-    """Show userbot info"""
+    """Userbot ma'lumotlarini ko'rsatish"""
 
     strings = {
         "name": "Info",
-        "owner": "Moderator",
-        "version": "Sosi version",
+        "owner": "Boshqaruvchi",
+        "version": "Sosi-versiyasi",
         "build": "Build",
         "prefix": "Prefix",
         "send_info": "Send userbot info",
@@ -61,30 +61,17 @@ class InfomodMod(loader.Module):
             ),
             loader.ConfigValue(
                 "custom_button",
-                ["🌉 Sosi private chat", "https://t.me/+5o1a-UjPfCZhNmE5"],
+                ["🌉 Sosi xususiy chat", "https://t.me/+5o1a-UjPfCZhNmE5"],
                 lambda: self.strings("_cfg_cst_btn"),
                 validator=loader.validators.Series(fixed_len=2),
             ),
 
             loader.ConfigValue(
-                "custom_button4",
-                ["🌉 Sosi private chat", "https://t.me/+5o1a-UjPfCZhNmE5"],
+                "custom_button5",
+                ["🌉 Sosi xususiy chat", "https://t.me/+5o1a-UjPfCZhNmE5"],
                 lambda: self.strings("_cfg_cst_btn"),
                 validator=loader.validators.Series(fixed_len=2),
-            ),
-
-            loader.ConfigValue(
-                "custom_button2",
-                ["🌉 Sosi private chat", "https://t.me/+5o1a-UjPfCZhNmE5"],
-                lambda: self.strings("_cfg_cst_btn"),
-                validator=loader.validators.Series(fixed_len=2),
-            ),
-            loader.ConfigValue(
-                "custom_button1",
-                ["🌉 Moderation", "https://t.me/netuzb"],
-                lambda: self.strings("_cfg_cst_btn"),
-                validator=loader.validators.Series(fixed_len=2),
-            ),
+            ),         
             loader.ConfigValue(
                 "disable_banner",
                 False,
@@ -131,7 +118,7 @@ class InfomodMod(loader.Module):
                 f'<b>🌉 {self.strings("owner")}: </b>{me}\n'
                 f"<b>🌉 {self.strings('version')}: </b><code>{version}</code> <a href='{build}'></a>\n"
                 f"<a href='{upd}'></a>\n"
-                f"🏙️ <b>Einstein's theory:</b> <code>If you are reading this, then understand that you are already sucking me.</code> <a href='{self.strings('prefix')} {prefix}'></a>\n"
+                f"🏙️ <b>Eynshteyn teoriyasi:</b> <code>Akangda shunaqa</code Sosi-Userbot <code> tursayu, siz boshqasini ishlatsangiz ajablanmayman.</code> (◕ᴗ◕✿) sosi <a href='{self.strings('prefix')} {prefix}'></a>\n"
                 f"<a href='{platform}'></a>\n"
             )
         )
@@ -141,8 +128,8 @@ class InfomodMod(loader.Module):
             None
             if not self.config["custom_button"]
             else [
-            {"text": self.config["custom_button4"][0],
-             "url": self.config["custom_button4"][1],
+            {"text": self.config["custom_button5"][0],
+             "url": self.config["custom_button5"][1],
             },            
           ]
         )
