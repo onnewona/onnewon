@@ -24,7 +24,7 @@ class HelpMod(loader.Module):
         "cmd_tmpl": " _ <code>{}</code>",
         "no_mod": "🚫 <b>Specify module to hide</b>",
         "hidden_shown": "• <b>{} modules hidden (◕ᴗ◕✿)\n• {} modules shown ಡ ͜ ʖ ಡ</b>\n{}\n{}",
-        "ihandler": "\n🌉 <b>{}</b> {}",
+        "ihandler": "\n◍ <b>{}</b> {}",
         "undoc_ihandler": "🦥 No docs",
         "joined": "🌉 <b>Joined the</b> <a href='https://t.me/hikka_talks'>support chat</a>",
         "join": "🌉 <b>Join the</b> <a href='https://t.me/hikka_talks'>support chat</a>",
@@ -313,10 +313,10 @@ class HelpMod(loader.Module):
 
             for cmd in icommands:
                 if first:
-                    tmp += self.strings("first_cmd_tmpl").format(f"• {cmd}")
+                    tmp += self.strings("first_cmd_tmpl").format(f"◍ {cmd}")
                     first = False
                 else:
-                    tmp += self.strings("cmd_tmpl").format(f"• {cmd}")
+                    tmp += self.strings("cmd_tmpl").format(f"◍ {cmd}")
 
             if commands or icommands:
                 tmp += " "
