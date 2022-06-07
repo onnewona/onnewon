@@ -227,10 +227,10 @@ class LoaderMod(loader.Module):
                 message,
                 [
                     self.strings("avail_header")
-                    + f"\n• <b>From repo link</b>: {repo.strip('/')}\n\n"
+                    + f"\n• <b>Link for repo</b>: <code>{repo.strip('/')}</code>\n\n"
                     + "\n".join(
                         [
-                            " | ".join(chunk)
+                            " ◍ ".join(chunk)
                             for chunk in utils.chunks(
                                 [
                                     f"<code>{i}</code>"
