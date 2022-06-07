@@ -313,10 +313,10 @@ class HelpMod(loader.Module):
 
             for cmd in icommands:
                 if first:
-                    tmp += self.strings("first_cmd_tmpl").format(f"🌉 {cmd}")
+                    tmp += self.strings("first_cmd_tmpl").format(f"• {cmd}")
                     first = False
                 else:
-                    tmp += self.strings("cmd_tmpl").format(f"🌉 {cmd}")
+                    tmp += self.strings("cmd_tmpl").format(f"• {cmd}")
 
             if commands or icommands:
                 tmp += " "
@@ -341,7 +341,7 @@ class HelpMod(loader.Module):
             if not self.lookup("Loader")._fully_loaded
             else ""
         )
-        sosi = "\n\n🏙️ <b>Sosi</b>, shunchaki sosi xolos."
+        sosi = "\n\n• <b>Sosi</b>, shunchaki sosi xolos <b>(◕ᴗ◕✿)</b>"
         await utils.answer(
             message,
             f"{reply}\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}{no_commands_}{partial_load}{sosi}",
