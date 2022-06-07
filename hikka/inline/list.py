@@ -287,7 +287,7 @@ class List(InlineUnit):
             *(
                 [
                     InlineKeyboardButton(
-                        f"⏪ [{self._units[unit_uid]['current_index']} / {len(self._units[unit_uid]['strings'])}]",
+                        f"back {self._units[unit_uid]['current_index']}-{len(self._units[unit_uid]['strings'])}",
                         callback_data=self._units[unit_uid]["btn_call_data"]["back"],
                     )
                 ]
@@ -295,13 +295,13 @@ class List(InlineUnit):
                 else []
             ),
             InlineKeyboardButton(
-                "❌",
+                "(◕ᴗ◕✿) close",
                 callback_data=self._units[unit_uid]["btn_call_data"]["close"],
             ),
             *(
                 [
                     InlineKeyboardButton(
-                        f"⏩ [{self._units[unit_uid]['current_index'] + 2} / {len(self._units[unit_uid]['strings'])}]",
+                        f"next {self._units[unit_uid]['current_index'] + 2}-{len(self._units[unit_uid]['strings'])}",
                         callback_data=self._units[unit_uid]["btn_call_data"]["next"],
                     ),
                 ]
