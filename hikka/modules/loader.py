@@ -92,7 +92,7 @@ class LoaderMod(loader.Module):
     strings = {
         "name": "Loader",
         "repo_config_doc": "Fully qualified URL to a module repo",
-        "avail_header": "<b>📲 Official modules from repo</b>",
+        "avail_header": "<b>• Official <u>modules</u> from repo (ʘᴗʘ✿)</b>",
         "select_preset": "<b>⚠️ Please select a preset</b>",
         "no_preset": "<b>🚫 Preset not found</b>",
         "preset_loaded": "<b>✅ Preset loaded</b>",
@@ -227,7 +227,7 @@ class LoaderMod(loader.Module):
                 message,
                 [
                     self.strings("avail_header")
-                    + f"\n☁️ {repo.strip('/')}\n\n"
+                    + f"\n• <b>From repo link</b>: {repo.strip('/')}\n\n"
                     + "\n".join(
                         [
                             " | ".join(chunk)
