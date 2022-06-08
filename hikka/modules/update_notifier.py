@@ -10,17 +10,12 @@ logger = logging.getLogger(__name__)
 
 @loader.tds
 class UpdateNotifierMod(loader.Module):
-    """Tracks latest Hikka releases, and notifies you, if update is required"""
+    """Sosi userbot yangilanish haqida bildirishnoma berish moduli"""
 
     strings = {
         "name": "UpdateNotifier",
-        "update_required": "🌇 <b>Sosi Update available!</b>\n\n🌇 Updated news:\n🌉 <b>Sosi <s>{}</s> -> {}</b>\n\n{}",
-        "more": "\n<i><b>🌉 And {} more...</b></i>",
-    }
-
-    strings_ru = {
-        "update_required": "🌘 <b>Доступно обновление Hikka!</b>\n\nОпубликована новая версия Hikka.\n🔮 <b>Hikka <s>{}</s> -> {}</b>\n\n{}",
-        "more": "\n<i><b>🎥 И еще {}...</b></i>",
+        "update_required": "◍ <b>Sosi yangilanishi mavjud!</b>\n\n◍ <b>Yangilanish haqida:\n◍ Sosi</b> <s>{}</s> - {}</b>\n\n{}",
+        "more": "\n<i><b>◍ And {} more...</b></i>",
     }
 
     _notified = None
@@ -54,7 +49,7 @@ class UpdateNotifierMod(loader.Module):
             return False
 
         res = "\n".join(
-            f"<b>{commit.split()[0]}</b>: <i>{utils.escape_html(' '.join(commit.split()[1:]))}</i>"
+            f"<b>◍ {commit.split()[0]}</b>: <code>{utils.escape_html(' '.join(commit.split()[1:]))}</code>"
             for commit in diff.splitlines()[:10]
         )
 
@@ -83,9 +78,9 @@ class UpdateNotifierMod(loader.Module):
 
         self._markup = self.inline.generate_markup(
             [
-                {"text": "🌉 Update", "data": "hikka_update"},
-                {"text": "🏙️ Ignore", "data": "hikka_upd_ignore"},
-            ]
+                {"text": "(◕ᴗ◕✿) Update", "data": "hikka_update"},
+                {"text": "( ꈍᴗꈍ) Ignore", "data": "hikka_upd_ignore"},
+            ], **{"photo": "https://i.imgur.com/t0Qjyhc.jpeg"},
         )
 
         self._task = asyncio.ensure_future(self.poller())
