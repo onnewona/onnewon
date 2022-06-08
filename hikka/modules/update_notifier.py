@@ -80,7 +80,7 @@ class UpdateNotifierMod(loader.Module):
             [
                 {"text": "(◕ᴗ◕✿) Update", "data": "hikka_update"},
                 {"text": "( ꈍᴗꈍ) Ignore", "data": "hikka_upd_ignore"},
-            ], **{"photo": "https://i.imgur.com/t0Qjyhc.jpeg"},
+            ]
         )
 
         self._task = asyncio.ensure_future(self.poller())
