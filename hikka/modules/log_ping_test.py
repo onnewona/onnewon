@@ -371,7 +371,7 @@ class TestMod(loader.Module):
     async def pingcmd(self, message: Message):
         """Test your userbot ping"""
         start = time.perf_counter_ns()
-        message = await utils.answer(message, "<code>🐻 Nofin...</code>")
+        message = await utils.answer(message, "<code>(◕ᴗ◕✿) wait...</code>")
         await utils.answer(
             message,
             self.strings("results_ping").format(
