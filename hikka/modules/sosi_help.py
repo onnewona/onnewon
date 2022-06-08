@@ -15,7 +15,7 @@ class HelpMod(loader.Module):
     strings = {
         "name": "Help",
         "bad_module": "<b>🚫 <b>Module</b> <code>{}</code> <b>not found</b>",
-        "single_mod_header": "🌇 <b>Module:</b> <code>{}</code>:",
+        "single_mod_header": "◍ <b>Modul nomi:</b> <code>{}</code>:",
         "single_cmd": "\n◍ <b>{}{}</b> <code>{}</code>",
         "undoc_cmd": "🦥 No docs",
         "all_header": "• <b>Bu mening Sosi o'yinchog'im (◕ᴗ◕✿)</b>\n• <b>{} ta mod mavjud (ʘᴗʘ✿)\n• {} tasi yashirin (ʘᴗʘ✿)</b>",
@@ -30,29 +30,6 @@ class HelpMod(loader.Module):
         "join": "🌉 <b>Join the</b> <a href='https://t.me/hikka_talks'>support chat</a>",
         "partial_load": "⚠️ <b>Userbot is not fully loaded, so not all modules are shown</b>",
         "not_exact": "⚠️ <b>No exact match occured, so the closest result is shown instead</b>",
-    }
-
-    strings_ru = {
-        "bad_module": "<b>🚫 <b>Модуль</b> <code>{}</code> <b>не найден</b>",
-        "single_mod_header": "🌑 <b>{}</b>:",
-        "single_cmd": "\n▫️ <code>{}{}</code> {}",
-        "undoc_cmd": "🦥 Нет описания",
-        "all_header": "🌘 <b>{} модулей доступно, {} скрыто:</b>",
-        "mod_tmpl": "\n{} <code>{}</code>",
-        "first_cmd_tmpl": ": ( {}",
-        "cmd_tmpl": " | {}",
-        "no_mod": "🚫 <b>Укажи модуль(-и), которые нужно скрыть</b>",
-        "hidden_shown": "🌘 <b>{} модулей скрыто, {} модулей показано:</b>\n{}\n{}",
-        "ihandler": "\n🎹 <code>{}</code> {}",
-        "undoc_ihandler": "🦥 Нет описания",
-        "joined": "🌘 <b>Вступил в</b> <a href='https://t.me/hikka_talks'>чат помощи</a>",
-        "join": "🌘 <b>Вступи в</b> <a href='https://t.me/hikka_talks'>чат помощи</a>",
-        "_cmd_doc_helphide": "<модуль(-и)> - Скрывает модуль(-и) из помощи\n*Разделяй имена модулей пробелами",
-        "_cmd_doc_help": "[модуль] [-f] - Показывает помощь",
-        "_cmd_doc_support": "Вступает в чат помощи Hikka",
-        "_cls_doc": "Модуль помощи, сделанный специально для Hikka <3",
-        "partial_load": "⚠️ <b>Юзербот еще не загрузился полностью, поэтому показаны не все модули</b>",
-        "not_exact": "⚠️ <b>Точного совпадения не нашлось, поэтому было выбрано наиболее подходящее</b>",
     }
 
     def __init__(self):
@@ -167,7 +144,7 @@ class HelpMod(loader.Module):
 
         reply = self.strings("single_mod_header").format(utils.escape_html(name))
         if module.__doc__:
-            reply += "<b>\n🌉 Info:</b> " + utils.escape_html(inspect.getdoc(module)) + "\n"  # fmt: skip
+            reply += "<b>\n◍ Modul vazifasi:</b> " + utils.escape_html(inspect.getdoc(module)) + "\n"  # fmt: skip
 
         commands = {
             name: func
