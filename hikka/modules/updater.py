@@ -46,7 +46,7 @@ class UpdaterMod(loader.Module):
         "cancel": "🚫 Cancel",
         "lavhost_restart": "✌️ <b>Your lavHost is restarting...\n&gt;///&lt;</b>",
         "lavhost_update": "✌️ <b>Your lavHost is updating...\n&gt;///&lt;</b>",
-        "full_success": "🌇 <b>Muvaffaqiyatli yakunlandi! {}\n🌉 Ma'lumot:</b> <code>Toʻliq qayta ishga tushirish {}s davom etdi.</code>",
+        "full_success": "◍ <b>Muvaffaqiyatli yakunlandi! {}\n◍ Ma'lumot:</b> <code>Toʻliq qayta ishga tushirish {}s davom etdi.</code>",
     }
 
     strings_ru = {
