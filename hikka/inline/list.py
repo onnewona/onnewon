@@ -180,7 +180,7 @@ class List(InlineUnit):
             try:
                 status_message = await (
                     message.edit if message.out else message.respond
-                )("🌘 <b>Loading inline list...</b>")
+                )("<b>(◕ᴗ◕✿) Inlayn list sosilashmoqda...</b>")
             except Exception:
                 status_message = None
         else:
