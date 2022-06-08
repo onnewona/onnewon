@@ -89,12 +89,12 @@ class InfomodMod(loader.Module):
                 "<b>◍ Sosi-Userbot (◕ᴗ◕✿) sosi</b>\n"
                 f'<b>◍ {self.strings("owner")}: </b>{me}\n'
                 f"<b>◍ {self.strings('version')}: </b><code>{version}</code> <a href='{build}'></a>\n"
-                f"\n• ╔═══╦═══╦═══╦══╗"
-                f"\n• ║╔═╗║╔═╗║╔═╗╠╣╠╝"
-                f"\n• ║╚══╣║─║║╚══╗║║ ╔╗──╔╗"
-                f"\n• ╚══╗║║─║╠══╗║║║ ║╚╦═╣╚╗"
-                f"\n• ║╚═╝║╚═╝║╚═╝╠╣╠╗║╬║╬║╔╣"
-                f"\n• ╚═══╩═══╩═══╩══╝╚═╩═╩═╝"
+                f"\n◍ ╔═══╦═══╦═══╦══╗"
+                f"\n◍ ║╔═╗║╔═╗║╔═╗╠╣╠╝"
+                f"\n◍ ║╚══╣║─║║╚══╗║║   ╔╗──╔╗"
+                f"\n◍ ╚══╗║║─║╠══╗║║║   ║╚╦═╣╚╗"
+                f"\n◍ ║╚═╝║╚═╝║╚═╝╠╣╠╗║╬║╬║╔╣"
+                f"\n◍ ╚═══╩═══╩═══╩══╝╚═╩═╩═╝"
                 f"\n\n<b>◍ <u>Eynshteyn</u> teoriyasi (ʘᴗʘ✿):</b> Statistik ma’lumotlarga  koʻra, eng xavfli odamlar lichkadagi yozishmalarni skrinshot qilib oladiganlari ekan."
             )
         )
