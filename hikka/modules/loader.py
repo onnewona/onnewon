@@ -394,7 +394,7 @@ class LoaderMod(loader.Module):
         ):
             if message.file:
                 await message.edit("")
-                message = await message.respond("🌘")
+                message = await message.respond("◍")
 
             if await self.inline.form(
                 self.strings("module_fs"),
@@ -694,7 +694,7 @@ class LoaderMod(loader.Module):
         modhelp = ""
 
         if instance.__doc__:
-            modhelp += f"<b>\n🌇 Info:</b> {utils.escape_html(inspect.getdoc(instance))}\n"
+            modhelp += f"<b>\n◍ Vazifasi:</b> {utils.escape_html(inspect.getdoc(instance))}\n"
 
         if any(
             line.replace(" ", "") == "#scope:disable_onload_docs"
