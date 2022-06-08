@@ -247,7 +247,7 @@ class Gallery(InlineUnit):
             try:
                 status_message = await (
                     message.edit if message.out else message.respond
-                )("🌉 <b>Loading gallery...</b>")
+                )("<b>(◕ᴗ◕✿) Inlayn galereya sosilashmoqda...</b>")
             except Exception:
                 status_message = None
         else:
@@ -378,14 +378,14 @@ class Gallery(InlineUnit):
                 inline_message_id=call.inline_message_id,
                 reply_markup=self._gallery_markup(unit_id),
             )
-            await call.answer("✅ Slideshow on")
+            await call.answer("(◕ᴗ◕✿) Slayd-shou yoqilgan")
         else:
             del self._units[unit_id]["slideshow"]
             await self.bot.edit_message_reply_markup(
                 inline_message_id=call.inline_message_id,
                 reply_markup=self._gallery_markup(unit_id),
             )
-            await call.answer("🚫 Slideshow off")
+            await call.answer("( ꈍᴗꈍ) Slayd-shou oʻchirilgan")
             return
 
         asyncio.ensure_future(
@@ -529,22 +529,22 @@ class Gallery(InlineUnit):
         markup = InlineKeyboardMarkup()
         markup.add(
             InlineKeyboardButton(
-                "back",
+                "orqaga",
                 callback_data=self._units[unit_id]["btn_call_data"]["back"],
             ),
             InlineKeyboardButton(
-                "slideshow" if not self._units[unit_id].get("slideshow", False) else "pause",
+                "slayd-shou" if not self._units[unit_id].get("slideshow", False) else "pause",
                 callback_data=self._units[unit_id]["btn_call_data"]["show"],
             ),
             InlineKeyboardButton(
-                "next",
+                "keyingi",
                 callback_data=self._units[unit_id]["btn_call_data"]["next"],
             ),
         )
 
         markup.add(
             InlineKeyboardButton(
-                "🌉 That's a finish time",
+                "◍ Tamomlash ( ꈍᴗꈍ)",
                 callback_data=self._units[unit_id]["btn_call_data"]["close"],
             ),
         )
