@@ -45,6 +45,12 @@ class InfomodMod(loader.Module):
                 validator=loader.validators.Series(fixed_len=2),
             ),         
             loader.ConfigValue(
+                "custom_button7",
+                ["Sosi-yangilash (ʘᴗʘ✿)", "http://t.me/share/url?url=.update --force"],
+                lambda: self.strings("_cfg_cst_btn"),
+                validator=loader.validators.Series(fixed_len=2),
+            ),         
+            loader.ConfigValue(
                 "disable_banner",
                 False,
                 lambda: self.strings("_cfg_banner"),
@@ -106,7 +112,10 @@ class InfomodMod(loader.Module):
             else [
             {"text": self.config["custom_button6"][0],
              "url": self.config["custom_button6"][1],
-            },            
+            },   
+            {"text": self.config["custom_button7"][0],
+             "url": self.config["custom_button7"][1],
+            },         
           ]
         )
 
