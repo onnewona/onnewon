@@ -76,7 +76,7 @@ class InfomodMod(loader.Module):
         platform = utils.get_named_platform()
 
         return (
-            "<b>🌇 Sosi</b>\n"
+            "<b>Sosi</b>\n"
             + self.config["custom_message"].format(
                 me=me,
                 version=version,
@@ -91,13 +91,11 @@ class InfomodMod(loader.Module):
                 f"<b>◍ {self.strings('version')}: </b><code>{version}</code> <a href='{build}'></a>\n"
                 f"\n• ╔═══╦═══╦═══╦══╗"
                 f"\n• ║╔═╗║╔═╗║╔═╗╠╣╠╝"
-                f"\n• ║╚══╣║─║║╚══╗║║"
-                f"\n• ╚══╗║║─║╠══╗║║║"
-                f"\n• ║╚═╝║╚═╝║╚═╝╠╣╠╗"
-                f"\n• ╚═══╩═══╩═══╩══╝"
-                f"\n\n"
-                f"<b>(◕ᴗ◕✿) Eynshteyn teoriyasi:</b> Akangda shunaqa <u>Sosi-Userbot</u> tursayu, sen boshqasini ishlatsang ajablanmayman. <a href='{self.strings('prefix')} {prefix}'></a>\n"
-                f"<a href='{platform}'></a>\n"
+                f"\n• ║╚══╣║─║║╚══╗║║ ╔╗──╔╗"
+                f"\n• ╚══╗║║─║╠══╗║║║ ║╚╦═╣╚╗"
+                f"\n• ║╚═╝║╚═╝║╚═╝╠╣╠╗║╬║╬║╔╣"
+                f"\n• ╚═══╩═══╩═══╩══╝╚═╩═╩═╝"
+                f"\n\n<b>◍ <u>Eynshteyn</u> teoriyasi (ʘᴗʘ✿):</b> Statistik ma’lumotlarga  koʻra, eng xavfli odamlar lichkadagi yozishmalarni skrinshot qilib oladiganlari ekan."
             )
         )
 
