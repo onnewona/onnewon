@@ -362,9 +362,9 @@ class Events(InlineUnit):
             try:
                 doc = utils.escape_html(inspect.getdoc(fun))
             except Exception:
-                doc = "🏙️ No docs"
+                doc = "◍ Hujjat yo'q"
 
-            _help += f"🌉 <code>@{self.bot_username} {name}</code> - {doc}\n\n🌉 <b>Info:</b> You can suck me if you want"
+            _help += f"◍ <code>@{self.bot_username} {name}</code> - {doc}\n\n◍ <b>Info:</b> Agar xohlasangiz, menikini so'rishingiz mumkin (ʘᴗʘ✿)"
 
         if not _help:
             await inline_query.answer(
@@ -374,7 +374,7 @@ class Events(InlineUnit):
                         title="Show available inline commands",
                         description="You have no available commands",
                         input_message_content=InputTextMessageContent(
-                            "<b>🏙️ There are no available inline commands or you lack access to them</b>",
+                            "<b>◍ Mavjud inlayn buyruqlar yo'q yoki siz ularga kirish imkoniga ega emassiz</b>",
                             "HTML",
                             disable_web_page_preview=True,
                         ),
@@ -394,7 +394,7 @@ class Events(InlineUnit):
                     title="Show available inline commands",
                     description=f"You have {len(_help.splitlines())} available command(-s)",
                     input_message_content=InputTextMessageContent(
-                        f"<b>🌇 Available inline commands:</b>\n\n{_help}",
+                        f"<b>◍ Mavjud inlayn buyruqlar:</b>\n\n{_help}",
                         "HTML",
                         disable_web_page_preview=True,
                     ),
