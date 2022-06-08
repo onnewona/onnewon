@@ -234,7 +234,7 @@ class Form(InlineUnit):
             try:
                 status_message = await (
                     message.edit if message.out else message.respond
-                )("🌉 <b>Loading inline...</b>")
+                )("<b>(◕ᴗ◕✿) Inlayn sosilashmoqda...</b>")
             except Exception:
                 status_message = None
         else:
@@ -277,9 +277,7 @@ class Form(InlineUnit):
             )
         except Exception:
             msg = (
-                "🚫 <b>A problem occurred with inline bot "
-                "while processing query. Check logs for "
-                "further info.</b>"
+                "<b>( ꈍᴗꈍ) Inlayn ishlamayapti... "
             )
 
             del self._units[unit_id]
