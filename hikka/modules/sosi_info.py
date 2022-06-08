@@ -86,18 +86,17 @@ class InfomodMod(loader.Module):
             )
             if self.config["custom_message"] and self.config["custom_message"] != "no"
             else (
-                "<b>🌇 Sosi-Userbot (◕ᴗ◕✿) sosi</b>\n"
-                f'<b>🌉 {self.strings("owner")}: </b>{me}\n'
-                f"<b>🌉 {self.strings('version')}: </b><code>{version}</code> <a href='{build}'></a>\n"
-                f"<a href='{upd}'></a>\n"
-                f"\n╔═══╦═══╦═══╦══╗"
-                f"\n║╔═╗║╔═╗║╔═╗╠╣╠╝"
-                f"\n║╚══╣║─║║╚══╗║║"
-                f"\n╚══╗║║─║╠══╗║║║"
-                f"\n║╚═╝║╚═╝║╚═╝╠╣╠╗"
-                f"\n╚═══╩═══╩═══╩══╝"
+                "<b>◍ Sosi-Userbot (◕ᴗ◕✿) sosi</b>\n"
+                f'<b>◍ {self.strings("owner")}: </b>{me}\n'
+                f"<b>◍ {self.strings('version')}: </b><code>{version}</code> <a href='{build}'></a>\n"
+                f"\n• ╔═══╦═══╦═══╦══╗"
+                f"\n• ║╔═╗║╔═╗║╔═╗╠╣╠╝"
+                f"\n• ║╚══╣║─║║╚══╗║║"
+                f"\n• ╚══╗║║─║╠══╗║║║"
+                f"\n• ║╚═╝║╚═╝║╚═╝╠╣╠╗"
+                f"\n• ╚═══╩═══╩═══╩══╝"
                 f"\n\n"
-                f"🏙️ <b>Eynshteyn teoriyasi:</b> Akangda shunaqa <u>Sosi-Userbot</u> tursayu, sen boshqasini ishlatsang ajablanmayman. <a href='{self.strings('prefix')} {prefix}'></a>\n"
+                f"<b>(◕ᴗ◕✿) Eynshteyn teoriyasi:</b> Akangda shunaqa <u>Sosi-Userbot</u> tursayu, sen boshqasini ishlatsang ajablanmayman. <a href='{self.strings('prefix')} {prefix}'></a>\n"
                 f"<a href='{platform}'></a>\n"
             )
         )
@@ -105,7 +104,7 @@ class InfomodMod(loader.Module):
     def _get_mark(self):
         return (
             None
-            if not self.config["custom_button"]
+            if not self.config["custom_button6"]
             else [
             {"text": self.config["custom_button6"][0],
              "url": self.config["custom_button6"][1],
