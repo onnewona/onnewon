@@ -544,7 +544,7 @@ class Gallery(InlineUnit):
 
         markup.add(
             InlineKeyboardButton(
-                "◍ Tamomlash ( ꈍᴗꈍ)",
+                "◍ tamomlash ( ꈍᴗꈍ)",
                 callback_data=self._units[unit_id]["btn_call_data"]["close"],
             ),
         )
