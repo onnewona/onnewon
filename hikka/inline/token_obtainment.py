@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 photo = io.BytesIO(
     requests.get(
-        "https://i.imgur.com/XavsNiG.jpeg"
+        "https://0x0.st/oMWz.jpg"
     ).content
 )
 photo.name = "avatar.png"
@@ -55,7 +55,7 @@ class TokenObtainment(InlineUnit):
                 username = f"@sosixuyme_bot"
 
             for msg in [
-                f"🌇 SOSI {self._name}"[:64],
+                f"(◕ᴗ◕✿) {self._name}"[:64],
                 username,
                 "/setuserpic",
                 username,
