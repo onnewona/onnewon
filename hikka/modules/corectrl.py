@@ -279,8 +279,8 @@ class CoreMod(loader.Module):
             message, self.strings("pack_saved" if success else "check_pack")
         )
 
-    async def setlangcmd(self, message: Message):
-        """[language] - Change default language"""
+    async def cmd(self, message: Message):
+        """..."""
         args = utils.get_args_raw(message)
         if not args or len(args) != 2:
             await utils.answer(message, self.strings("incorrect_language"))
