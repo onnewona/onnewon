@@ -87,8 +87,8 @@ class InfomodMod(loader.Module):
             if self.config["custom_message"] and self.config["custom_message"] != "no"
             else (
                 "<b>◍ Sosi-Userbot (◕ᴗ◕✿) sosi</b>\n"
-                f'<b>◍ {self.strings("owner")}: </b>{me}\n'
-                f"<b>◍ {self.strings('version')}: </b><code>{version}</code> <a href='{build}'></a>\n"
+                f'<b>◍ {self.strings("owner")}:</b> <a href="{me}">bu yerda</a>\n'
+                f"<b>◍ {self.strings('version')}:</b> <code>{version}</code> <a href='{build}'></a>\n"
                 f"\n◍ ╔═══╦═══╦═══╦══╗"
                 f"\n◍ ║╔═╗║╔═╗║╔═╗╠╣╠╝"
                 f"\n◍ ║╚══╣║─║║╚══╗║║   ╔╗──╔╗"
