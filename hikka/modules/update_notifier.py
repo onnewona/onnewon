@@ -14,8 +14,8 @@ class UpdateNotifierMod(loader.Module):
 
     strings = {
         "name": "UpdateNotifier",
-        "update_required": "◍ <b>Sosi yangilanishi mavjud!</b>\n\n◍ <b>Yangilanish haqida:\n◍ Sosi</b> <s>{}</s> - {}</b>\n\n{}",
-        "more": "\n<i><b>◍ And {} more...</b></i>",
+        "update_required": "◍ <b>Sosi yangilanishi mavjud!</b>\n\n◍ <b>Yangilanish haqida:\n◍ Sosi</b> <s>{}</s> - {}\n\n{}",
+        "more": "\n◍ And {} more...",
     }
 
     _notified = None
@@ -80,7 +80,7 @@ class UpdateNotifierMod(loader.Module):
             [
                 {"text": "(◕ᴗ◕✿) Update", "data": "hikka_update"},
                 {"text": "( ꈍᴗꈍ) Ignore", "data": "hikka_upd_ignore"},
-            ]
+            ], **{"photo": "https://i.imgur.com/t0Qjyhc.jpeg"},
         )
 
         self._task = asyncio.ensure_future(self.poller())
