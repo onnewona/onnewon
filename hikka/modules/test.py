@@ -33,7 +33,7 @@ class TestMod(loader.Module):
         "logs_caption": "🌉 <b>Sosi logs with verbosity </b><code>{}</code>\n🌉 <b>Sosi version: {}.{}.{}</b>\n<a href='{}'></a>",
         "suspend_invalid_time": "🚫 <b>Invalid time to suspend</b>",
         "suspended": "🏙️ <b>Bot suspended for</b> <code>{}</code> <b>seconds</b>",
-        "results_ping": "🌉 <b>Response speed:</b> <code>{} ms</code>\n🌉 <b>Updated time:</b> <code>{}</code>",
+        "results_ping": "(◕ᴗ◕✿) <b>Response speed:</b> <code>{} ms</code>\n(◍•ᴗ•◍) <b>Updated time:</b> <code>{}</code>",
         "confidential": "⚠️ <b>Log level </b><code>{}</code><b> may reveal your confidential info, be careful</b>",
         "confidential_text": (
             "⚠️ <b>Log level </b><code>{0}</code><b> may reveal your confidential info, "
