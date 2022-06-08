@@ -29,13 +29,13 @@ class UpdaterMod(loader.Module):
     strings = {
         "name": "Updater",
         "source": "🌉 <b>Read the source code from</b> <a href='{}'>here</a>",
-        "restarting_caption": "🌉 <b>Qayta ishga tushirilmoqda...</b>",
-        "downloading": "🌉 <b>Yangilanishlar yuklab olinmoqda...</b>",
-        "installing": "🌉 <b>Yangilanishlar o'rnatilmoqda...</b>",
-        "success": "🌇 <b>Qayta ishga tushirish muvaffaqiyatli bajarildi! {}\n🌉 Ma'lumot:</b> <code>Ammo modullar hali ham yuklanmoqda...</code>\n<b>🌉 Daraja:</b> <code>Qayta ishga tushirish {} soniya davom etadi.</code>",
+        "restarting_caption": "(◕ᴗ◕✿) <b>Qayta ishga tushirilmoqda...</b>",
+        "downloading": "(ʘᴗʘ✿) <b>Yangilanishlar yuklab olinmoqda...</b>",
+        "installing": "(◍•ᴗ•◍) <b>Yangilanishlar o'rnatilmoqda...</b>",
+        "success": "◍ <b>Qayta ishga tushirish muvaffaqiyatli bajarildi! {}\n◍ Ma'lumot:</b> <code>Ammo modullar hali ham yuklanmoqda...</code>\n<b>◍ Daraja:</b> <code>Qayta ishga tushirish {} soniya davom etadi.</code>",
         "origin_cfg_doc": "Git origin URL, for where to update from",
-        "btn_restart": "🔄 Restart",
-        "btn_update": "🧭 Update",
+        "btn_restart": "(◕ᴗ◕✿) restart",
+        "btn_update": "( ꈍᴗꈍ) update",
         "restart_confirm": "🌇 <b>Are you sure you want to restart?</b>",
         "update_confirm": (
             "🧭 <b>Are you sure you want to update?\n\n"
