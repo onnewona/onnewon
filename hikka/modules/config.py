@@ -17,7 +17,7 @@ class ConfigmodMod(loader.Module):
     strings = {
         "name": "Config",
         "configure": "🎚 <b>Here you can configure your modules' configs</b>",
-        "configuring_mod": "🎚 <b>Choose config option for mod</b> <code>{}</code>",
+        "configuring_mod": "(◍•ᴗ•◍) <b>Mod uchun konfiguratsiya opsiyasini tanlang</b> <code>{}</code>",
         "configuring_option": "🎚 <b>Configuring option </b><code>{}</code><b> of mod </b><code>{}</code>\n<i>ℹ️ {}</i>\n\n<b>Default: </b><code>{}</code>\n\n<b>Current: </b><code>{}</code>\n\n{}",
         "option_saved": "🎚 <b>Option </b><code>{}</code><b> of mod </b><code>{}</code><b> saved!</b>\n<b>Current: </b><code>{}</code>",
         "option_reset": "♻️ <b>Option </b><code>{}</code><b> of mod </b><code>{}</code><b> has been reset to default</b>\n<b>Current: </b><code>{}</code>",
