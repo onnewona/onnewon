@@ -27,30 +27,9 @@ class InfomodMod(loader.Module):
         "name": "Info",
         "owner": "Boshqaruvchi",
         "version": "Sosi-versiyasi",
-        "build": "Build",
-        "prefix": "Prefix",
-        "send_info": "Send userbot info",
-        "description": "ℹ This will not compromise any sensitive info",
-        "up-to-date": "😌 Up-to-date",
-        "update_required": "😕 Update required </b><code>.update</code><b>",
         "_cfg_cst_msg": "Custom message for info. May contain {me}, {version}, {build}, {prefix}, {platform} keywords",
         "_cfg_cst_btn": "Custom button for info. Leave empty to remove button",
         "_cfg_banner": "Set `True` in order to disable an image banner",
-    }
-
-    strings_ru = {
-        "owner": "Владелец",
-        "version": "Версия",
-        "build": "Сборка",
-        "prefix": "Префикс",
-        "send_info": "Отправить информацию о юзерботе",
-        "description": "ℹ Это не раскроет никакой личной информации",
-        "_ihandle_doc_info": "Отправить информацию о юзерботе",
-        "up-to-date": "😌 Актуальная версия",
-        "update_required": "😕 Требуется обновление </b><code>.update</code><b>",
-        "_cfg_cst_msg": "Кастомный текст сообщения в info. Может содержать ключевые слова {me}, {version}, {build}, {prefix}, {platform}",
-        "_cfg_cst_btn": "Кастомная кнопка в сообщении в info. Оставь пустым, чтобы убрать кнопку",
-        "_cfg_banner": "Поставь `True`, чтобы отключить баннер-картинку",
     }
 
     def __init__(self):
@@ -60,15 +39,8 @@ class InfomodMod(loader.Module):
                 doc=lambda: self.strings("_cfg_cst_msg"),
             ),
             loader.ConfigValue(
-                "custom_button",
-                ["🌉 Sosi xususiy chat", "https://t.me/+5o1a-UjPfCZhNmE5"],
-                lambda: self.strings("_cfg_cst_btn"),
-                validator=loader.validators.Series(fixed_len=2),
-            ),
-
-            loader.ConfigValue(
-                "custom_button5",
-                ["🌉 Sosi xususiy chat", "https://t.me/+5o1a-UjPfCZhNmE5"],
+                "custom_button6",
+                ["Sosi-xususiy-chat (◕ᴗ◕✿)", "https://t.me/+5o1a-UjPfCZhNmE5"],
                 lambda: self.strings("_cfg_cst_btn"),
                 validator=loader.validators.Series(fixed_len=2),
             ),         
@@ -118,6 +90,13 @@ class InfomodMod(loader.Module):
                 f'<b>🌉 {self.strings("owner")}: </b>{me}\n'
                 f"<b>🌉 {self.strings('version')}: </b><code>{version}</code> <a href='{build}'></a>\n"
                 f"<a href='{upd}'></a>\n"
+                f"\n╔═══╦═══╦═══╦══╗"
+                f"\n║╔═╗║╔═╗║╔═╗╠╣╠╝"
+                f"\n║╚══╣║─║║╚══╗║║"
+                f"\n╚══╗║║─║╠══╗║║║"
+                f"\n║╚═╝║╚═╝║╚═╝╠╣╠╗"
+                f"\n╚═══╩═══╩═══╩══╝"
+                f"\n\n"
                 f"🏙️ <b>Eynshteyn teoriyasi:</b> Akangda shunaqa <u>Sosi-Userbot</u> tursayu, sen boshqasini ishlatsang ajablanmayman. <a href='{self.strings('prefix')} {prefix}'></a>\n"
                 f"<a href='{platform}'></a>\n"
             )
@@ -128,8 +107,8 @@ class InfomodMod(loader.Module):
             None
             if not self.config["custom_button"]
             else [
-            {"text": self.config["custom_button5"][0],
-             "url": self.config["custom_button5"][1],
+            {"text": self.config["custom_button6"][0],
+             "url": self.config["custom_button6"][1],
             },            
           ]
         )
