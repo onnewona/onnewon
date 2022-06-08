@@ -14,22 +14,20 @@ class HelpMod(loader.Module):
 
     strings = {
         "name": "Help",
-        "bad_module": "<b>🚫 <b>Module</b> <code>{}</code> <b>not found</b>",
+        "bad_module": "<b>◍ <b>Modul</b> <code>{}</code> <b>topilmadi ( ꈍᴗꈍ)</b>",
         "single_mod_header": "◍ <b>Modul nomi:</b> <code>{}</code>:",
         "single_cmd": "\n◍ <b>{}{}</b> <code>{}</code>",
-        "undoc_cmd": "🦥 No docs",
+        "undoc_cmd": "( ꈍᴗꈍ) Hujjat yo'q",
         "all_header": "• <b>Bu mening Sosi o'yinchog'im (◕ᴗ◕✿)</b>\n• <b>{} ta mod mavjud (ʘᴗʘ✿)\n• {} tasi yashirin (ʘᴗʘ✿)</b>",
         "mod_tmpl": "\n{} {}",
         "first_cmd_tmpl": ": <code>{}</code>",
         "cmd_tmpl": " _ <code>{}</code>",
-        "no_mod": "🚫 <b>Specify module to hide</b>",
+        "no_mod": "<b>(◍•ᴗ•◍) Yashirish uchun modulni belgilang</b>",
         "hidden_shown": "• <b>{} modules hidden (◕ᴗ◕✿)\n• {} modules shown ಡ ͜ ʖ ಡ</b>\n{}\n{}",
         "ihandler": "\n◍ <b>{}</b> {}",
-        "undoc_ihandler": "🦥 No docs",
-        "joined": "🌉 <b>Joined the</b> <a href='https://t.me/hikka_talks'>support chat</a>",
-        "join": "🌉 <b>Join the</b> <a href='https://t.me/hikka_talks'>support chat</a>",
-        "partial_load": "⚠️ <b>Userbot is not fully loaded, so not all modules are shown</b>",
-        "not_exact": "⚠️ <b>No exact match occured, so the closest result is shown instead</b>",
+        "undoc_ihandler": "( ꈍᴗꈍ) Hujjat yo'q",
+        "partial_load": "<b>( ꈍᴗꈍ) Userbot to'liq yuklanmagan, shuning uchun barcha modullar ko'rsatilmaydi</b>",
+        "not_exact": "<b>( ꈍᴗꈍ) Ggg</b>, modul haqiqiy nomini kiritmadingiz va shu sababli modul maʼlumotlari <u>tasodifiy</u> koʻrsatildi.",
     }
 
     def __init__(self):
@@ -92,8 +90,8 @@ class HelpMod(loader.Module):
             self.strings("hidden_shown").format(
                 len(hidden),
                 len(shown),
-                "\n".join([f"👁‍🗨 <i>{m}</i>" for m in hidden]),
-                "\n".join([f"👁 <i>{m}</i>" for m in shown]),
+                "\n".join([f"- <i>{m}</i>" for m in hidden]),
+                "\n".join([f"+ <i>{m}</i>" for m in shown]),
             ),
         )
 
