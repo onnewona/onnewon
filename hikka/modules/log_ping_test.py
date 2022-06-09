@@ -28,11 +28,11 @@ class TestMod(loader.Module):
     strings = {
         "name": "Tester",
         "set_loglevel": "🚫 <b>Please specify verbosity as an integer or string</b>",
-        "no_logs": "🌉 <b>You don't have any logs at verbosity {}.</b>",
+        "no_logs": "<b>◍ Sizda batafsil ma'lumot bo'yicha hech qanday jurnal yo'q {}.</b>",
         "logs_filename": "sosi-logs.html",
-        "logs_caption": "🌉 <b>Sosi logs with verbosity </b><code>{}</code>\n🌉 <b>Sosi version: {}.{}.{}</b>\n<a href='{}'></a>",
+        "logs_caption": "<b>◍ Sosi batafsil xatoliklar </b><code>{}</code>\n◍ <b>Sosi versiya: {}.{}.{}</b>\n<a href='{}'></a>",
         "suspend_invalid_time": "🚫 <b>Invalid time to suspend</b>",
-        "suspended": "🏙️ <b>Bot suspended for</b> <code>{}</code> <b>seconds</b>",
+        "suspended": "<b>◍ Bot suspended for</b> <code>{}</code> <b>seconds</b>",
         "results_ping": "(◕ᴗ◕✿) <b>Response speed:</b> <code>{} ms</code>\n(◍•ᴗ•◍) <b>Updated time:</b> <code>{}</code>",
         "confidential": "⚠️ <b>Log level </b><code>{}</code><b> may reveal your confidential info, be careful</b>",
         "confidential_text": (
@@ -40,35 +40,12 @@ class TestMod(loader.Module):
             "be careful</b>\n<b>Type </b><code>.logs {0} force_insecure</code><b> "
             "to ignore this warning</b>"
         ),
-        "choose_loglevel": "🌉 <b>Choose log level</b>",
-        "database_unlocked": "🚫 DB eval unlocked",
-        "database_locked": "🌇 DB eval locked",
-        "bad_module": "🚫 <b>Module not found</b>",
-        "debugging_enabled": "🌉 <b>Debugging mode enabled for module </b><code>{0}</code>\n<i>Go to directory named `debug_modules`, edit file named `{0}.py` and see changes in real time</i>",
-        "debugging_disabled": "🌇 <b>Debugging disabled</b>",
-    }
-
-    strings_ru = {
-        "set_loglevel": "🚫 <b>Укажи уровень логов числом или строкой</b>",
-        "no_logs": "ℹ️ <b>У тебя нет логов уровня {}.</b>",
-        "logs_filename": "hikka-logs.txt",
-        "logs_caption": "🌘 <b>Логи Hikka уровня </b><code>{}</code>\n\n👩‍🎤 <b>Версия Hikka: {}.{}.{}</b>{}\n⏱ <b>Uptime: {}</b>\n<b>{}</b>\n\n<b>{}</b>\n\n<b>{} NoNick</b>\n<b>{} Grep</b>\n<b>{} InlineLogs</b>",
-        "database_unlocked": "🚫 База скомпрометирована",
-        "database_locked": "✅ База защищена",
-        "bad_module": "🚫 <b>Модуль не найден</b>",
-        "debugging_enabled": "🧑‍💻 <b>Режим разработчика включен для модуля </b><code>{0}</code>\n<i>Отправляйся в директорию `debug_modules`, изменяй файл `{0}.py`, и смотри изменения в режиме реального времени</i>",
-        "debugging_disabled": "✅ <b>Режим разработчика выключен</b>",
-        "suspend_invalid_time": "🚫 <b>Неверное время заморозки</b>",
-        "suspended": "🥶 <b>Бот заморожен на</b> <code>{}</code> <b>секунд</b>",
-        "results_ping": "⏱ <b>Скорость отклика:</b> <code>{}</code> <b>ms</b>\n👩‍💼 <b>Прошло с последней перезагрузки: {}</b>",
-        "confidential": "⚠️ <b>Уровень логов </b><code>{}</code><b> может содержать личную информацию, будь осторожен</b>",
-        "confidential_text": "⚠️ <b>Уровень логов </b><code>{0}</code><b> может содержать личную информацию, будь осторожен</b>\n<b>Напиши </b><code>.logs {0} force_insecure</code><b>, чтобы отправить логи игнорируя предупреждение</b>",
-        "choose_loglevel": "💁‍♂️ <b>Выбери уровень логов</b>",
-        "_cmd_doc_dump": "Показать информацию о сообщении",
-        "_cmd_doc_logs": "<уровень> - Отправляет лог-файл. Уровни ниже WARNING могут содержать личную инфомрацию.",
-        "_cmd_doc_suspend": "<время> - Заморозить бота на некоторое время",
-        "_cmd_doc_ping": "Проверяет скорость отклика юзербота",
-        "_cls_doc": "Операции, связанные с самотестированием",
+        "choose_loglevel": "◍ <b>Jurnal darajasi</b>ni tanlang",
+        "database_unlocked": "◍ JB bahosi ochildi",
+        "database_locked": "◍ JB baholash bloklangan",
+        "bad_module": "<b>◍ Modul topilmadi</b>",
+        "debugging_enabled": "<b>◍ Modul uchun nosozliklarni tuzatish rejimi yoqilgan </b><code>{0}</code>\n<i>Go to directory named `debug_modules`, edit file named `{0}.py` and see changes in real time</i>",
+        "debugging_disabled": "<b>◍ Nosozliklarni tuzatish o'chirilgan</b>",
     }
 
     @staticmethod
@@ -198,41 +175,41 @@ class TestMod(loader.Module):
                     reply_markup=[
                         [
                             {
-                                "text": "🌇 Critical",
+                                "text": "◍ Tanqidiy",
                                 "callback": self.logscmd,
                                 "args": (False, 50),
                             },
                             {
-                                "text": "🌇 Error",
+                                "text": "◍ Xato",
                                 "callback": self.logscmd,
                                 "args": (False, 40),
                             },
                         ],
                         [
                             {
-                                "text": "🌉 Warning",
+                                "text": "◍ Ogohlantirish",
                                 "callback": self.logscmd,
                                 "args": (False, 30),
                             },
                             {
-                                "text": "🌉 Info",
+                                "text": "◍ Ma'lumot",
                                 "callback": self.logscmd,
                                 "args": (False, 20),
                             },
                         ],
                         [
                             {
-                                "text": "🌉 Debug",
+                                "text": "◍ Nosozliklarni tuzatish",
                                 "callback": self.logscmd,
                                 "args": (False, 10),
                             },
                             {
-                                "text": "🌉 All",
+                                "text": "◍ Hammasi",
                                 "callback": self.logscmd,
                                 "args": (False, 0),
                             },
                         ],
-                        [{"text": "🚫 Cancel", "callback": self.cancel}],
+                        [{"text": "× Bekor qilish", "callback": self.cancel}],
                     ],
                     message=message,
                 ):
@@ -271,11 +248,11 @@ class TestMod(loader.Module):
                     "text": self.strings("confidential").format(named_lvl),
                     "reply_markup": [
                         {
-                            "text": "📤 Send anyway",
+                            "text": "◍ Baribir yuboring",
                             "callback": self.logscmd,
                             "args": [True, lvl],
                         },
-                        {"text": "🚫 Cancel", "callback": self.cancel},
+                        {"text": "× Bekor qilish", "callback": self.cancel},
                     ],
                 }
                 if isinstance(message, Message):
