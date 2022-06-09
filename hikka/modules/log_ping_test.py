@@ -210,7 +210,7 @@ class TestMod(loader.Module):
                             },
                         ],
                         [{"text": "× Bekor qilish", "callback": self.cancel}],
-                    ],
+                    ], **{"photo": "https://te.legra.ph/file/e25356c13768135669a1c.jpg"},
                     message=message,
                 ):
                     raise
