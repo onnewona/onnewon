@@ -82,7 +82,7 @@ class InfomodMod(loader.Module):
         platform = utils.get_named_platform()
 
         return (
-            "<b>Sosi</b>\n"
+            ""
             + self.config["custom_message"].format(
                 me=me,
                 version=version,
