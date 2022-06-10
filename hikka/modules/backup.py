@@ -131,7 +131,7 @@ class BackupmodMod(loader.Module):
             )
 
             backup = io.BytesIO(json.dumps(self._db).encode("utf-8"))
-            backup.name = f"hikka-db-backup-{getattr(datetime, 'datetime', datetime).now().strftime('%d-%m-%Y-%H-%M')}.json"
+            backup.name = f"soso-db-backup-{getattr(datetime, 'datetime', datetime).now().strftime('%d-%m-%Y-%H-%M')}.json"
 
             await self._client.send_file(
                 self._backup_channel,
