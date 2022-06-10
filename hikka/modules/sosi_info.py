@@ -39,14 +39,14 @@ class InfomodMod(loader.Module):
                 doc=lambda: self.strings("_cfg_cst_msg"),
             ),
             loader.ConfigValue(
-                "custom_button8",
-                ["Soso-xususiy-chat (◕ᴗ◕✿)", "https://t.me/+5o1a-UjPfCZhNmE5"],
+                "custom_button10",
+                ["◍ Soso-xususiy-chat", "https://t.me/+5o1a-UjPfCZhNmE5"],
                 lambda: self.strings("_cfg_cst_btn"),
                 validator=loader.validators.Series(fixed_len=2),
             ),         
             loader.ConfigValue(
-                "custom_button9",
-                ["Soso-yangilash (ʘᴗʘ✿)", "http://t.me/share/url?url=.update --force"],
+                "custom_button11",
+                ["◍ Soso-yangilash", "http://t.me/share/url?url=.update --force"],
                 lambda: self.strings("_cfg_cst_btn"),
                 validator=loader.validators.Series(fixed_len=2),
             ),         
@@ -103,13 +103,13 @@ class InfomodMod(loader.Module):
     def _get_mark(self):
         return (
             None
-            if not self.config["custom_button8"]
+            if not self.config["custom_button10"]
             else [
-            {"text": self.config["custom_button8"][0],
-             "url": self.config["custom_button8"][1],
+            {"text": self.config["custom_button10"][0],
+             "url": self.config["custom_button10"][1],
             },   
-            {"text": self.config["custom_button9"][0],
-             "url": self.config["custom_button9"][1],
+            {"text": self.config["custom_button11"][0],
+             "url": self.config["custom_button11"][1],
             },         
           ]
         )
