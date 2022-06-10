@@ -26,7 +26,7 @@ class InfomodMod(loader.Module):
     strings = {
         "name": "Info",
         "owner": "Boshqaruvchi",
-        "version": "Sosi-versiyasi",
+        "version": "Soso-versiyasi",
         "_cfg_cst_msg": "Custom message for info. May contain {me}, {version}, {build}, {prefix}, {platform} keywords",
         "_cfg_cst_btn": "Custom button for info. Leave empty to remove button",
         "_cfg_banner": "Set `True` in order to disable an image banner",
@@ -92,16 +92,11 @@ class InfomodMod(loader.Module):
             )
             if self.config["custom_message"] and self.config["custom_message"] != "no"
             else (
-                "<b>◍ Sosi-Userbot (◕ᴗ◕✿) sosi</b>\n"
+                "<b>◍ Soso-Userbot (◕ᴗ◕✿) sosi</b>\n"
                 f'<b>◍ {self.strings("owner")}:</b> <a href="tg://user?id={self._me.id}">bu yerda</a>\n'
                 f"<b>◍ {self.strings('version')}:</b> <code>{version}</code> <a href='{build}'></a>\n"
-                f"\n◍ ╔═══╦═══╦═══╦══╗"
-                f"\n◍ ║╔═╗║╔═╗║╔═╗╠╣╠╝"
-                f"\n◍ ║╚══╣║─║║╚══╗║║   ╔╗──╔╗"
-                f"\n◍ ╚══╗║║─║╠══╗║║║   ║╚╦═╣╚╗"
-                f"\n◍ ║╚═╝║╚═╝║╚═╝╠╣╠╗║╬║╬║╔╣"
-                f"\n◍ ╚═══╩═══╩═══╩══╝╚═╩═╩═╝"
-                f"\n\n<b>◍ <u>Eynshteyn</u> teoriyasi (ʘᴗʘ✿):</b> Statistik ma’lumotlarga  koʻra, eng xavfli odamlar lichkadagi yozishmalarni skrinshot qilib oladiganlari ekan."
+                f"<b>◍ Soso-platforma:</b> <code>{platform}</code>"
+                f"\n\n<b>◍ <u>Eynshteyn</u> teoriyasi (ʘᴗʘ✿):</b> soso top"
             )
         )
 
