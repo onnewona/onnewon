@@ -27,11 +27,11 @@ class TestMod(loader.Module):
 
     strings = {
         "name": "Tester",
-        "set_loglevel": "🚫 <b>Please specify verbosity as an integer or string</b>",
+        "set_loglevel": "<b>× Iltimos, aniqlikni butun son yoki qator sifatida belgilang</b>",
         "no_logs": "<b>◍ Sizda batafsil ma'lumot bo'yicha hech qanday jurnal yo'q {}.</b>",
-        "logs_filename": "sosi-logs.html",
+        "logs_filename": "soso-logs.html",
         "logs_caption": "<b>◍ Sosi batafsil xatoliklar </b><code>{}</code>\n◍ <b>Sosi versiya: {}.{}.{}</b>\n<a href='{}'></a>",
-        "suspend_invalid_time": "🚫 <b>Invalid time to suspend</b>",
+        "suspend_invalid_time": "<b>× To‘xtatib turish uchun vaqt noto‘g‘ri</b>",
         "suspended": "<b>◍ Bot suspended for</b> <code>{}</code> <b>seconds</b>",
         "results_ping": "(◕ᴗ◕✿) <b>Response speed:</b> <code>{} ms</code>\n(◍•ᴗ•◍) <b>Updated time:</b> <code>{}</code>",
         "confidential": "⚠️ <b>Log level </b><code>{}</code><b> may reveal your confidential info, be careful</b>",
@@ -334,7 +334,7 @@ class TestMod(loader.Module):
 
     @loader.owner
     async def suspendcmd(self, message: Message):
-        """<time> - Suspends the bot for N seconds"""
+        """<time> - botni N soniyaga to'xtatib turadi"""
         try:
             time_sleep = float(utils.get_args_raw(message))
             await utils.answer(
@@ -363,10 +363,10 @@ class TestMod(loader.Module):
 
         chat, is_new = await utils.asset_channel(
             self._client,
-            "🌇 SOSI-LOGS",
-            "🌇 SOSI-LOGS - All logs is here",
+            "◍ soso-logs",
+            "◍ Soso-logs - All logs is here",
             silent=True,
-            avatar="https://i.imgur.com/JmwwMM0.jpeg",
+            avatar="https://te.legra.ph/file/00798b99b67f3e98d676b.jpg",
         )
 
         self._logchat = int(f"-100{chat.id}")
