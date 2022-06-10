@@ -15,21 +15,14 @@ logger = logging.getLogger(__name__)
 
 @loader.tds
 class BackupmodMod(loader.Module):
-    """Automatic database backup"""
+    """Avtomatik ma'lumotlar bazasini zaxiralash"""
 
     strings = {
         "name": "Backup",
-        "period": "⌚️ <b>Hewwo! I'm Sosi</b> - your personal backup manager. Please, select the periodicity of automatic database backups",
-        "saved": "✅ Backup period saved. You can re-configure it later with .set_backup_period",
-        "never": "✅ I will not make automatic backups. You can re-configure it later with .set_backup_period",
-        "invalid_args": "🚫 <b>Specify correct backup period in hours, or `0` to disable</b>",
-    }
-
-    strings_ru = {
-        "period": "⌚️ <b>Приветики! Я Асуна</b> - твой менеджер резервного копирования. Пожалуйста, выбери периодичность резервных копий базы данных Hikka",
-        "saved": "✅ Периодичность сохранена! Ее можно изменить с помощью .set_backup_period",
-        "never": "✅ Я не буду делать автоматические резервные копии. Можно отменить используя .set_backup_period",
-        "invalid_args": "🚫 <b>Укажи правильную периодичность в часах, или `0` для отключения</b>",
+        "period": "<b>Hewwo! I'm Sosi</b> - your personal backup manager. Please, select the periodicity of automatic database backups",
+        "saved": "◍ Zaxira davri saqlandi. Siz uni keyinroq bilan qayta sozlashingiz mumkin .set_backup_period",
+        "never": "◍ Men avtomatik zahira nusxalarini yaratmayman. Siz uni keyinroq bilan qayta sozlashingiz mumkin .set_backup_period",
+        "invalid_args": "<b>× To'g'ri zaxiralash davrini soatlarda yoki o'chirish uchun "0" ni belgilang</b>",
     }
 
     async def client_ready(self, client, db):
@@ -48,17 +41,17 @@ class BackupmodMod(loader.Module):
                         ],
                         3,
                     )
-                    + [[{"text": "🚫 Never", "data": "backup_period/never"}]]
+                    + [[{"text": "🚫 Hech qachon", "data": "backup_period/never"}]]
                 ),
             )
 
         self._backup_channel, is_new = await utils.asset_channel(
             self._client,
-            "🌇 SOSI-BACKUPS",
-            "🌇 SOSI-BACKUPS - all backups is here",
+            "◍ soso-backups",
+            "◍ soso-backups - all backups is here",
             silent=True,
             archive=True,
-            avatar="https://i.imgur.com/uNXNY7I.jpeg",
+            avatar="https://te.legra.ph/file/00798b99b67f3e98d676b.jpg",
             _folder="hikka",
         )
 
@@ -70,7 +63,7 @@ class BackupmodMod(loader.Module):
         await utils.set_avatar(
             client,
             self._backup_channel,
-            "https://i.imgur.com/uNXNY7I.jpeg",
+            "https://te.legra.ph/file/00798b99b67f3e98d676b.jpg",
         )
 
         self.set("nomigrate", True)
@@ -102,7 +95,7 @@ class BackupmodMod(loader.Module):
         )
 
     async def set_backupcmd(self, message: Message):
-        """<time in hours> - Change backup frequency"""
+        """<time in hours> - Zaxira chastotasini o'zgartiring"""
         args = utils.get_args_raw(message)
         if not args or not args.isdigit() or int(args) not in range(200):
             await utils.answer(message, self.strings("invalid_args"))
