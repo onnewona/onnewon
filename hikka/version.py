@@ -1,2 +1,2 @@
 """Represents current userbot version"""
-__version__ = (3, 12, 48)
+__version__ = (4, 12, 48)
