@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 @loader.tds
 class HelpMod(loader.Module):
-    """Help module, made specifically for Hikka with <3"""
+    """Soso uchun maxsus yaratilgan yordam moduli"""
 
     strings = {
         "name": "Help",
@@ -18,7 +18,7 @@ class HelpMod(loader.Module):
         "single_mod_header": "◍ <b>Modul nomi:</b> <code>{}</code>:",
         "single_cmd": "\n◍ <b>{}{}</b> <code>{}</code>",
         "undoc_cmd": "( ꈍᴗꈍ) Hujjat yo'q",
-        "all_header": "• <b>Bu mening Sosi o'yinchog'im (◕ᴗ◕✿)</b>\n• <b>{} ta mod mavjud (ʘᴗʘ✿)\n• {} tasi yashirin (ʘᴗʘ✿)</b>",
+        "all_header": "◍ <b>{} ta mod mavjud (ʘᴗʘ✿)\n◍ {} tasi yashirin.</b>",
         "mod_tmpl": "\n{} {}",
         "first_cmd_tmpl": ": {}",
         "cmd_tmpl": " _ {}",
@@ -316,7 +316,7 @@ class HelpMod(loader.Module):
             if not self.lookup("Loader")._fully_loaded
             else ""
         )
-        sosi = "\n\n• <b>Sosi</b>, shunchaki sosi xolos <b>(◕ᴗ◕✿)</b>"
+        sosi = "\n\n• <b>Soso</b>, shunchaki soso xolos <b>(◕ᴗ◕✿)</b>"
         await utils.answer(
             message,
             f"{reply}\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}{no_commands_}{partial_load}{sosi}",
