@@ -19,10 +19,10 @@ class BackupmodMod(loader.Module):
 
     strings = {
         "name": "Backup",
-        "period": "<b>Salom! Men Soso</b> - shaxsiy zaxira menejeringiz. Iltimos, ma'lumotlar bazasini avtomatik zahiralash davriyligini tanlang",
+        "period": "<b>◍ Salom! Men Soso</b> - shaxsiy zaxira menejeringiz. Iltimos, ma'lumotlar bazasini avtomatik zahiralash davriyligini tanlang",
         "saved": "◍ Zaxira davri saqlandi. Siz uni keyinroq bilan qayta sozlashingiz mumkin .set_backup_period",
         "never": "◍ Men avtomatik zahira nusxalarini yaratmayman. Siz uni keyinroq bilan qayta sozlashingiz mumkin .set_backup_period",
-        "invalid_args": "<b>× To'g'ri zaxiralash davrini soatlarda yoki o'chirish uchun "0" ni belgilang</b>",
+        "invalid_args": "<b>× To'g'ri zaxiralash davrini soatlarda yoki o'chirish uchun '0' ni belgilang</b>",
     }
 
     async def client_ready(self, client, db):
