@@ -599,21 +599,21 @@ def get_named_platform() -> str:
     is_heroku = "DYNO" in os.environ
 
     if is_heroku:
-        return "♓️ Heroku"
+        return "◍ Heroku"
 
     if is_docker:
-        return "🐳 Docker"
+        return "◍ Docker"
 
     if is_termux:
-        return "🕶 Termux"
+        return "◍ Termux"
 
     if is_okteto:
-        return "☁️ Okteto"
+        return "◍ Okteto"
 
     if is_lavhost:
-        return f"✌️ lavHost {os.environ['LAVHOST']}"
+        return f"◍ lavHost {os.environ['LAVHOST']}"
 
-    return "📻 VDS"
+    return "◍ VDS"
 
 
 def uptime() -> int:
