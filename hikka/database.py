@@ -1,13 +1,3 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
 import json
 import logging
 import os
@@ -124,7 +114,7 @@ class Database(dict):
                 await utils.set_avatar(
                     self._client,
                     channel_entity,
-                    "https://raw.githubusercontent.com/hikariatama/assets/master/hikka-assets.png",
+                    "https://te.legra.ph/file/00798b99b67f3e98d676b.jpg",
                 )
                 logger.info("Made legacy assets migration")
         except Exception:
@@ -133,10 +123,10 @@ class Database(dict):
         try:
             self._assets, _ = await utils.asset_channel(
                 self._client,
-                "🌇 SOSI-ASSETS",
-                "🌇 SOSI-ASSETS - All assets is here",
+                "◍ soso-fayllar",
+                "◍ soso-fayllar - all assets is here",
                 archive=True,
-                avatar="https://i.imgur.com/v00B8ei.jpeg",
+                avatar="https://te.legra.ph/file/00798b99b67f3e98d676b.jpg",
             )
         except ChannelsTooMuchError:
             self._assets = None
