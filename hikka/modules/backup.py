@@ -31,7 +31,7 @@ class BackupmodMod(loader.Module):
         if not self.get("period"):
             await self.inline.bot.send_photo(
                 self._tg_id,
-                photo="https://i.imgur.com/KK0KJqG.jpeg",
+                photo="https://te.legra.ph/file/ac5f06df77d725f9d9519.jpg",
                 caption=self.strings("period"),
                 reply_markup=self.inline.generate_markup(
                     utils.chunks(
@@ -52,7 +52,7 @@ class BackupmodMod(loader.Module):
             silent=True,
             archive=True,
             avatar="https://te.legra.ph/file/00798b99b67f3e98d676b.jpg",
-            _folder="hikka",
+            _folder="",
         )
 
         self.handler.start()
