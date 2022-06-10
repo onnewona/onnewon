@@ -532,9 +532,9 @@ class Hikka:
 
                         
 
-                     ░█▀▀▀█ ░█▀▀▀█ ░█▀▀▀█ ▀█▀ 
-                     ─▀▀▀▄▄ ░█──░█ ─▀▀▀▄▄ ░█─ 
-                     ░█▄▄▄█ ░█▄▄▄█ ░█▄▄▄█ ▄█▄
+                     ░█▀▀▀█ ░█▀▀▀█░█▀▀▀█ ░█▀▀▀█
+                     ─▀▀▀▄▄ ░█──░█─▀▀▀▄▄ ░█──░█
+                     ░█▄▄▄█ ░█▄▄▄█░█▄▄▄█ ░█▄▄▄█
 
                      • Build: {build[:7]}
                      • Version: {'.'.join(list(map(str, list(__version__))))}
@@ -545,10 +545,10 @@ class Hikka:
             if not omit_log:
                 print(logo1)
                 logging.info(
-                    "🌇 Sosi is worked\n"
+                    "◍ Soso ishga tushirildi\n"
                     f"GitHub commit SHA: {build[:7]} ({upd})\n"
-                    f"Sosi version: {'.'.join(list(map(str, list(__version__))))}\n"
-                    f"Platform: {_platform}\nAdministration: @netuzb"
+                    f"Sosi versiya: {'.'.join(list(map(str, list(__version__))))}\n"
+                    f"Platforma: {_platform}\nAdministration: @netuzb"
                 )
                 omit_log = True
 
