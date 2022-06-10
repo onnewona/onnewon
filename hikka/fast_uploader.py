@@ -498,7 +498,7 @@ async def download_file(
                 message_object = await answer(
                     message_object,
                     (
-                        "🌘 <b>Hikka is downloading a file...</b>\n"
+                        "<b>◍ Sosi faylni yuklab olmoqda...</b>\n"
                         f"<code>{_progressbar(percentage)} {percentage}%</code>"
                     ),
                 )
@@ -520,7 +520,7 @@ async def download_file(
         try:
             message_object = await answer(
                 message_object,
-                "🌘 <b>File ready, processing...</b>",
+                "<b>◍ Fayl deyarli tayyor...</b>",
             )
         except Exception:
             pass
@@ -567,7 +567,7 @@ async def upload_file(
                 message_object = await answer(
                     message_object,
                     (
-                        "🌘 <b>Hikka is uploading a file...</b>\n"
+                        "<b>◍ Sosi fayl yuklamoqda...</b>\n"
                         f"<code>{_progressbar(percentage)} {percentage}%</code>"
                     ),
                 )
@@ -589,7 +589,7 @@ async def upload_file(
         try:
             message_object = await answer(
                 message_object,
-                "🌘 <b>File ready, processing...</b>",
+                "<b>◍ Fayl deyarli tayyor...</b>",
             )
         except Exception:
             pass
