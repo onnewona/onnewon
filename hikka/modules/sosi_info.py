@@ -27,9 +27,9 @@ class InfomodMod(loader.Module):
         "name": "Info",
         "owner": "Boshqaruvchi",
         "version": "Soso-versiyasi",
-        "_cfg_cst_msg": "Custom message for info. May contain {me}, {version}, {build}, {prefix}, {platform} keywords",
-        "_cfg_cst_btn": "Custom button for info. Leave empty to remove button",
-        "_cfg_banner": "Set `True` in order to disable an image banner",
+        "_cfg_cst_msg": "Ma'lumot uchun maxsus xabar. O'z ichiga olishi mumkin {me}, {version}, {build}, {prefix}, {platform}",
+        "_cfg_cst_btn": "Ma'lumot uchun maxsus tugma. O'chirish uchun tugmani bo'sh qoldiring",
+        "_cfg_banner": "Rasm bannerini oʻchirish uchun “True” ni oʻrnating",
     }
 
     def __init__(self):
@@ -39,14 +39,14 @@ class InfomodMod(loader.Module):
                 doc=lambda: self.strings("_cfg_cst_msg"),
             ),
             loader.ConfigValue(
-                "custom_button6",
-                ["Sosi-xususiy-chat (◕ᴗ◕✿)", "https://t.me/+5o1a-UjPfCZhNmE5"],
+                "custom_button8",
+                ["Soso-xususiy-chat (◕ᴗ◕✿)", "https://t.me/+5o1a-UjPfCZhNmE5"],
                 lambda: self.strings("_cfg_cst_btn"),
                 validator=loader.validators.Series(fixed_len=2),
             ),         
             loader.ConfigValue(
-                "custom_button7",
-                ["Sosi-yangilash (ʘᴗʘ✿)", "http://t.me/share/url?url=.update --force"],
+                "custom_button9",
+                ["Soso-yangilash (ʘᴗʘ✿)", "http://t.me/share/url?url=.update --force"],
                 lambda: self.strings("_cfg_cst_btn"),
                 validator=loader.validators.Series(fixed_len=2),
             ),         
@@ -103,20 +103,20 @@ class InfomodMod(loader.Module):
     def _get_mark(self):
         return (
             None
-            if not self.config["custom_button6"]
+            if not self.config["custom_button8"]
             else [
-            {"text": self.config["custom_button6"][0],
-             "url": self.config["custom_button6"][1],
+            {"text": self.config["custom_button8"][0],
+             "url": self.config["custom_button8"][1],
             },   
-            {"text": self.config["custom_button7"][0],
-             "url": self.config["custom_button7"][1],
+            {"text": self.config["custom_button9"][0],
+             "url": self.config["custom_button9"][1],
             },         
           ]
         )
 
     @loader.inline_everyone
     async def info_inline_handler(self, query: InlineQuery) -> dict:
-        """Send userbot info"""
+        """Userbot ma'lumotlarini yuboring"""
 
         return {
             "title": self.strings("send_info"),
@@ -128,7 +128,7 @@ class InfomodMod(loader.Module):
 
     @loader.unrestricted
     async def infocmd(self, message: Message):
-        """Send userbot info"""
+        """Userbot ma'lumotlarini yuboring"""
         await self.inline.form(
             message=message,
             text=self._render_info(),
@@ -139,5 +139,3 @@ class InfomodMod(loader.Module):
                 else {}
             ),
         ) 
-
-#949493939393949494994
