@@ -287,7 +287,7 @@ class List(InlineUnit):
             *(
                 [
                     InlineKeyboardButton(
-                        f"back {self._units[unit_uid]['current_index']}-{len(self._units[unit_uid]['strings'])}",
+                        f"orqaga",
                         callback_data=self._units[unit_uid]["btn_call_data"]["back"],
                     )
                 ]
@@ -295,13 +295,13 @@ class List(InlineUnit):
                 else []
             ),
             InlineKeyboardButton(
-                "(◕ᴗ◕✿) close",
+                "(◕ᴗ◕✿) yopish",
                 callback_data=self._units[unit_uid]["btn_call_data"]["close"],
             ),
             *(
                 [
                     InlineKeyboardButton(
-                        f"next {self._units[unit_uid]['current_index'] + 2}-{len(self._units[unit_uid]['strings'])}",
+                        f"keyingi",
                         callback_data=self._units[unit_uid]["btn_call_data"]["next"],
                     ),
                 ]
