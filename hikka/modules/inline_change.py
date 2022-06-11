@@ -14,20 +14,13 @@ logger = logging.getLogger(__name__)
 
 @loader.tds
 class InlineStuffMod(loader.Module):
-    """Provides support for inline stuff"""
+    """Bot yaratish yoki botni oʻzgartirish"""
 
     strings = {
-        "name": "InlineChanger",
-        "bot_username_invalid": "🚫 <b>Specified bot username is invalid. It must end with </b><code>bot</code><b> and contain at least 4 symbols</b>",
-        "bot_username_occupied": "🚫 <b>This username is already occupied</b>",
-        "bot_updated": "😌 <b>Config successfully saved. Restart userbot to apply changes</b>",
-    }
-
-    strings_ru = {
-        "bot_username_invalid": "🚫 <b>Неправильный ник бота. Он должен заканчиваться на </b><code>bot</code><b> и быть не короче чем 5 символов</b>",
-        "bot_username_occupied": "🚫 <b>Такой ник бота уже занят</b>",
-        "bot_updated": "😌 <b>Настройки сохранены. Для их применения нужно перезагрузить юзербот</b>",
-        "_cmd_doc_ch_hikka_bot": "<username> - Изменить юзернейм инлайн бота",
+        "name": "BotYaratuvchi",
+        "bot_username_invalid": "<b>◍ Belgilangan bot foydalanuvchi nomi yaroqsiz. Quyidagicha tugashi kerak </b><code>...bot</code>",
+        "bot_username_occupied": "<b>◍ Bu foydalanuvchi nomi allaqachon band ಥ_ಥ</b>",
+        "bot_updated": "<b>◍ Konfiguratsiya muvaffaqiyatli saqlandi. O'zgarishlarni qo'llash uchun userbotni qayta ishga tushiring.</b>",
     }
 
     async def client_ready(self, client, db):
@@ -61,7 +54,7 @@ class InlineStuffMod(loader.Module):
 
         await message.delete()
 
-        m = await message.respond("🌉 <b>Opening gallery... wait</b>")
+        m = await message.respond("<b>◍ Galereya ochilishi...</b>")
 
         await self.inline.gallery(
             message=m,
@@ -103,7 +96,7 @@ class InlineStuffMod(loader.Module):
                     return True
 
     async def change_inlinecmd(self, message: Message):
-        """<username> - Change your inline bot username"""
+        """<username> - Inline bot foydalanuvchi nomini o'zgartiring"""
         args = utils.get_args_raw(message).strip("@")
         if (
             not args
