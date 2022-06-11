@@ -192,7 +192,7 @@ class TokenObtainment(InlineUnit):
                     for msg in [
                         "/setinline",
                         button.text,
-                        "HikkaQuery",
+                        "sosoooooo",
                         "/setinlinefeedback",
                         button.text,
                         "Enabled",
