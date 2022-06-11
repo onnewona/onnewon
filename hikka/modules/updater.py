@@ -36,7 +36,7 @@ class UpdaterMod(loader.Module):
         "origin_cfg_doc": "Git origin URL, for where to update from",
         "btn_restart": "(◕ᴗ◕✿) restart",
         "btn_update": "( ꈍᴗꈍ) update",
-        "restart_confirm": "🌇 <b>Are you sure you want to restart?</b>",
+        "restart_confirm": "<b>◍ Haqiqatan ham qayta ishga tushirmoqchimisiz?</b>",
         "update_confirm": (
             "🧭 <b>Are you sure you want to update?\n\n"
             '<a href="https://github.com/Netuzb/sosi/commit/{}">{}</a> ⤑ '
@@ -47,33 +47,6 @@ class UpdaterMod(loader.Module):
         "lavhost_restart": "✌️ <b>Your lavHost is restarting...\n&gt;///&lt;</b>",
         "lavhost_update": "✌️ <b>Your lavHost is updating...\n&gt;///&lt;</b>",
         "full_success": "◍ <b>Muvaffaqiyatli yakunlandi! {}\n◍ Ma'lumot:</b> <code>Toʻliq qayta ishga tushirish {}s davom etdi.</code>",
-    }
-
-    strings_ru = {
-        "source": "ℹ️ <b>Исходный код можно прочитать</b> <a href='{}'>здесь</a>",
-        "restarting_caption": "🔄 <b>Перезагрузка...</b>",
-        "downloading": "🕐 <b>Скачивание обновлений...</b>",
-        "installing": "🕐 <b>Установка обновлений...</b>",
-        "success": "⏳ <b>Перезагрузка успешна! {}</b>\n<i>Но модули еще загружаются...</i>\n<i>Перезагрузка заняла {} сек</i>",
-        "full_success": "✅ <b>Юзербот полностью загружен! {}</b>\n<i>Полная перезагрузка заняла {} сек</i>",
-        "origin_cfg_doc": "Ссылка, из которой будут загружаться обновления",
-        "btn_restart": "🔄 Перезагрузиться",
-        "btn_update": "🧭 Обновиться",
-        "restart_confirm": "🔄 <b>Ты уверен, что хочешь перезагрузиться?</b>",
-        "update_confirm": (
-            "🧭 <b>Ты уверен, что хочешь обновиться??\n\n"
-            '<a href="https://github.com/hikariatama/Hikka/commit/{}">{}</a> ⤑ '
-            '<a href="https://github.com/hikariatama/Hikka/commit/{}">{}</a></b>'
-        ),
-        "no_update": "🚸 <b>У тебя последняя версия. Обновиться принудительно?</b>",
-        "cancel": "🚫 Отмена",
-        "_cmd_doc_restart": "Перезагружает юзербот",
-        "_cmd_doc_download": "Скачивает обновления",
-        "_cmd_doc_update": "Обновляет юзербот",
-        "_cmd_doc_source": "Ссылка на исходный код проекта",
-        "_cls_doc": "Обновляет юзербот",
-        "lavhost_restart": "✌️ <b>Твой lavHost перезагружается...\n&gt;///&lt;</b>",
-        "lavhost_update": "✌️ <b>Твой lavHost обновляется...\n&gt;///&lt;</b>",
     }
 
     def __init__(self):
@@ -88,7 +61,7 @@ class UpdaterMod(loader.Module):
 
     @loader.owner
     async def restartcmd(self, message: Message):
-        """Restarts the userbot"""
+        """Userbotni qayta ishga tushiradi"""
         try:
             if (
                 "--force" in (utils.get_args_raw(message) or "")
