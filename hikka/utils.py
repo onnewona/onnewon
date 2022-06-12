@@ -579,7 +579,7 @@ def get_named_platform() -> str:
         return "◍ Docker"
 
     if is_termux:
-        return "◍ Termux"
+        return "◍ Terminal"
 
     if is_okteto:
         return "◍ Okteto"
