@@ -111,9 +111,9 @@ class InfomodMod(loader.Module):
             if self.config["custom_message"] and self.config["custom_message"] != "no"
             else (
                 f"{self.strings('soso_userbot')}\n"
-                f'<b>◍ {self.strings("owner")}:</b> <a href="tg://user?id={self._me.id}">{me}</a>\n'
-                f"<b>◍ {self.strings('version')}:</b> <code>{version}</code> <a href='{build}'></a>\n"
-                f"<b>◍ {self.strings('soso_platforma')}:</b> <code>{platform}</code>"
+                f'<b>◍ {self.strings("owner")}</b> ◍ <a href="tg://user?id={self._me.id}">{me}</a>\n'
+                f"<b>◍ {self.strings('version')}</b> ◍ <code>{version}</code> <a href='{build}'></a>\n"
+                f"<b>◍ {self.strings('soso_platforma')}</b> <code>{platform}</code>"
                 f"\n\n{self.strings('soso_einstein')}"
             )
         )
