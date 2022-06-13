@@ -317,7 +317,7 @@ class HelpMod(loader.Module):
             if not self.lookup("Loader")._fully_loaded
             else ""
         )
-        sosi = "\n\n• <b>Soso</b>, shunchaki soso xolos <b>(◕ᴗ◕✿)</b>"
+        sosi = f"\n\n{self.strings('soso_pass')}"
         await utils.answer(
             message,
             f"{reply}\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}{no_commands_}{partial_load}{sosi}",
