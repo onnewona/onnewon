@@ -5,7 +5,7 @@ from .. import loader, main, translations, utils
 
 @loader.tds
 class CoreMod(loader.Module):
-    """Control core userbot settings"""
+    """Asosiy userbot sozlamalarini boshqaring"""
 
     strings = {
         "name": "Sozlamalar",
