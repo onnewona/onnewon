@@ -26,7 +26,7 @@ class CoreMod(loader.Module):
         "no_alias": "<b>🚫 Alias</b> <code>{}</code> <b>does not exist</b>",
         "db_cleared": "<b>◍ Database cleared</b>",
         "check_url": "🚫 <b>You need to specify valid url containing a langpack</b>",
-        "lang_saved": "{} <b>Language saved!</b>",
+        "lang_saved": "{} <b>Til quyidagiga oʻzgardi:</b>",
         "pack_saved": "◍ <b>Translate pack saved!</b>",
         "incorrect_language": "🚫 <b>Incorrect language specified</b>",
         "lang_removed": "◍ <b>Translations reset to default ones</b>",
@@ -241,7 +241,7 @@ class CoreMod(loader.Module):
             message, self.strings("pack_saved" if success else "check_pack")
         )
 
-    async def soso_cncmd(self, message: Message):
+    async def soso_tilcmd(self, message: Message):
         """Soso tilini Xitoy'chaga oʻzgartirish"""
         args = utils.get_args_raw(message)
         if not args or len(args) != 2:
@@ -263,7 +263,7 @@ class CoreMod(loader.Module):
             message,
             self.strings("lang_saved").format(
                 utils.get_lang_flag(args.lower() if args.lower() != "en" else "gb")
-            ),
+            ) + f" <code>{args}</code>",
         )
 
     @loader.owner
