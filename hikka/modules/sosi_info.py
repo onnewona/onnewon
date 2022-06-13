@@ -27,6 +27,8 @@ class InfomodMod(loader.Module):
         "name": "Info",
         "owner": "Boshqaruvchi",
         "version": "Soso-versiyasi",
+        "soso_userbot": "<b>◍ Soso-Userbot (◕ᴗ◕✿) soso</b>",
+        "soso_einstein": "<b>◍ <u>Eynshteyn</u> teoriyasi (ʘᴗʘ✿):</b> temurni soso'si top",
         "_cfg_cst_msg": "Ma'lumot uchun maxsus xabar. O'z ichiga olishi mumkin {me}, {version}, {build}, {prefix}, {platform}",
         "_cfg_cst_btn": "Ma'lumot uchun maxsus tugma. O'chirish uchun tugmani bo'sh qoldiring",
         "_cfg_banner": "Rasm bannerini oʻchirish uchun “True” ni oʻrnating",
@@ -35,6 +37,8 @@ class InfomodMod(loader.Module):
     strings_cn = {
         "owner": "經理",
         "version": "Soso-版本",
+        "soso_userbot": "<b>◍ Soso-用戶機器人 (◕ᴗ◕✿) 普通</b>",
+        "soso_einstein": "<b>◍ <u>愛因斯坦</u> 理論 (ʘᴗʘ✿):</b> 找到鐵木耳醬",
         "_cfg_cst_msg": "信息的特殊消息。可能包括 {me}, {version}, {build}, {prefix}, {platform}",
         "_cfg_cst_btn": "信息的特殊按鈕。將按鈕留空以將其關閉",
         "_cfg_banner": "設置 True 以刪除圖像橫幅",
@@ -100,11 +104,11 @@ class InfomodMod(loader.Module):
             )
             if self.config["custom_message"] and self.config["custom_message"] != "no"
             else (
-                "<b>◍ Soso-Userbot (◕ᴗ◕✿) soso</b>\n"
+                f"{self.strings('soso_userbot')}\n"
                 f'<b>◍ {self.strings("owner")}:</b> <a href="tg://user?id={self._me.id}">{me}</a>\n'
                 f"<b>◍ {self.strings('version')}:</b> <code>{version}</code> <a href='{build}'></a>\n"
                 f"<b>◍ Soso-platforma:</b> <code>{platform}</code>"
-                f"\n\n<b>◍ <u>Eynshteyn</u> teoriyasi (ʘᴗʘ✿):</b> temurni soso'si top"
+                f"\n\n◍ {self.strings('soso_einstein')}"
             )
         )
 
