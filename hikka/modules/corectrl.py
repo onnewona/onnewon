@@ -241,8 +241,8 @@ class CoreMod(loader.Module):
             message, self.strings("pack_saved" if success else "check_pack")
         )
 
-    async def cmd(self, message: Message):
-        """..."""
+    async def soso_cncmd(self, message: Message):
+        """Soso tilini Xitoy'chaga oʻzgartirish"""
         args = utils.get_args_raw(message)
         if not args or len(args) != 2:
             await utils.answer(message, self.strings("incorrect_language"))
