@@ -132,18 +132,6 @@ class InfomodMod(loader.Module):
           ]
         )
 
-    @loader.inline_everyone
-    async def info_inline_handler(self, query: InlineQuery) -> dict:
-        """Userbot ma'lumotlarini yuboring"""
-
-        return {
-            "title": self.strings("send_info"),
-            "description": self.strings("description"),
-            "message": self._render_info(),
-            "thumb": "https://i.imgur.com/sYULuO1.jpeg",
-            "reply_markup": self._get_mark(),
-        }
-
     @loader.unrestricted
     async def infocmd(self, message: Message):
         """Userbot ma'lumotlarini yuboring"""
@@ -152,7 +140,7 @@ class InfomodMod(loader.Module):
             text=self._render_info(),
             reply_markup=self._get_mark(),
             **(
-                {"photo": "https://i.imgur.com/t0Qjyhc.jpeg"}
+                {"photo": "https://te.legra.ph/file/695db61e0d6e83fcb7953.jpg"}
                 if not self.config["disable_banner"]
                 else {}
             ),
