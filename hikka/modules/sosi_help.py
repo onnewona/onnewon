@@ -25,6 +25,7 @@ class HelpMod(loader.Module):
         "no_mod": "<b>(◍•ᴗ•◍) Yashirish uchun modulni belgilang</b>",
         "hidden_shown": "• <b>{} modules hidden (◕ᴗ◕✿)\n• {} modules shown ಡ ͜ ʖ ಡ</b>\n{}\n{}",
         "ihandler": "\n◍ <b>{}</b> {}",
+        "soso_pass": "◍ Soso, shunchaki soso xolos (◕ᴗ◕✿)",
         "undoc_ihandler": "( ꈍᴗꈍ) Hujjat yo'q",
         "partial_load": "<b>( ꈍᴗꈍ) Userbot to'liq yuklanmagan, shuning uchun barcha modullar ko'rsatilmaydi</b>",
         "not_exact": "<b>( ꈍᴗꈍ) Ggg</b>, modul haqiqiy nomini kiritmadingiz va shu sababli modul maʼlumotlari <u>tasodifiy</u> koʻrsatildi.",
@@ -42,6 +43,7 @@ class HelpMod(loader.Module):
         "no_mod": "<b>(◍•ᴗ•◍) 選擇要隱藏的模塊</b>",
         "hidden_shown": "• <b>{} 隱藏的模塊 (◕ᴗ◕✿)\n• {} 顯示的模塊 ಡ ͜ ʖ ಡ</b>\n{}\n{}",
         "ihandler": "\n◍ <b>{}</b> {}",
+        "soso_pass": "◍ Soso, 簡單地 soso (◕ᴗ◕✿)",
         "undoc_ihandler": "( ꈍᴗꈍ) 沒有文件",
         "partial_load": "<b>( ꈍᴗꈍ) 用戶機器人未完全加載，因此並未顯示所有模塊</b>",
         "not_exact": "<b>( ꈍᴗꈍ) 格格</b>, 你沒有輸入模塊的真實名稱，所以模塊信息是<u>隨機顯示的</u>.",
@@ -261,11 +263,11 @@ class HelpMod(loader.Module):
             core = mod.__origin__ == "<core>"
 
             if core:
-                emoji = self.config["core_emoji"]
+                emoji = self.config["soso_emoji"]
             elif inline:
-                emoji = self.config["hikka_emoji"]
+                emoji = self.config["soso_emoji"]
             else:
-                emoji = self.config["plain_emoji"]
+                emoji = self.config["soso_emoji"]
 
             if (
                 not getattr(mod, "commands", None)
@@ -273,7 +275,7 @@ class HelpMod(loader.Module):
                 and not getattr(mod, "callback_handlers", None)
             ):
                 no_commands_ += [
-                    self.strings("mod_tmpl").format(self.config["empty_emoji"], name)
+                    self.strings("mod_tmpl").format(self.config["soso_emoji"], name)
                 ]
                 continue
 
