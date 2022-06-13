@@ -26,7 +26,7 @@ class CoreMod(loader.Module):
         "no_alias": "<b>🚫 Alias</b> <code>{}</code> <b>does not exist</b>",
         "db_cleared": "<b>◍ Database cleared</b>",
         "check_url": "🚫 <b>You need to specify valid url containing a langpack</b>",
-        "lang_saved": "{} <b>Til quyidagiga oʻzgardi:</b>",
+        "lang_saved": "<b>◍ Til quyidagiga oʻzgardi: {}</b>",
         "pack_saved": "◍ <b>Translate pack saved!</b>",
         "incorrect_language": "🚫 <b>Incorrect language specified</b>",
         "lang_removed": "◍ <b>Translations reset to default ones</b>",
