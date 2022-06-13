@@ -27,6 +27,9 @@ class InfomodMod(loader.Module):
         "name": "Info",
         "owner": "Boshqaruvchi",
         "version": "Soso-versiyasi",
+        "soso_update": "Soso-yangilash",
+        "soso_chat": "Soso-xususiy-chat",
+        "soso_platforma": "Soso-platforma",
         "soso_userbot": "<b>◍ Soso-Userbot (◕ᴗ◕✿) soso</b>",
         "soso_einstein": "<b>◍ <u>Eynshteyn</u> teoriyasi (ʘᴗʘ✿):</b> temurni soso'si top",
         "_cfg_cst_msg": "Ma'lumot uchun maxsus xabar. O'z ichiga olishi mumkin {me}, {version}, {build}, {prefix}, {platform}",
@@ -37,6 +40,9 @@ class InfomodMod(loader.Module):
     strings_cn = {
         "owner": "經理",
         "version": "Soso-版本",
+        "soso_update": "Soso-更新",
+        "soso_chat": "Soso-私人的-聊天",
+        "soso_platforma": "Soso-平台",
         "soso_userbot": "<b>◍ Soso-用戶機器人 (◕ᴗ◕✿) 普通</b>",
         "soso_einstein": "<b>◍ <u>愛因斯坦</u> 理論 (ʘᴗʘ✿):</b> 找到鐵木耳醬",
         "_cfg_cst_msg": "信息的特殊消息。可能包括 {me}, {version}, {build}, {prefix}, {platform}",
@@ -51,14 +57,14 @@ class InfomodMod(loader.Module):
                 doc=lambda: self.strings("_cfg_cst_msg"),
             ),
             loader.ConfigValue(
-                "custom_button10",
-                ["◍ Soso-xususiy-chat", "https://t.me/+5o1a-UjPfCZhNmE5"],
+                "custom_button12",
+                [f"◍ {self.strings('soso_chat')}", "https://t.me/+5o1a-UjPfCZhNmE5"],
                 lambda: self.strings("_cfg_cst_btn"),
                 validator=loader.validators.Series(fixed_len=2),
             ),         
             loader.ConfigValue(
-                "custom_button11",
-                ["◍ Soso-yangilash", "http://t.me/share/url?url=.update --force"],
+                "custom_button13",
+                [f"◍ {self.strings('soso_update')}", "http://t.me/share/url?url=.update --force"],
                 lambda: self.strings("_cfg_cst_btn"),
                 validator=loader.validators.Series(fixed_len=2),
             ),         
@@ -107,21 +113,21 @@ class InfomodMod(loader.Module):
                 f"{self.strings('soso_userbot')}\n"
                 f'<b>◍ {self.strings("owner")}:</b> <a href="tg://user?id={self._me.id}">{me}</a>\n'
                 f"<b>◍ {self.strings('version')}:</b> <code>{version}</code> <a href='{build}'></a>\n"
-                f"<b>◍ Soso-platforma:</b> <code>{platform}</code>"
-                f"\n\n◍ {self.strings('soso_einstein')}"
+                f"<b>◍ {self.strings('soso_platforma')}:</b> <code>{platform}</code>"
+                f"\n\n{self.strings('soso_einstein')}"
             )
         )
 
     def _get_mark(self):
         return (
             None
-            if not self.config["custom_button10"]
+            if not self.config["custom_button12"]
             else [
-            {"text": self.config["custom_button10"][0],
-             "url": self.config["custom_button10"][1],
+            {"text": self.config["custom_button12"][0],
+             "url": self.config["custom_button12"][1],
             },   
-            {"text": self.config["custom_button11"][0],
-             "url": self.config["custom_button11"][1],
+            {"text": self.config["custom_button13"][0],
+             "url": self.config["custom_button13"][1],
             },         
           ]
         )
