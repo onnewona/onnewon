@@ -58,13 +58,13 @@ class InfomodMod(loader.Module):
             ),
             loader.ConfigValue(
                 "custom_button12",
-                [f"◍ {self.strings('soso_chat')}", "https://t.me/+5o1a-UjPfCZhNmE5"],
+                ["◍ soso-chat", "https://t.me/+5o1a-UjPfCZhNmE5"],
                 lambda: self.strings("_cfg_cst_btn"),
                 validator=loader.validators.Series(fixed_len=2),
             ),         
             loader.ConfigValue(
                 "custom_button13",
-                [f"◍ {self.strings('soso_update')}", "http://t.me/share/url?url=.update --force"],
+                ["◍ soso-yangilash", "http://t.me/share/url?url=.update --force"],
                 lambda: self.strings("_cfg_cst_btn"),
                 validator=loader.validators.Series(fixed_len=2),
             ),         
