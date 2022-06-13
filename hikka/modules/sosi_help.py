@@ -19,7 +19,7 @@ class HelpMod(loader.Module):
         "single_cmd": "\n◍ <b>{}{}</b> <code>{}</code>",
         "undoc_cmd": "( ꈍᴗꈍ) Hujjat yo'q",
         "all_header": "◍ <b>{} ta mod mavjud (ʘᴗʘ✿)\n◍ {} tasi yashirin.</b>",
-        "mod_tmpl": "\n{} {}",
+        "mod_tmpl": "\n<b>{} {}</b>",
         "first_cmd_tmpl": ": {}",
         "cmd_tmpl": " _ {}",
         "no_mod": "<b>(◍•ᴗ•◍) Yashirish uchun modulni belgilang</b>",
@@ -37,7 +37,7 @@ class HelpMod(loader.Module):
         "single_cmd": "\n◍ <b>{}{}</b> <code>{}</code>",
         "undoc_cmd": "( ꈍᴗꈍ) 沒有文件",
         "all_header": "◍ <b>{} 可用模組° (ʘᴗʘ✿)\n◍ {} 已隱藏°</b>",
-        "mod_tmpl": "\n{} {}",
+        "mod_tmpl": "\n<b>{} {}</b>",
         "first_cmd_tmpl": ": {}",
         "cmd_tmpl": " _ {}",
         "no_mod": "<b>(◍•ᴗ•◍) 選擇要隱藏的模塊</b>",
@@ -56,25 +56,7 @@ class HelpMod(loader.Module):
                 "◍",
                 lambda: "Core module bullet",
                 validator=loader.validators.String(length=1),
-            ),
-            loader.ConfigValue(
-                "cmd_soso_emoji",
-                "◍",
-                lambda: "Hikka-only module bullet",
-                validator=loader.validators.String(length=1),
-            ),
-            loader.ConfigValue(
-                "cmd_i_emoji",
-                "◍",
-                lambda: "Plain module bullet",
-                validator=loader.validators.String(length=1),
-            ),
-            loader.ConfigValue(
-                "cmd_emoji",
-                "◍",
-                lambda: "Empty modules bullet",
-                validator=loader.validators.String(length=1),
-            ),
+            ),          
         )
 
     async def helphidecmd(self, message: Message):
