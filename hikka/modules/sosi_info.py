@@ -32,6 +32,14 @@ class InfomodMod(loader.Module):
         "_cfg_banner": "Rasm bannerini oʻchirish uchun “True” ni oʻrnating",
     }
 
+    strings_cn = {
+        "owner": "經理",
+        "version": "Soso-版本",
+        "_cfg_cst_msg": "信息的特殊消息。可能包括 {me}, {version}, {build}, {prefix}, {platform}",
+        "_cfg_cst_btn": "信息的特殊按鈕。將按鈕留空以將其關閉",
+        "_cfg_banner": "設置 True 以刪除圖像橫幅",
+    }
+
     def __init__(self):
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
