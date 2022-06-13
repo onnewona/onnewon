@@ -317,10 +317,9 @@ class HelpMod(loader.Module):
             if not self.lookup("Loader")._fully_loaded
             else ""
         )
-        sosi = f"\n\n{self.strings('soso_pass')}"
         await utils.answer(
             message,
-            f"{reply}\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}{no_commands_}{partial_load}{sosi}",
+            f"{reply}\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}{no_commands_}{partial_load}",
         )
 
     async def client_ready(self, client, db):
