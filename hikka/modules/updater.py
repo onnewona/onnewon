@@ -32,7 +32,7 @@ class UpdaterMod(loader.Module):
         "restarting_caption": "(◕ᴗ◕✿) <b>Qayta ishga tushirilmoqda...</b>",
         "downloading": "(ʘᴗʘ✿) <b>Yangilanishlar yuklab olinmoqda...</b>",
         "installing": "(◍•ᴗ•◍) <b>Yangilanishlar o'rnatilmoqda...</b>",
-        "success": "◍ <b>Qayta ishga tushirish muvaffaqiyatli bajarildi! {}\n◍ Ma'lumot:</b> <code>Ammo modullar hali ham yuklanmoqda...</code>\n<b>◍ Daraja:</b> <code>Qayta ishga tushirish {} soniya davom etadi.</code>",
+        "success": "◍ <b>Qayta ishga tushirish muvaffaqiyatli bajarildi! {}\n◍ Ma'lumot:</b> modullar hali ham yuklanmoqda...\n<b>◍ Daraja:</b> qayta ishga tushirish {} soniya davom etadi.",
         "origin_cfg_doc": "Git origin URL, for where to update from",
         "btn_restart": "(◕ᴗ◕✿) restart",
         "btn_update": "( ꈍᴗꈍ) update",
@@ -46,7 +46,7 @@ class UpdaterMod(loader.Module):
         "cancel": "🚫 Cancel",
         "lavhost_restart": "✌️ <b>Your lavHost is restarting...\n&gt;///&lt;</b>",
         "lavhost_update": "✌️ <b>Your lavHost is updating...\n&gt;///&lt;</b>",
-        "full_success": "◍ <b>Muvaffaqiyatli yakunlandi! {}\n◍ Ma'lumot:</b> <code>Toʻliq qayta ishga tushirish {}s davom etdi.</code>",
+        "full_success": "◍ <b>Muvaffaqiyatli yakunlandi! {}\n◍ Ma'lumot:</b> toʻliq qayta ishga tushirish {} soniya davom etdi.</code>",
     }
 
     def __init__(self):
