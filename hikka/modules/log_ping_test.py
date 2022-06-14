@@ -48,6 +48,10 @@ class TestMod(loader.Module):
         "debugging_disabled": "<b>◍ Nosozliklarni tuzatish o'chirilgan</b>",
     }
 
+    strings_ru = {
+        "results_ping": "◍ <b>Скорость отклика:</b> <code>{} ms</code>\n<b>◍ Обновленное время:</b> <code>{}</code>",
+    }
+
     @staticmethod
     async def dumpcmd(message: Message):
         """Use in reply to get a dump of a message"""
