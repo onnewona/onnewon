@@ -165,7 +165,7 @@ class LoaderMod(loader.Module):
 
     @loader.owner
     async def dlmodcmd(self, message: Message) -> None:
-        """Downloads and installs a module from the official module repo"""
+        """Rasmiy modul repo-dan modulni yuklab oladi va o'rnatadi"""
         if args := utils.get_args(message):
             args = args[0]
 
@@ -202,7 +202,7 @@ class LoaderMod(loader.Module):
 
     @loader.owner
     async def dlpresetcmd(self, message: Message) -> None:
-        """Set modules preset"""
+        """Modullarni oldindan o'rnatish"""
         args = utils.get_args(message)
 
         if not args:
@@ -349,7 +349,7 @@ class LoaderMod(loader.Module):
 
     @loader.owner
     async def loadmodcmd(self, message: Message) -> None:
-        """Loads the module file"""
+        """Modul faylini yuklaydi"""
         msg = message if message.file else (await message.get_reply_message())
 
         if msg is None or msg.media is None:
@@ -767,7 +767,7 @@ class LoaderMod(loader.Module):
 
     @loader.owner
     async def unloadmodcmd(self, message: Message) -> None:
-        """Unload module by class name"""
+        """Sinf nomi bo'yicha modulni o'chirish"""
         args = utils.get_args_raw(message)
 
         if not args:
@@ -792,7 +792,7 @@ class LoaderMod(loader.Module):
 
     @loader.owner
     async def clearmodulescmd(self, message: Message) -> None:
-        """Delete all installed modules"""
+        """Barcha o'rnatilgan modullarni o'chiring"""
         self.set("loaded_modules", {})
 
         if "DYNO" not in os.environ:
