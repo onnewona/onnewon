@@ -30,10 +30,10 @@ class TestMod(loader.Module):
         "set_loglevel": "<b>× Iltimos, aniqlikni butun son yoki qator sifatida belgilang</b>",
         "no_logs": "<b>◍ Sizda batafsil ma'lumot bo'yicha hech qanday jurnal yo'q {}.</b>",
         "logs_filename": "soso-logs.html",
-        "logs_caption": "<b>◍ Sosi batafsil xatoliklar </b><code>{}</code>\n◍ <b>Sosi versiya: {}.{}.{}</b>\n<a href='{}'></a>",
+        "logs_caption": "<b>◍ Soso batafsil xatoliklar </b><code>{}</code>\n◍ <b>Sosi versiya: {}.{}.{}</b>\n<a href='{}'></a>",
         "suspend_invalid_time": "<b>× To‘xtatib turish uchun vaqt noto‘g‘ri</b>",
         "suspended": "<b>◍ Bot suspended for</b> <code>{}</code> <b>seconds</b>",
-        "results_ping": "(◕ᴗ◕✿) <b>Response speed:</b> <code>{} ms</code>\n(◍•ᴗ•◍) <b>Updated time:</b> <code>{}</code>",
+        "results_ping": "◍ <b>Javob tezligi:</b> <code>{} ms</code>\n<b>◍ Yangilangan vaqt:</b> <code>{}</code>",
         "confidential": "⚠️ <b>Log level </b><code>{}</code><b> may reveal your confidential info, be careful</b>",
         "confidential_text": (
             "⚠️ <b>Log level </b><code>{0}</code><b> may reveal your confidential info, "
@@ -348,7 +348,7 @@ class TestMod(loader.Module):
     async def pingcmd(self, message: Message):
         """Test your userbot ping"""
         start = time.perf_counter_ns()
-        message = await utils.answer(message, "<code>(◕ᴗ◕✿) wait...</code>")
+        message = await utils.answer(message, "<code>(◕ᴗ◕✿) kuting...</code>")
         await utils.answer(
             message,
             self.strings("results_ping").format(
