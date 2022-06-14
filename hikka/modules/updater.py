@@ -24,28 +24,28 @@ logger = logging.getLogger(__name__)
 
 @loader.tds
 class UpdaterMod(loader.Module):
-    """Updates itself"""
+    """Soso yangilash boʻlimi"""
 
     strings = {
         "name": "Updater",
-        "source": "🌉 <b>Read the source code from</b> <a href='{}'>here</a>",
-        "restarting_caption": "(◕ᴗ◕✿) <b>Qayta ishga tushirilmoqda...</b>",
-        "downloading": "(ʘᴗʘ✿) <b>Yangilanishlar yuklab olinmoqda...</b>",
-        "installing": "(◍•ᴗ•◍) <b>Yangilanishlar o'rnatilmoqda...</b>",
+        "source": "◍ <b>Manba kodini o'qing:</b> <a href='{}'>bu yerda</a>",
+        "restarting_caption": "◍ <b>Qayta ishga tushirilmoqda...</b>",
+        "downloading": "◍ <b>Yangilanishlar yuklab olinmoqda...</b>",
+        "installing": "◍ <b>Yangilanishlar o'rnatilmoqda...</b>",
         "success": "◍ <b>Qayta ishga tushirish muvaffaqiyatli bajarildi! {}\n◍ Ma'lumot:</b> modullar hali ham yuklanmoqda...\n<b>◍ Daraja:</b> qayta ishga tushirish {} soniya davom etadi.",
-        "origin_cfg_doc": "Git origin URL, for where to update from",
-        "btn_restart": "(◕ᴗ◕✿) restart",
-        "btn_update": "( ꈍᴗꈍ) update",
+        "origin_cfg_doc": "Qayerdan yangilash uchun Git Origin URL kerak.",
+        "btn_restart": "◍ restart",
+        "btn_update": "◍ yangilash",
         "restart_confirm": "<b>◍ Haqiqatan ham qayta ishga tushirmoqchimisiz?</b>",
         "update_confirm": (
-            "🧭 <b>Are you sure you want to update?\n\n"
+            "◍ <b>Haqiqatan ham yangilashni xohlaysizmi?\n\n"
             '<a href="https://github.com/Netuzb/sosi/commit/{}">{}</a> ⤑ '
             '<a href="https://github.com/Netuzb/sosi/commit/{}">{}</a></b>'
         ),
-        "no_update": "🚸 <b>You are on the latest version, pull updates anyway?</b>",
-        "cancel": "🚫 Cancel",
-        "lavhost_restart": "✌️ <b>Your lavHost is restarting...\n&gt;///&lt;</b>",
-        "lavhost_update": "✌️ <b>Your lavHost is updating...\n&gt;///&lt;</b>",
+        "no_update": "◍ <b>Siz eng so'nggi versiyadasiz, baribir yangilanishlarni oʻrnatib olasizmi?</b>",
+        "cancel": "◍ Bekor qilish",
+        "lavhost_restart": "◍  <b>Your lavHost is restarting...\n&gt;///&lt;</b>",
+        "lavhost_update": "◍  <b>Your lavHost is updating...\n&gt;///&lt;</b>",
         "full_success": "◍ <b>Muvaffaqiyatli yakunlandi! {}\n◍ Ma'lumot:</b> toʻliq qayta ishga tushirish {} soniya davom etdi.</code>",
     }
 
