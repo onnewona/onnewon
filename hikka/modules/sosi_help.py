@@ -15,8 +15,8 @@ class HelpMod(loader.Module):
     strings = {
         "name": "Help",
         "bad_module": "<b>◍ <b>Modul</b> <code>{}</code> <b>topilmadi ( ꈍᴗꈍ)</b>",
-        "single_mod_header": "◍ <b>Modul nomi:</b> <code>{}</code>:",
-        "single_cmd": "\n◍ <b>{}{}</b> <code>{}</code>",
+        "single_mod_header": "◍ <b>Modul nomi:</b> {}",
+        "single_cmd": "\n◍ <b>{}{}</b> <code>{}</code>,
         "undoc_cmd": "( ꈍᴗꈍ) Hujjat yo'q",
         "all_header": "◍ <b>{} ta mod mavjud (ʘᴗʘ✿)\n◍ {} tasi yashirin.</b>",
         "mod_tmpl": "\n<b>{} {}</b>",
@@ -34,10 +34,10 @@ class HelpMod(loader.Module):
 
     strings_ru = {
         "bad_module": "<b>◍ <b>Модуль</b> <code>{}</code> <b>не найден ( ꈍᴗꈍ)</b>",
-        "single_mod_header": "◍ <b>Имя модуля:</b> <code>{}</code>:",
+        "single_mod_header": "◍ <b>Имя модуля:</b> {}",
         "single_cmd": "\n◍ <b>{}{}</b> <code>{}</code>",
         "undoc_cmd": "( ꈍᴗꈍ) Нет документов",
-        "all_header": "◍ <b>{} моды имеется (ʘᴗʘ✿) \ n◍ {} скрыт. </b>",
+        "all_header": "◍ <b>{} моды имеется (ʘᴗʘ✿) \n◍ {} скрыт. </b>",
         "mod_tmpl": "\n<b>{} {}</b>",
         "first_cmd_tmpl": ": {}",
         "cmd_tmpl": " _ {}",
@@ -145,7 +145,7 @@ class HelpMod(loader.Module):
 
         reply = self.strings("single_mod_header").format(utils.escape_html(name))
         if module.__doc__:
-            reply += f"\n{self.strings('vazifa')}" + utils.escape_html(inspect.getdoc(module)) + "\n"  # fmt: skip
+            reply += f"\n{self.strings('vazifa')} " + utils.escape_html(inspect.getdoc(module)) + "\n"  # fmt: skip
 
         commands = {
             name: func
