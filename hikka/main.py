@@ -396,7 +396,7 @@ class Hikka:
 
     def _web_banner(self):
         """Shows web banner"""
-        print("✅ Web mode ready for configuration")
+        print("- Veb rejimi konfiguratsiyaga tayyor")
         ip = (
             "127.0.0.1"
             if "DOCKER" not in os.environ
@@ -404,7 +404,7 @@ class Hikka:
                 ["hostname", "-i"], stdout=subprocess.PIPE, check=True
             ).stdout
         )
-        print(f"🌐 Please visit http://{ip}:{self.web.port}")
+        print(f"- Marhamat tashrif buyuring http://{ip}:{self.web.port}")
 
     async def wait_for_web_auth(self, token: str):
         """Waits for web auth confirmation in Telegram"""
@@ -432,7 +432,7 @@ class Hikka:
                     connection=self.conn,
                     proxy=self.proxy,
                     connection_retries=None,
-                    device_model="Hikka",
+                    device_model="ApeniAmi",
                 )
 
                 client.start(phone)
@@ -467,7 +467,7 @@ class Hikka:
                     connection=self.conn,
                     proxy=self.proxy,
                     connection_retries=None,
-                    device_model="Hikka",
+                    device_model="ApeniApmi",
                 )
 
                 client.start(phone=raise_auth if self.web else lambda: input("Phone: "))
