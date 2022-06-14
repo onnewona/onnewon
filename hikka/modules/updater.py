@@ -54,7 +54,7 @@ class UpdaterMod(loader.Module):
         "restarting_caption": "◍ <b>Перезапуск...</b>",
         "downloading": "◍ <b>Обновления загружаются...</b>",
         "installing": "◍ <b>Устанавливаются обновления...</b>",
-        "success": "◍ <b>Перезагрузка успешно завершена! {} \n◍ Информация: </b>модули все еще загружаются... \n<b> ◍ Уровень: </b>перезапуск занимает {} секунд.",
+        "success": "◍ <b>Перезагрузка успешно завершена! {} \n◍ Информация: </b>модули все еще загружаются... \n<b>◍ Уровень: </b>перезапуск занимает {} секунд.",
         "origin_cfg_doc": "Где вам нужно обновить URL-адрес Git Origin.",
         "btn_restart": "◍ Рестарт",
         "btn_update": "◍ Обновить",
@@ -68,7 +68,7 @@ class UpdaterMod(loader.Module):
         "cancel": "◍ Отмена",
         "lavhost_restart": "◍  <b>Your lavHost is restarting...\n&gt;///&lt;</b>",
         "lavhost_update": "◍  <b>Your lavHost is updating...\n&gt;///&lt;</b>",
-        "full_success": "◍ <b>Успешно завершено! {} \n◍ Информация: </b>полный перезапуск заняла {} секунды </code>",
+        "full_success": "◍ <b>Успешно завершено! {} \n◍ Информация: </b>полный перезапуск занял {} секунд. </code>",
     }
 
     def __init__(self):
