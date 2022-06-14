@@ -32,6 +32,11 @@ class CoreMod(loader.Module):
         "lang_removed": "◍ <b>Translations reset to default ones</b>",
         "check_pack": "🚫 <b>Invalid pack format in url</b>",
     }
+
+
+    strings_ru = {
+        "lang_saved": "<b>◍ Язык изменился на: {}</b>",
+    }
        
 
     async def client_ready(self, client, db):
@@ -241,8 +246,8 @@ class CoreMod(loader.Module):
             message, self.strings("pack_saved" if success else "check_pack")
         )
 
-    async def soso_tilcmd(self, message: Message):
-        """Soso tilini Xitoy'chaga oʻzgartirish"""
+    async def solangcmd(self, message: Message):
+        """Soso tilini oʻzgartirish"""
         args = utils.get_args_raw(message)
         if not args or len(args) != 2:
             await utils.answer(message, self.strings("incorrect_language"))
