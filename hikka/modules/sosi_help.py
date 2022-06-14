@@ -25,28 +25,28 @@ class HelpMod(loader.Module):
         "no_mod": "<b>(◍•ᴗ•◍) Yashirish uchun modulni belgilang</b>",
         "hidden_shown": "• <b>{} modules hidden (◕ᴗ◕✿)\n• {} modules shown ಡ ͜ ʖ ಡ</b>\n{}\n{}",
         "ihandler": "\n◍ <b>{}</b> {}",
-        "soso_pass": "◍ <b<Soso,</b> shunchaki soso xolos (◕ᴗ◕✿)",
+        "soso_pass": "◍ <bSoso,</b> shunchaki soso xolos (◕ᴗ◕✿)",
         "undoc_ihandler": "( ꈍᴗꈍ) Hujjat yo'q",
         "partial_load": "<b>( ꈍᴗꈍ) Userbot to'liq yuklanmagan, shuning uchun barcha modullar ko'rsatilmaydi</b>",
         "not_exact": "<b>( ꈍᴗꈍ) Ggg</b>, modul haqiqiy nomini kiritmadingiz va shu sababli modul maʼlumotlari <u>tasodifiy</u> koʻrsatildi.",
     }
 
-    strings_cn = {
-        "bad_module": "<b>◍ <b>模塊</b> <code>{}</code> <b>未找到 ( ꈍᴗꈍ)</b>",
-        "single_mod_header": "◍ <b>模塊名稱：</b> <code>{}</code>:",
+    strings_ru = {
+        "bad_module": "<b>◍ <b>Модуль</b> <code>{}</code> <b>не найден ( ꈍᴗꈍ)</b>",
+        "single_mod_header": "◍ <b>Имя модуля:</b> <code>{}</code>:",
         "single_cmd": "\n◍ <b>{}{}</b> <code>{}</code>",
-        "undoc_cmd": "( ꈍᴗꈍ) 沒有文件",
-        "all_header": "◍ <b>{} 可用模組° (ʘᴗʘ✿)\n◍ {} 已隱藏°</b>",
+        "undoc_cmd": "( ꈍᴗꈍ) Нет документов",
+        "all_header": "◍ <b> {} моды имеется (ʘᴗʘ✿) \ n◍ {} скрыт. </b>",
         "mod_tmpl": "\n<b>{} {}</b>",
         "first_cmd_tmpl": ": {}",
         "cmd_tmpl": " _ {}",
-        "no_mod": "<b>(◍•ᴗ•◍) 選擇要隱藏的模塊</b>",
-        "hidden_shown": "• <b>{} 隱藏的模塊 (◕ᴗ◕✿)\n• {} 顯示的模塊 ಡ ͜ ʖ ಡ</b>\n{}\n{}",
+        "no_mod": "<b>(◍•ᴗ•◍) Выберите модуль, который нужно скрыть</b>",
+        "hidden_shown": "• <b>{} модули скрыты (◕ᴗ◕✿)\n• {} показаны</b>\n{}\n{}",
         "ihandler": "\n◍ <b>{}</b> {}",
-        "soso_pass": "◍ <b>Soso,</b> 簡單地 soso (◕ᴗ◕✿)",
-        "undoc_ihandler": "( ꈍᴗꈍ) 沒有文件",
-        "partial_load": "<b>( ꈍᴗꈍ) 用戶機器人未完全加載，因此並未顯示所有模塊</b>",
-        "not_exact": "<b>( ꈍᴗꈍ) 格格</b>, 你沒有輸入模塊的真實名稱，所以模塊信息是<u>隨機顯示的</u>.",
+        "soso_pass": "◍ <bSoso, </b> просто так Soso (◕ᴗ◕✿)",
+        "undoc_ihandler": "( ꈍᴗꈍ) Нет документов",
+        "partial_load": "<b>( ꈍᴗꈍ) Юзербот загружен не полностью, поэтому отображаются не все модули.</b>",
+        "not_exact": "<b> (◍•ᴗ•◍) Ггг </b>, вы не ввели настоящее имя модуля, поэтому информация о модуле отображалась <u> случайным образом </u>.",
     }
 
     def __init__(self):
