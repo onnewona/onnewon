@@ -145,7 +145,7 @@ class HelpMod(loader.Module):
 
         reply = self.strings("single_mod_header").format(utils.escape_html(name))
         if module.__doc__:
-            reply += "\n{self.strings('vazifa')}" + utils.escape_html(inspect.getdoc(module)) + "\n"  # fmt: skip
+            reply += f"\n{self.strings('vazifa')}" + utils.escape_html(inspect.getdoc(module)) + "\n"  # fmt: skip
 
         commands = {
             name: func
