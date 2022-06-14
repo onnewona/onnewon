@@ -49,6 +49,28 @@ class UpdaterMod(loader.Module):
         "full_success": "◍ <b>Muvaffaqiyatli yakunlandi! {}\n◍ Ma'lumot:</b> toʻliq qayta ishga tushirish {} soniya davom etdi.</code>",
     }
 
+    strings_ru = {
+        "source": "◍ <b>Прочтите исходный код:</b> <ahref='eccess'>здесь</a>",
+        "restarting_caption": "◍ <b>Перезапуск...</b>",
+        "downloading": "◍ <b>Обновления загружаются...</b>",
+        "installing": "◍ <b>Устанавливаются обновления...</b>",
+        "success": "◍ <b>Перезагрузка успешно завершена! {} \n◍ Информация: </b>модули все еще загружаются... \n<b> ◍ Уровень: </b>перезапуск занимает {} секунд.",
+        "origin_cfg_doc": "Где вам нужно обновить URL-адрес Git Origin.",
+        "btn_restart": "◍ Рестарт",
+        "btn_update": "◍ Обновить",
+        "restart_confirm": "<b>◍ Вы действительно хотите перезапустить?</b>",
+        "update_confirm": (
+            "◍ <b>Вы действительно хотите обновиться?\n\n"
+            '<a href="https://github.com/Netuzb/sosi/commit/{}">{}</a> ⤑ '
+            '<a href="https://github.com/Netuzb/sosi/commit/{}">{}</a></b>'
+        ),
+        "no_update": "◍ <b>Вы используете последнюю версию, можете ли вы установить обновления?</b>",
+        "cancel": "◍ Отмена",
+        "lavhost_restart": "◍  <b>Your lavHost is restarting...\n&gt;///&lt;</b>",
+        "lavhost_update": "◍  <b>Your lavHost is updating...\n&gt;///&lt;</b>",
+        "full_success": "◍ <b>Успешно завершено! {} \n◍ Информация: </b>полный перезапуск заняла {} секунды </code>",
+    }
+
     def __init__(self):
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
