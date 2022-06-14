@@ -22,6 +22,7 @@ class HelpMod(loader.Module):
         "mod_tmpl": "\n<b>{} {}</b>",
         "first_cmd_tmpl": ": {}",
         "cmd_tmpl": " _ {}",
+        "vazifa": "<b>◍ Vazifasi:</b>",
         "no_mod": "<b>(◍•ᴗ•◍) Yashirish uchun modulni belgilang</b>",
         "hidden_shown": "• <b>{} modules hidden (◕ᴗ◕✿)\n• {} modules shown ಡ ͜ ʖ ಡ</b>\n{}\n{}",
         "ihandler": "\n◍ <b>{}</b> {}",
@@ -36,14 +37,15 @@ class HelpMod(loader.Module):
         "single_mod_header": "◍ <b>Имя модуля:</b> <code>{}</code>:",
         "single_cmd": "\n◍ <b>{}{}</b> <code>{}</code>",
         "undoc_cmd": "( ꈍᴗꈍ) Нет документов",
-        "all_header": "◍ <b> {} моды имеется (ʘᴗʘ✿) \ n◍ {} скрыт. </b>",
+        "all_header": "◍ <b>{} моды имеется (ʘᴗʘ✿) \ n◍ {} скрыт. </b>",
         "mod_tmpl": "\n<b>{} {}</b>",
         "first_cmd_tmpl": ": {}",
         "cmd_tmpl": " _ {}",
+        "vazifa": "<b>◍ Функция:</b>",
         "no_mod": "<b>(◍•ᴗ•◍) Выберите модуль, который нужно скрыть</b>",
         "hidden_shown": "• <b>{} модули скрыты (◕ᴗ◕✿)\n• {} показаны</b>\n{}\n{}",
         "ihandler": "\n◍ <b>{}</b> {}",
-        "soso_pass": "◍ <b>Soso, </b> просто так Soso (◕ᴗ◕✿)",
+        "soso_pass": "◍ <b>Soso,</b> просто так Soso (◕ᴗ◕✿)",
         "undoc_ihandler": "( ꈍᴗꈍ) Нет документов",
         "partial_load": "<b>( ꈍᴗꈍ) Юзербот загружен не полностью, поэтому отображаются не все модули.</b>",
         "not_exact": "<b> (◍•ᴗ•◍) Ггг </b>, вы не ввели настоящее имя модуля, поэтому информация о модуле отображалась <u> случайным образом </u>.",
@@ -143,7 +145,7 @@ class HelpMod(loader.Module):
 
         reply = self.strings("single_mod_header").format(utils.escape_html(name))
         if module.__doc__:
-            reply += "<b>\n◍ Modul vazifasi:</b> " + utils.escape_html(inspect.getdoc(module)) + "\n"  # fmt: skip
+            reply += "\n{self.strings('vazifa')}" + utils.escape_html(inspect.getdoc(module)) + "\n"  # fmt: skip
 
         commands = {
             name: func
