@@ -87,10 +87,10 @@ def get_git_api(url):
 
 @loader.tds
 class LoaderMod(loader.Module):
-    """Loads modules"""
+    """Modullarni yuklash"""
 
     strings = {
-        "name": "Loader",
+        "name": "Oʻrnatgich",
         "repo_config_doc": "Modul repo uchun to'liq malakali URL",
         "avail_header": "<b>◍ Repodagi rasmiy <u>modullar</u> (ʘᴗʘ✿)</b>",
         "select_preset": "<b>◉ Iltimos, oldindan sozlashni tanlang</b>",
@@ -164,8 +164,8 @@ class LoaderMod(loader.Module):
         )
 
     @loader.owner
-    async def dlmodcmd(self, message: Message) -> None:
-        """Downloads and installs a module from the official module repo"""
+    async def ykmodcmd(self, message: Message) -> None:
+        """Rasmiy modul repo-dan modulni yuklab oladi va o'rnatadi"""
         if args := utils.get_args(message):
             args = args[0]
 
@@ -201,8 +201,8 @@ class LoaderMod(loader.Module):
             )
 
     @loader.owner
-    async def dlpresetcmd(self, message: Message) -> None:
-        """Set modules preset"""
+    async def ykoldincmd(self, message: Message) -> None:
+        """Modullarni oldindan o'rnatish"""
         args = utils.get_args(message)
 
         if not args:
@@ -348,8 +348,8 @@ class LoaderMod(loader.Module):
             await self.load_module(doc, call, save_fs=save)
 
     @loader.owner
-    async def loadmodcmd(self, message: Message) -> None:
-        """Loads the module file"""
+    async def ykvaqtcmd(self, message: Message) -> None:
+        """Modul faylini yuklaydi"""
         msg = message if message.file else (await message.get_reply_message())
 
         if msg is None or msg.media is None:
@@ -766,8 +766,8 @@ class LoaderMod(loader.Module):
             )
 
     @loader.owner
-    async def unloadmodcmd(self, message: Message) -> None:
-        """Unload module by class name"""
+    async def modochcmd(self, message: Message) -> None:
+        """Modulni o'chirish"""
         args = utils.get_args_raw(message)
 
         if not args:
@@ -791,8 +791,8 @@ class LoaderMod(loader.Module):
         )
 
     @loader.owner
-    async def clearmodulescmd(self, message: Message) -> None:
-        """Delete all installed modules"""
+    async def modtozcmd(self, message: Message) -> None:
+        """Barcha o'rnatilgan modullarni o'chiring"""
         self.set("loaded_modules", {})
 
         if "DYNO" not in os.environ:
