@@ -16,7 +16,7 @@ class HelpMod(loader.Module):
         "name": "Help",
         "bad_module": "<b>◍ <b>Modul</b> <code>{}</code> <b>topilmadi ( ꈍᴗꈍ)</b>",
         "single_mod_header": "◍ <b>Modul nomi:</b> {}",
-        "single_cmd": "\n◍ <b>{}{}</b> <code>{}</code>,
+        "single_cmd": "\n◍ <b>{}{}</b> <code>{}</code>",
         "undoc_cmd": "( ꈍᴗꈍ) Hujjat yo'q",
         "all_header": "◍ <b>{} ta mod mavjud (ʘᴗʘ✿)\n◍ {} tasi yashirin.</b>",
         "mod_tmpl": "\n<b>{} {}</b>",
