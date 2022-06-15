@@ -180,7 +180,7 @@ class List(InlineUnit):
             try:
                 status_message = await (
                     message.edit if message.out else message.respond
-                )("<b>(◕ᴗ◕✿) Inlayn list sosilashmoqda...</b>")
+                )("<b>◍ soso inline...</b>"")
             except Exception:
                 status_message = None
         else:
@@ -280,33 +280,33 @@ class List(InlineUnit):
             await call.answer("Error occurred", show_alert=True)
             return
 
-    def _list_markup(self, unit_uid: str) -> InlineKeyboardMarkup:
+    def _list_markup(self, unit_id: str) -> InlineKeyboardMarkup:
         """Converts `btn_call_data` into a aiogram markup"""
         markup = InlineKeyboardMarkup()
         markup.add(
             *(
                 [
                     InlineKeyboardButton(
-                        f"orqaga",
-                        callback_data=self._units[unit_uid]["btn_call_data"]["back"],
+                        f"<< [{self._units[unit_id]['current_index']} / {len(self._units[unit_id]['strings'])}]",
+                        callback_data=self._units[unit_id]["btn_call_data"]["back"],
                     )
                 ]
-                if self._units[unit_uid]["current_index"] > 0
+                if self._units[unit_id]["current_index"] > 0
                 else []
             ),
             InlineKeyboardButton(
-                "(◕ᴗ◕✿) yopish",
-                callback_data=self._units[unit_uid]["btn_call_data"]["close"],
+                "×××",
+                callback_data=self._units[unit_id]["btn_call_data"]["close"],
             ),
             *(
                 [
                     InlineKeyboardButton(
-                        f"keyingi",
-                        callback_data=self._units[unit_uid]["btn_call_data"]["next"],
+                        f">> [{self._units[unit_id]['current_index'] + 2} / {len(self._units[unit_id]['strings'])}]",
+                        callback_data=self._units[unit_id]["btn_call_data"]["next"],
                     ),
                 ]
-                if self._units[unit_uid]["current_index"]
-                < len(self._units[unit_uid]["strings"]) - 1
+                if self._units[unit_id]["current_index"]
+                < len(self._units[unit_id]["strings"]) - 1
                 else []
             ),
         )
