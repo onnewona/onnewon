@@ -234,7 +234,7 @@ class Form(InlineUnit):
             try:
                 status_message = await (
                     message.edit if message.out else message.respond
-                )("<b>(◕ᴗ◕✿) Inlayn sosilashmoqda...</b>")
+                )("<b>◍ soso inline...</b>")
             except Exception:
                 status_message = None
         else:
