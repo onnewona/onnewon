@@ -364,7 +364,7 @@ class Events(InlineUnit):
             except Exception:
                 doc = "◍ Hujjat yo'q"
 
-            _help += f"◍ <code>@{self.bot_username} {name}</code> - {doc}"
+            _help += f"◍ <code>@{self.bot_username} {name}</code> - {doc}\n"
 
         if not _help:
             await inline_query.answer(
