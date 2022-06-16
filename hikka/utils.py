@@ -304,12 +304,12 @@ async def answer(
                 return list_
             except Exception:
                 file = io.BytesIO(text.encode("utf-8"))
-                file.name = "command_result.txt"
+                file.name = "soso-katta-fayl.html"
 
                 result = await message.client.send_file(
                     message.peer_id,
                     file,
-                    caption="<b>📤 Command output seems to be too long, so it's sent in file.</b>",
+                    caption="<b>◍ Habar hajmi katta boʻlganligi sababli</b> natija fayl koʻrinishida taqdim etildi.",
                 )
 
                 if message.out:
