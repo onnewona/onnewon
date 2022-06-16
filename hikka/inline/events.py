@@ -364,17 +364,17 @@ class Events(InlineUnit):
             except Exception:
                 doc = "◍ Hujjat yo'q"
 
-            _help += f"◍ <code>@{self.bot_username} {name}</code> - {doc}\n\n◍ <b>Info:</b> Agar xohlasangiz, menikini so'rishingiz mumkin (ʘᴗʘ✿)"
+            _help += f"◍ <code>@{self.bot_username} {name}</code> - {doc}"
 
         if not _help:
             await inline_query.answer(
                 [
                     InlineQueryResultArticle(
                         id=utils.rand(20),
-                        title="Show available inline commands",
-                        description="You have no available commands",
+                        title="◍ Barcha inlayn buyruqlar.",
+                        description="Sizda inlayn buyruqlar mavjud emas",
                         input_message_content=InputTextMessageContent(
-                            "<b>◍ Mavjud inlayn buyruqlar yo'q yoki siz ularga kirish imkoniga ega emassiz</b>",
+                            "<b>◍ Barcha inlayn buyruqlar yo'q yoki siz ularga kirish imkoniga ega emassiz</b>",
                             "HTML",
                             disable_web_page_preview=True,
                         ),
@@ -391,10 +391,10 @@ class Events(InlineUnit):
             [
                 InlineQueryResultArticle(
                     id=utils.rand(20),
-                    title="Show available inline commands",
-                    description=f"You have {len(_help.splitlines())} available command(-s)",
+                    title="◍ Barcha inlayn buyruqlar.",
+                    description=f"◍ Sizda {len(_help.splitlines())} ta buyruq(lar) mavjud.",
                     input_message_content=InputTextMessageContent(
-                        f"<b>◍ Mavjud inlayn buyruqlar:</b>\n\n{_help}",
+                        f"<b>◍ Barcha inlayn buyruqlar:</b>\n\n{_help}",
                         "HTML",
                         disable_web_page_preview=True,
                     ),
