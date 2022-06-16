@@ -78,7 +78,7 @@ class SettingsmodMod(loader.Module):
     }
 
 
-    strings_ru {
+    strings_ru = {
         "logs_cleared": "◍ <b>Журнал очищен.</b>",
     }
 
