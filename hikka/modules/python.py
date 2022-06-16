@@ -28,7 +28,7 @@ class PythonMod(loader.Module):
 
     strings = {
         "name": "Python",
-        "eval": "<b>◍ python:</b>\n\n<code>{}</code>\n<b>◍ natija:</b>\n\n<code>{}</code>",
+        "eval": "<b>◍ python:</b>\n\n<code>{}</code>\n\n<b>◍ natija:</b>\n\n<code>{}</code>",
         "err": "<b>◍ python:</b>\n\n<code>{}</code>\n\n<b>◍ noma`lum:</b>\n\n<code>{}</code>",
         "db_permission": "◍ db.set unknown",
     }
