@@ -74,8 +74,14 @@ class SettingsmodMod(loader.Module):
         "deauth_confirm_btn": "😢 Delete",
         "uninstall": "😢 <b>Uninstalling Hikka...</b>",
         "uninstalled": "😢 <b>Hikka uninstalled. Web interface is still active, you can add another account</b>",
-        "logs_cleared": "🗑 <b>Logs cleared</b>",
+        "logs_cleared": "◍ <b>Jurnal tozalandi.</b>",
     }
+
+
+    strings_ru {
+        "logs_cleared": "◍ <b>Журнал очищен.</b>",
+    }
+
 
     def get_watchers(self) -> tuple:
         return [
