@@ -30,7 +30,7 @@ class SettingsmodMod(loader.Module):
     """Advanced settings for Hikka Userbot"""
 
     strings = {
-        "name": "SosiSets",
+        "name": "Sososets",
         "watchers": "👀 <b>Watchers:</b>\n\n<b>{}</b>",
         "mod404": "🚫 <b>Watcher {} not found</b>",
         "disabled": "👀 <b>Watcher {} is now <u>disabled</u></b>",
@@ -197,8 +197,8 @@ class SettingsmodMod(loader.Module):
             ],
         )
 
-    async def uninstall_ubcmd(self, message: Message):
-        """Uninstall Hikka"""
+    async def cmd(self, message: Message):
+        """..."""
         await self.inline.form(
             self.strings("deauth_confirm"),
             message,
