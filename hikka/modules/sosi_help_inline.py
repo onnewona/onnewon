@@ -18,7 +18,7 @@ class HelpMod(loader.Module):
         "single_mod_header": "◍ <b>Modul nomi:</b> {}",
         "single_cmd": "\n◍ <b>{}{}</b> <code>{}</code>",
         "undoc_cmd": "( ꈍᴗꈍ) Hujjat yo'q",
-        "all_header": "◍ <b>{} ta mod mavjud (ʘᴗʘ✿)\n◍ {} tasi yashirin.</b>",
+        "all_header": "{} ta modul mavjud {}",
         "mod_tmpl": "\n<b>{} {}</b>",
         "first_cmd_tmpl": ": {}",
         "cmd_tmpl": " _ {}",
@@ -328,18 +328,18 @@ class HelpMod(loader.Module):
         await self.inline.form(
                     text = f"{reply}\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}{no_commands_}{partial_load}",
                     reply_markup=[
-                     [{
+      [{
+       "text": f"{reply}", 
+       "callback": self._temur,
+      }],
+      [{
        "text": f"{self.strings('soso_temur')}", 
        "callback": self._temur,
       },
       {
        "text": f"{self.strings('soso_userbot')}", 
        "callback": self._temur,
-      }],
-      [{
-       "text": f"{reply}", 
-       "callback": self._temur,
-      }],
+      }],      
            ],
                     ttl=10,
                     message=message,
