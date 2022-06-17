@@ -51,6 +51,26 @@ class HelpMod(loader.Module):
         "not_exact": "<b> (◍•ᴗ•◍) Ггг </b>, вы не ввели настоящее имя модуля, поэтому информация о модуле отображалась <u> случайным образом </u>.",
     }
 
+
+    strings_cn = {
+        "bad_module": "<b>◍ <b>模塊</b> <code>{}</code> <b>未找到 ( ꈍᴗꈍ)</b>",
+        "single_mod_header": "◍ <b>模塊名稱:</b> {}",
+        "single_cmd": "\n◍ <b>{}{}</b> <code>{}</code>",
+        "undoc_cmd": "( ꈍᴗꈍ) 沒有文件",
+        "all_header": "◍ <b>{} 時尚可用 (ʘᴗʘ✿) \n◍ {} 被隱藏. </b>",
+        "mod_tmpl": "\n<b>{} {}</b>",
+        "first_cmd_tmpl": ": {}",
+        "cmd_tmpl": " _ {}",
+        "vazifa": "<b>◍ 功能:</b>",
+        "no_mod": "<b>(◍•ᴗ•◍) 選擇要隱藏的模塊</b>",
+        "hidden_shown": "• <b>{} 模塊被隱藏 (◕ᴗ◕✿)\n• {} 顯示</b>\n{}\n{}",
+        "ihandler": "\n◍ <b>{}</b> {}",
+        "soso_pass": "◍ <b>Soso,</b> 只是 Soso (◕ᴗ◕✿)",
+        "undoc_ihandler": "( ꈍᴗꈍ) 沒有文件",
+        "partial_load": "<b>( ꈍᴗꈍ) 用戶機器人未完全加載，因此並未顯示所有模塊.</b>",
+        "not_exact": "<b> (◍•ᴗ•◍) 格格 </b>, 你沒有輸入真實的模塊名稱，所以模塊信息是<u>隨機顯示的</u>.",
+    }
+
     def __init__(self):
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
