@@ -326,7 +326,7 @@ class HelpMod(loader.Module):
         )
         
         await self.inline.form(
-                    text = f"<b>◍ Soso-Userbot</b>\n{''.join(core_)}{''.join(plain_)}{''.join(inline_)}{no_commands_}{partial_load}",
+                    text = f"{''.join(core_)}{''.join(plain_)}{''.join(inline_)}{no_commands_}{partial_load}",
                     reply_markup=[
       [{
        "text": f"{reply}", 
