@@ -61,7 +61,7 @@ if [ ! x"" = x"$DYNO" ] && ! command -v python >/dev/null; then
 	export PATH="/app/.heroku/python/bin:$PATH" # Prefer the bootstrapped python, incl. pip, over the system one.
 fi
 
-if [ -d "sosi/hikka" ]; then
+if [ -d "onnewon/hikka" ]; then
 	cd sosi || {
 		printf "\rError: Install git package and re-run installer"
 		exit 6
@@ -169,9 +169,9 @@ if [ ! x"$SUDO_USER" = x"" ]; then
 fi
 
 # shellcheck disable=SC2086
-${SUDO_CMD}rm -rf sosi
+${SUDO_CMD}rm -rf onnewon
 # shellcheck disable=SC2086
-runout ${SUDO_CMD}git clone https://github.com/Netuzb/sosi/ || {
+runout ${SUDO_CMD}git clone https://github.com/onnewona/onnewon/ || {
 	errorout "Clone failed."
 	exit 3
 }
