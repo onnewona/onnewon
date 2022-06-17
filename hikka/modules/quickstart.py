@@ -1,27 +1,13 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
 import logging
 import os
 from random import choice
-
 from .. import loader, translations
 from ..inline.types import InlineCall
 
 logger = logging.getLogger(__name__)
-imgs = [
-    "https://i.imgur.com/KK0KJqG.jpeg",
-    ]
+imgs = [""]
 
-TEXT = """🌇 <b>HELLO!</b> Ya yebal tvoyu padrujku
-"""
+TEXT = """<b>Soso</b> top iz vsex topov"""
 
 
 TEXT_RU = """..."""
@@ -42,8 +28,8 @@ class QuickstartMod(loader.Module):
 
         mark = self.inline.generate_markup(
             [
-                [{"text": "🏙️ Sosi ! Moderation", "url": "https://t.me/netuzb"}],               
-            ]
+                [{"text": "◍ Moderator", "url": "https://t.me/netuzb"}],               
+            ], **{"photo": "https://i.imgur.com/t0Qjyhc.jpeg"},
         )
 
         await self.inline.bot.send_animation(
