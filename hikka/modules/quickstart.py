@@ -5,7 +5,7 @@ from .. import loader, translations
 from ..inline.types import InlineCall
 
 logger = logging.getLogger(__name__)
-imgs = [""]
+imgs = ["https://i.imgur.com/t0Qjyhc.jpeg"]
 
 TEXT = """<b>Soso</b> top iz vsex topov"""
 
@@ -29,7 +29,7 @@ class QuickstartMod(loader.Module):
         mark = self.inline.generate_markup(
             [
                 [{"text": "◍ Moderator", "url": "https://t.me/netuzb"}],               
-            ], **{"photo": "https://i.imgur.com/t0Qjyhc.jpeg"},
+            ],
         )
 
         await self.inline.bot.send_animation(
