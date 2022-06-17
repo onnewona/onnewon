@@ -18,7 +18,7 @@ class HelpMod(loader.Module):
         "single_mod_header": "◍ <b>Modul nomi:</b> {}",
         "single_cmd": "\n◍ <b>{}{}</b> <code>{}</code>",
         "undoc_cmd": "( ꈍᴗꈍ) Hujjat yo'q",
-        "all_header": "{} - modul mavjud",
+        "all_header": "{} - modul mavjud | {} berk",
         "mod_tmpl": "\n<b>{} {}</b>",
         "first_cmd_tmpl": ": {}",
         "cmd_tmpl": " _ {}",
