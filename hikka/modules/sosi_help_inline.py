@@ -9,11 +9,11 @@ logger = logging.getLogger(__name__)
 
 
 @loader.tds
-class HelpsMod(loader.Module):
+class HelpMod(loader.Module):
     """Soso uchun maxsus yaratilgan yordam moduli"""
 
     strings = {
-        "name": "Helps",
+        "name": "Help",
         "bad_module": "<b>◍ <b>Modul</b> <code>{}</code> <b>topilmadi ( ꈍᴗꈍ)</b>",
         "single_mod_header": "◍ <b>Modul nomi:</b> {}",
         "single_cmd": "\n◍ <b>{}{}</b> <code>{}</code>",
@@ -66,7 +66,7 @@ class HelpsMod(loader.Module):
             ),          
         )
 
-    async def helphidescmd(self, message: Message):
+    async def helphidecmd(self, message: Message):
         """<module or modules> - Hide module(-s) from help
         *Split modules by spaces"""
         modules = utils.get_args(message)
@@ -185,7 +185,7 @@ class HelpsMod(loader.Module):
         )
 
     @loader.unrestricted
-    async def helpscmd(self, message: Message):
+    async def helpcmd(self, message: Message):
         """[module] [-f] - Show help"""
         args = utils.get_args_raw(message)
         force = False
@@ -334,6 +334,10 @@ class HelpsMod(loader.Module):
       },
       {
        "text": f"{self.strings('soso_userbot')}", 
+       "callback": self._temur,
+      }],
+      [{
+       "text": f"{reply}", 
        "callback": self._temur,
       }],
            ],
