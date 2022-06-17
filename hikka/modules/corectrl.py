@@ -33,8 +33,14 @@ class CoreMod(loader.Module):
         "check_pack": "🚫 <b>Invalid pack format in url</b>",
     }
 
+    strings_cn = {
+        "name": "設置",
+        "lang_saved": "<b>◍ 語言已更改為: {}</b>",
+    }
+
 
     strings_ru = {
+        "name": "Настройки",
         "lang_saved": "<b>◍ Язык изменился на: {}</b>",
     }
        
