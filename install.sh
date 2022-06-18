@@ -62,7 +62,7 @@ if [ ! x"" = x"$DYNO" ] && ! command -v python >/dev/null; then
 fi
 
 if [ -d "onnewon/hikka" ]; then
-	cd sosi || {
+	cd onnewon || {
 		printf "\rError: Install git package and re-run installer"
 		exit 6
 	}
